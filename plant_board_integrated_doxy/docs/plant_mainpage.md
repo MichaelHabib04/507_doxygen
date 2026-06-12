@@ -19,19 +19,19 @@ The board was designed to take M3 screws, and the enclosure contains several 3D 
 
 Due to the mounting holes on the controller board being unusable, a controller housing was designed with slots to fit the board into.
 
-Controller as depicted in Fusion
+![Caption Text](controller.png "Controller as depicted in Fusion")
 
-Controller in real life
+![Caption Text](controller_pg.jpg "Controller in real life")
 
 **Plant Board**
 
 The board was designed with screw terminals intended for attaching peripherals to the board. The board was ultimately 5” by 2.5” with power supplied through a barrel jack connector. The 12V volatage supplied powers two valves, and after a buck converter, the 5V line supports a motor and conductivity (TDS) probe. With an LDO, the voltage is further stepped down to 3.3V to power the MCU and float switch. The board features various test points to ensure proper voltages and signals are being sent, and for a bulk of the project, we powered the board through the 12V and GND test poins with a DC power supply with current limiting. SWD interface is done with a 6 pin header to interface with the ST Link, and we additionally broke out four spare GPIO pins and a spare UART. With the realization that the intended microB connector on the board was not operational without a crystal, we used the spare UART for all debugging through Putty.
 
-Plant Board Layout
+![Caption Text](plant_board_layout.png "Plant Board Layout")
 
-3D model as developed in Fusion
+![Caption Text](3d_plant_board.png "3D model as developed in Fusion")
 
-Real board post assembly
+![Caption Text](real_p_board.jpg "Real board post assembly")
 
 The motor driver issues PWM commands to set the motor to operate at 50% duty cycle as recommended by the Adafruit Pump manufacturers.
 
@@ -42,6 +42,8 @@ The TDS probe was intended for Arduino usage, so it came with a breakout board f
 **Software**
 
 **Controls – Plant Board**
+
+![Caption Text](p_fsm.png "Plant System FSM/STD")
 
 C was used for all the programming of the main board control loop because Malaika does not understand objects but she likes structs. An FSM was considered for this application, but due to the simplicity of the control scheme, it was deemed unnecessary. Control is possible with several if/else statements
 
@@ -61,7 +63,7 @@ Currently, the controller and plant board communicate with each other over Wi-Fi
 
 The controller board features buttons for user interaction and an LCD with LED bars for information display. The buttons use an enumeration and switch case logic to run a state machine. The button FSM takes care of debounce and long-press functionality if so desired. There are four button objects that are instantiated in the code. Below is a state diagram of the button class.
 
-  
+![Caption Text](c_fsm.png "Controller FSM/STD")
 
 The LCD has an integrated display driver, enabling loading bits over 3-wire SPI bus. Images are read from a raw RGB565 array of a user defined image and sent in frames of 9 bits. The LED bars are composed of four vertical bars of four LEDs. They are addressable through shifting a 16 bit-bitmask into the LED control shift register and triggering the latch pin. This enables individual LED control from the MCU with only 3 logic pins.
 
@@ -73,11 +75,13 @@ Our initial version of the plant board became dysfunctional after an accidental 
 
 To assess the issue, power was supplied to the board, and each component was felt for temperature increases and each test point was probed with the intention of observing any suspicious shorts. Based on post-mortem damage analysis, the relay’s internal LED may have blown up due to a lack of resistor to reduce current input. The photo-mos relay was supplied with 3.3V instead of the required 2.3, potentially shorting both sides of the relay and supplying 12V to MCU. This is our working theory for why various board components were suddenly damaged.
 
-From the datasheet: a pinout of the relay
+![Caption Text](relay_pins.png "From the datasheet: a pinout of the relay")
+
 
 The solution, as the complete issue was not diagnosed, was to assemble a secondary board. Based on the relay LED drawing 10mA and the MCU supplying 3.3V, a 100Ω resistor was bodged between the relay pin and pad. Since the MCU supplies commands to relay pin 1, we bent the pin up to avoid it contacting the pad and soldered a resistor vertically to contact the pad on one side and the pin on the other side, as shown in the image.
 
-Bodging
+![Caption Text](relay_bodge.png "Bodging")
+
 
 However, the new board was not without issues. Initially, the board was observed only to deliver 3.8V on the expected 5V line. 12V and 3.3V were drawing correct voltages and power, but 5V was shown to current limit. We then probed each component in the buck converter (from 12V to 5V) to assess if a passive component was broken, or if the buck itself was broken. This yielded no results. Due to randomness in the universe, the board magically started working after a solder blob was flicked off the inductor. Yippee!
 
@@ -89,8 +93,12 @@ During button testing, we realized that the buttons were oriented wrong by 90 de
 
 Additionally, due to a mismatch in net-naming between 3V3, +3.3V, and 3.3V, one of the pins on the LCD driver which needed to be powered to 3.3V was instead left floating. 32AWG PTFE wire was used to bridge between another powered LCD pin and the floating pin, which resolved the issue.
 
+![Caption Text](controller_bodge.jpg "Controller Bodge")
+
 The serial clock on the LCD was also routed to the wrong pin on the MCU. Due to the correct MCU pin and incorrect MCU pin being adjacent to each other (as well as both not requiring usage), both pins were bridged together with solder to allow correct signals to flow to the correct pin. The CUBEMX file was also updated to ensure the incorrect pin was not used.
 
 **Final Product**
 
 Well… it doesn’t work anymore. Here are some videos we took while it was! This video consists of clips of each individual functionality (sensors and actuators) as well as a video of the autonomous mode where the tank self-regulates.
+
+https://youtu.be/ZvsrLwSTyi8
