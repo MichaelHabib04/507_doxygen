@@ -1,0 +1,131 @@
+\doxysection{Inc/\+probe.h File Reference}
+\hypertarget{probe_8h}{}\label{probe_8h}\index{Inc/probe.h@{Inc/probe.h}}
+
+
+Interface for reading and reporting TDS probe measurements.  
+
+
+{\ttfamily \+\#include "{}stm32f4xx\+\_\+hal.\+h"{}}\newline
+{\ttfamily \+\#include $<$stdint.\+h$>$}\newline
+\doxysubsubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}}
+\begin{DoxyCompactList}\small\item\em Runtime state and peripheral handles for a TDS probe. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{probe_8h_a1418504529dfe3b2d2a1408f1a69b1c6}{tds\+\_\+init}} (\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \texorpdfstring{$\ast$}{*}tds, ADC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hadc, UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}huart, float vref)
+\begin{DoxyCompactList}\small\item\em Initialize a TDS probe state structure. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{probe_8h_ad2c191421817da3548d6f5828caf601e}{tds\+\_\+read\+\_\+ppm}} (\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \texorpdfstring{$\ast$}{*}tds)
+\begin{DoxyCompactList}\small\item\em Read the TDS probe and calculate the compensated ppm value. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{probe_8h_a1a6f9be411334b54153823e297f2b309}{tds\+\_\+uart\+\_\+print}} (\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \texorpdfstring{$\ast$}{*}tds)
+\begin{DoxyCompactList}\small\item\em Print the most recent TDS reading over UART. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Interface for reading and reporting TDS probe measurements. 
+
+This module reads a TDS probe through an ADC channel, converts the ADC count to voltage, applies temperature compensation, estimates parts-\/per-\/million, and can print the latest reading over UART.
+
+\begin{DoxyDate}{Date}
+Created on Jun 11, 2026 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+malai 
+\end{DoxyAuthor}
+
+
+\label{probe_8h_doc-func-members}
+\Hypertarget{probe_8h_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{probe_8h_a1418504529dfe3b2d2a1408f1a69b1c6}\index{probe.h@{probe.h}!tds\_init@{tds\_init}}
+\index{tds\_init@{tds\_init}!probe.h@{probe.h}}
+\doxysubsubsection{\texorpdfstring{tds\_init()}{tds\_init()}}
+{\footnotesize\ttfamily \label{probe_8h_a1418504529dfe3b2d2a1408f1a69b1c6} 
+void tds\+\_\+init (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tds}{, }\item[{ADC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{hadc}{, }\item[{UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{huart}{, }\item[{float}]{vref}{}\end{DoxyParamCaption})}
+
+
+
+Initialize a TDS probe state structure. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em tds} & Pointer to the TDS state structure to initialize. \\
+\hline
+{\em hadc} & ADC handle used for probe sampling. \\
+\hline
+{\em huart} & UART handle used for reporting probe values. \\
+\hline
+{\em vref} & ADC reference voltage in volts.\\
+\hline
+\end{DoxyParams}
+The probe starts with zeroed ADC, voltage, and ppm values. Temperature is set to 25 degrees Celsius, which is the reference temperature for the compensation calculation used by \doxylink{probe_8c_ad2c191421817da3548d6f5828caf601e}{tds\+\_\+read\+\_\+ppm()}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tds} & Pointer to the TDS state structure to initialize. \\
+\hline
+{\em hadc} & ADC handle used for probe sampling. \\
+\hline
+{\em huart} & UART handle used for reporting probe values. \\
+\hline
+{\em vref} & ADC reference voltage in volts. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{probe_8h_ad2c191421817da3548d6f5828caf601e}\index{probe.h@{probe.h}!tds\_read\_ppm@{tds\_read\_ppm}}
+\index{tds\_read\_ppm@{tds\_read\_ppm}!probe.h@{probe.h}}
+\doxysubsubsection{\texorpdfstring{tds\_read\_ppm()}{tds\_read\_ppm()}}
+{\footnotesize\ttfamily \label{probe_8h_ad2c191421817da3548d6f5828caf601e} 
+float tds\+\_\+read\+\_\+ppm (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tds}{}\end{DoxyParamCaption})}
+
+
+
+Read the TDS probe and calculate the compensated ppm value. 
+
+Sample the ADC and calculate the compensated TDS value.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tds} & Pointer to the initialized TDS state structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Latest TDS estimate in parts per million.
+\end{DoxyReturn}
+Read the TDS probe and calculate the compensated ppm value.
+
+The ADC reading is converted to volts using the configured reference voltage. A temperature compensation factor is applied before the TDS polynomial is evaluated.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tds} & Pointer to the initialized TDS state structure. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Latest TDS estimate in parts per million. 
+\end{DoxyReturn}
+\Hypertarget{probe_8h_a1a6f9be411334b54153823e297f2b309}\index{probe.h@{probe.h}!tds\_uart\_print@{tds\_uart\_print}}
+\index{tds\_uart\_print@{tds\_uart\_print}!probe.h@{probe.h}}
+\doxysubsubsection{\texorpdfstring{tds\_uart\_print()}{tds\_uart\_print()}}
+{\footnotesize\ttfamily \label{probe_8h_a1a6f9be411334b54153823e297f2b309} 
+void tds\+\_\+uart\+\_\+print (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{tds}{}\end{DoxyParamCaption})}
+
+
+
+Print the most recent TDS reading over UART. 
+
+Print the most recent ADC, voltage, and TDS values over UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tds} & Pointer to the initialized TDS state structure.\\
+\hline
+\end{DoxyParams}
+Print the most recent TDS reading over UART.
+
+
+\begin{DoxyParams}{Parameters}
+{\em tds} & Pointer to the initialized TDS state structure. \\
+\hline
+\end{DoxyParams}

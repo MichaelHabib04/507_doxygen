@@ -1,0 +1,55 @@
+\doxysection{Src/\+float.c File Reference}
+\hypertarget{float_8c}{}\label{float_8c}\index{Src/float.c@{Src/float.c}}
+
+
+Implementation of the float switch GPIO read helper.  
+
+
+{\ttfamily \+\#include "{}float.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+GPIO\+\_\+\+Pin\+State \doxymbox{\hyperlink{float_8c_a0946796970c135c9d3dd803f514db044}{read\+\_\+float}} (\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+\_\+float)
+\begin{DoxyCompactList}\small\item\em Read the current state of the float switch input pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of the float switch GPIO read helper. 
+
+\begin{DoxyDate}{Date}
+Created on Jun 9, 2026 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+malaika 
+\end{DoxyAuthor}
+
+
+\label{float_8c_doc-func-members}
+\Hypertarget{float_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{float_8c_a0946796970c135c9d3dd803f514db044}\index{float.c@{float.c}!read\_float@{read\_float}}
+\index{read\_float@{read\_float}!float.c@{float.c}}
+\doxysubsubsection{\texorpdfstring{read\_float()}{read\_float()}}
+{\footnotesize\ttfamily \label{float_8c_a0946796970c135c9d3dd803f514db044} 
+GPIO\+\_\+\+Pin\+State read\+\_\+float (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+float}{}\end{DoxyParamCaption})}
+
+
+
+Read the current state of the float switch input pin. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+float} & Pointer to the float switch configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GPIO\+\_\+\+PIN\+\_\+\+SET if the configured input is high; GPIO\+\_\+\+PIN\+\_\+\+RESET if low.
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+float} & Pointer to the float switch configuration. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+GPIO\+\_\+\+Pin\+State Current GPIO state returned by HAL\+\_\+\+GPIO\+\_\+\+Read\+Pin(). 
+\end{DoxyReturn}

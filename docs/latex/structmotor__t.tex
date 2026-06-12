@@ -1,0 +1,65 @@
+\doxysection{motor\+\_\+t Struct Reference}
+\hypertarget{structmotor__t}{}\label{structmotor__t}\index{motor\_t@{motor\_t}}
+
+
+Timer channel configuration for a PWM-\/controlled motor.  
+
+
+
+
+{\ttfamily \+\#include $<$motor\+\_\+driver.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+uint16\+\_\+t \doxymbox{\hyperlink{structmotor__t_a63072e0bf315d555693c5fbd0ced0003}{motor\+\_\+out\+\_\+1}}
+\begin{DoxyCompactList}\small\item\em Primary PWM timer channel used to drive the motor. \end{DoxyCompactList}\item 
+uint16\+\_\+t \doxymbox{\hyperlink{structmotor__t_a8c75fcb0db73c098528643c385376a14}{motor\+\_\+out\+\_\+2}}
+\begin{DoxyCompactList}\small\item\em Secondary PWM timer channel held low for this drive direction. \end{DoxyCompactList}\item 
+TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structmotor__t_a773d5dfb4db57609948b961bbfec6197}{htim}}
+\begin{DoxyCompactList}\small\item\em STM32 HAL timer handle that owns the PWM channels. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Timer channel configuration for a PWM-\/controlled motor. 
+
+The motor is represented by two timer output channels and the timer handle that owns those channels. 
+
+\label{structmotor__t_doc-variable-members}
+\Hypertarget{structmotor__t_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structmotor__t_a773d5dfb4db57609948b961bbfec6197}\index{motor\_t@{motor\_t}!htim@{htim}}
+\index{htim@{htim}!motor\_t@{motor\_t}}
+\doxysubsubsection{\texorpdfstring{htim}{htim}}
+{\footnotesize\ttfamily \label{structmotor__t_a773d5dfb4db57609948b961bbfec6197} 
+TIM\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} motor\+\_\+t::\+htim}
+
+
+
+STM32 HAL timer handle that owns the PWM channels. 
+
+\Hypertarget{structmotor__t_a63072e0bf315d555693c5fbd0ced0003}\index{motor\_t@{motor\_t}!motor\_out\_1@{motor\_out\_1}}
+\index{motor\_out\_1@{motor\_out\_1}!motor\_t@{motor\_t}}
+\doxysubsubsection{\texorpdfstring{motor\_out\_1}{motor\_out\_1}}
+{\footnotesize\ttfamily \label{structmotor__t_a63072e0bf315d555693c5fbd0ced0003} 
+uint16\+\_\+t motor\+\_\+t::\+motor\+\_\+out\+\_\+1}
+
+
+
+Primary PWM timer channel used to drive the motor. 
+
+\Hypertarget{structmotor__t_a8c75fcb0db73c098528643c385376a14}\index{motor\_t@{motor\_t}!motor\_out\_2@{motor\_out\_2}}
+\index{motor\_out\_2@{motor\_out\_2}!motor\_t@{motor\_t}}
+\doxysubsubsection{\texorpdfstring{motor\_out\_2}{motor\_out\_2}}
+{\footnotesize\ttfamily \label{structmotor__t_a8c75fcb0db73c098528643c385376a14} 
+uint16\+\_\+t motor\+\_\+t::\+motor\+\_\+out\+\_\+2}
+
+
+
+Secondary PWM timer channel held low for this drive direction. 
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Inc/\+\doxymbox{\hyperlink{motor__driver_8h}{motor\+\_\+driver.\+h}}\end{DoxyCompactItemize}

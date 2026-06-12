@@ -1,0 +1,26 @@
+\doxysection{valve.\+h}
+\hypertarget{valve_8h_source}{}\label{valve_8h_source}\index{Inc/valve.h@{Inc/valve.h}}
+\doxymbox{\hyperlink{valve_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{preprocessor}{\#ifndef\ INC\_VALVE\_H\_}}
+\DoxyCodeLine{00013\ \textcolor{preprocessor}{\#define\ INC\_VALVE\_H\_}}
+\DoxyCodeLine{00014\ }
+\DoxyCodeLine{00015\ \textcolor{preprocessor}{\#include\ "{}stm32f4xx\_hal.h"{}}}
+\DoxyCodeLine{00016\ }
+\DoxyCodeLine{00020\ \textcolor{keyword}{typedef}\ \textcolor{keyword}{struct}\{}
+\DoxyCodeLine{00022\ \ \ \ \ GPIO\_TypeDef*\ \doxymbox{\hyperlink{structvalve__t_ab25c7ed0e3e1faaccedf94bda262962e}{gpio\_Relay}};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00025\ \ \ \ \ uint16\_t\ \doxymbox{\hyperlink{structvalve__t_a80e0db80509fb9eee27d7d0676117a99}{pin\_Relay}};}
+\DoxyCodeLine{00026\ \textcolor{comment}{//\ \ GPIO\_TypeDef*\ Relay2\_GPIO\_Port;}}
+\DoxyCodeLine{00027\ \textcolor{comment}{//\ \ uint16\_t\ Relay2\_Pin;}}
+\DoxyCodeLine{00028\ \}\ \doxymbox{\hyperlink{structvalve__t}{valve\_t}};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00035\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{valve_8h_a75a34bba40281d9babf4010f64f9e233}{valve\_open}}(\doxymbox{\hyperlink{structvalve__t}{valve\_t}}*\ p\_valve);}
+\DoxyCodeLine{00036\ }
+\DoxyCodeLine{00042\ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{valve_8h_a6c83dc7aed505a5af939d9d62d07a9e7}{valve\_close}}(\doxymbox{\hyperlink{structvalve__t}{valve\_t}}*\ p\_valve);}
+\DoxyCodeLine{00043\ }
+\DoxyCodeLine{00044\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{/*\ INC\_VALVE\_H\_\ */}\textcolor{preprocessor}{}}
+
+\end{DoxyCode}

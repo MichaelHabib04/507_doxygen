@@ -1,0 +1,111 @@
+\doxysection{tds\+\_\+t Struct Reference}
+\hypertarget{structtds__t}{}\label{structtds__t}\index{tds\_t@{tds\_t}}
+
+
+Runtime state and peripheral handles for a TDS probe.  
+
+
+
+
+{\ttfamily \+\#include $<$probe.\+h$>$}
+
+\doxysubsubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+ADC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structtds__t_a9b294a6452e3ccd0a750856ffbec2efa}{hadc}}
+\begin{DoxyCompactList}\small\item\em ADC handle used to sample the probe voltage. \end{DoxyCompactList}\item 
+UART\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*} \doxymbox{\hyperlink{structtds__t_a2638bbd28a4105d7e17993fbb52548cb}{huart}}
+\begin{DoxyCompactList}\small\item\em UART handle used to print debug or telemetry messages. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{structtds__t_ab488fd98a7de0006341f5cf47f91d035}{adc\+\_\+value}}
+\begin{DoxyCompactList}\small\item\em Most recent raw 12-\/bit ADC conversion value. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structtds__t_afc9423a6ab5c6c54fe5d53eecebab779}{voltage}}
+\begin{DoxyCompactList}\small\item\em Most recent probe voltage in volts. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structtds__t_a7d924f493b980ff573c5fe8146e20326}{ppm}}
+\begin{DoxyCompactList}\small\item\em Most recent estimated total dissolved solids value in ppm. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structtds__t_ad5c71db1edd602c9f3449bea3a9b557e}{temperature\+\_\+c}}
+\begin{DoxyCompactList}\small\item\em Water temperature used for compensation in degrees Celsius. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{structtds__t_a7e19e74d8e4af6841bf43e93cd92c0c9}{vref}}
+\begin{DoxyCompactList}\small\item\em ADC reference voltage in volts. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Runtime state and peripheral handles for a TDS probe. 
+
+\label{structtds__t_doc-variable-members}
+\Hypertarget{structtds__t_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{structtds__t_ab488fd98a7de0006341f5cf47f91d035}\index{tds\_t@{tds\_t}!adc\_value@{adc\_value}}
+\index{adc\_value@{adc\_value}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{adc\_value}{adc\_value}}
+{\footnotesize\ttfamily \label{structtds__t_ab488fd98a7de0006341f5cf47f91d035} 
+uint32\+\_\+t tds\+\_\+t::\+adc\+\_\+value}
+
+
+
+Most recent raw 12-\/bit ADC conversion value. 
+
+\Hypertarget{structtds__t_a9b294a6452e3ccd0a750856ffbec2efa}\index{tds\_t@{tds\_t}!hadc@{hadc}}
+\index{hadc@{hadc}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{hadc}{hadc}}
+{\footnotesize\ttfamily \label{structtds__t_a9b294a6452e3ccd0a750856ffbec2efa} 
+ADC\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} tds\+\_\+t::\+hadc}
+
+
+
+ADC handle used to sample the probe voltage. 
+
+\Hypertarget{structtds__t_a2638bbd28a4105d7e17993fbb52548cb}\index{tds\_t@{tds\_t}!huart@{huart}}
+\index{huart@{huart}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{huart}{huart}}
+{\footnotesize\ttfamily \label{structtds__t_a2638bbd28a4105d7e17993fbb52548cb} 
+UART\+\_\+\+Handle\+Type\+Def\texorpdfstring{$\ast$}{*} tds\+\_\+t::\+huart}
+
+
+
+UART handle used to print debug or telemetry messages. 
+
+\Hypertarget{structtds__t_a7d924f493b980ff573c5fe8146e20326}\index{tds\_t@{tds\_t}!ppm@{ppm}}
+\index{ppm@{ppm}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{ppm}{ppm}}
+{\footnotesize\ttfamily \label{structtds__t_a7d924f493b980ff573c5fe8146e20326} 
+float tds\+\_\+t::\+ppm}
+
+
+
+Most recent estimated total dissolved solids value in ppm. 
+
+\Hypertarget{structtds__t_ad5c71db1edd602c9f3449bea3a9b557e}\index{tds\_t@{tds\_t}!temperature\_c@{temperature\_c}}
+\index{temperature\_c@{temperature\_c}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{temperature\_c}{temperature\_c}}
+{\footnotesize\ttfamily \label{structtds__t_ad5c71db1edd602c9f3449bea3a9b557e} 
+float tds\+\_\+t::\+temperature\+\_\+c}
+
+
+
+Water temperature used for compensation in degrees Celsius. 
+
+\Hypertarget{structtds__t_afc9423a6ab5c6c54fe5d53eecebab779}\index{tds\_t@{tds\_t}!voltage@{voltage}}
+\index{voltage@{voltage}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{voltage}{voltage}}
+{\footnotesize\ttfamily \label{structtds__t_afc9423a6ab5c6c54fe5d53eecebab779} 
+float tds\+\_\+t::\+voltage}
+
+
+
+Most recent probe voltage in volts. 
+
+\Hypertarget{structtds__t_a7e19e74d8e4af6841bf43e93cd92c0c9}\index{tds\_t@{tds\_t}!vref@{vref}}
+\index{vref@{vref}!tds\_t@{tds\_t}}
+\doxysubsubsection{\texorpdfstring{vref}{vref}}
+{\footnotesize\ttfamily \label{structtds__t_a7e19e74d8e4af6841bf43e93cd92c0c9} 
+float tds\+\_\+t::\+vref}
+
+
+
+ADC reference voltage in volts. 
+
+
+
+The documentation for this struct was generated from the following file:\+\begin{DoxyCompactItemize}
+\item 
+Inc/\+\doxymbox{\hyperlink{probe_8h}{probe.\+h}}\end{DoxyCompactItemize}
