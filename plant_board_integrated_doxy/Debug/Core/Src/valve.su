@@ -1,2 +1,0 @@
-../Core/Src/valve.c:10:6:valve_open	16	static
-../Core/Src/valve.c:14:6:valve_close	16	static

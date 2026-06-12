@@ -26,14 +26,6 @@ var NAVTREE =
 [
   [ "Plant Board Documentation", "index.html", [
     [ "Topics", "topics.html", "topics" ],
-    [ "Classes", "annotated.html", [
-      [ "Class List", "annotated.html", "annotated_dup" ],
-      [ "Class Index", "classes.html", null ],
-      [ "Class Members", "functions.html", [
-        [ "All", "functions.html", null ],
-        [ "Variables", "functions_vars.html", null ]
-      ] ]
-    ] ],
     [ "Files", "files.html", [
       [ "File List", "files.html", "files_dup" ],
       [ "File Members", "globals.html", [
@@ -49,8 +41,7 @@ var NAVTREE =
 
 var NAVTREEINDEX =
 [
-"annotated.html",
-"syscalls_8c.html#a945e539df8e0f66d3c73c533fe1968ee"
+"dir_1e26994493a58d6bf59e9f04beb12239.html"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

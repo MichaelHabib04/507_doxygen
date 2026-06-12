@@ -1,5 +1,5 @@
-\doxysection{Src/\+float.c File Reference}
-\hypertarget{float_8c}{}\label{float_8c}\index{Src/float.c@{Src/float.c}}
+\doxysection{plant\+\_\+board\+\_\+integrated\+\_\+doxy/\+\+Core/\+\+Src/\+float.c File Reference}
+\hypertarget{float_8c}{}\label{float_8c}\index{plant\_board\_integrated\_doxy/Core/Src/float.c@{plant\_board\_integrated\_doxy/Core/Src/float.c}}
 
 
 Implementation of the float switch GPIO read helper.  
@@ -9,7 +9,7 @@ Implementation of the float switch GPIO read helper.
 \doxysubsubsection*{Functions}
 \begin{DoxyCompactItemize}
 \item 
-GPIO\+\_\+\+Pin\+State \doxymbox{\hyperlink{float_8c_a0946796970c135c9d3dd803f514db044}{read\+\_\+float}} (\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+\_\+float)
+GPIO\+\_\+\+Pin\+State \doxymbox{\hyperlink{float_8c_a0946796970c135c9d3dd803f514db044}{read\+\_\+float}} (float\+\_\+t \texorpdfstring{$\ast$}{*}p\+\_\+float)
 \begin{DoxyCompactList}\small\item\em Read the current state of the float switch input pin. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
@@ -31,7 +31,7 @@ malaika
 \index{read\_float@{read\_float}!float.c@{float.c}}
 \doxysubsubsection{\texorpdfstring{read\_float()}{read\_float()}}
 {\footnotesize\ttfamily \label{float_8c_a0946796970c135c9d3dd803f514db044} 
-GPIO\+\_\+\+Pin\+State read\+\_\+float (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+float}{}\end{DoxyParamCaption})}
+GPIO\+\_\+\+Pin\+State read\+\_\+float (\begin{DoxyParamCaption}\item[{float\+\_\+t \texorpdfstring{$\ast$}{*}}]{p\+\_\+float}{}\end{DoxyParamCaption})}
 
 
 
@@ -43,13 +43,5 @@ Read the current state of the float switch input pin.
 \hline
 \end{DoxyParams}
 \begin{DoxyReturn}{Returns}
-GPIO\+\_\+\+PIN\+\_\+\+SET if the configured input is high; GPIO\+\_\+\+PIN\+\_\+\+RESET if low.
-\end{DoxyReturn}
-
-\begin{DoxyParams}{Parameters}
-{\em p\+\_\+float} & Pointer to the float switch configuration. \\
-\hline
-\end{DoxyParams}
-\begin{DoxyReturn}{Returns}
-GPIO\+\_\+\+Pin\+State Current GPIO state returned by HAL\+\_\+\+GPIO\+\_\+\+Read\+Pin(). 
+GPIO\+\_\+\+PIN\+\_\+\+SET if the configured input is high; GPIO\+\_\+\+PIN\+\_\+\+RESET if low. 
 \end{DoxyReturn}

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=11"/>
 <meta name="generator" content="Doxygen 1.17.0"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Plant Board Documentation: Src/main.cpp File Reference</title>
+<title>Plant Board Documentation: plant_board_integrated_doxy/Core/Src/main.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="codefolding.js"></script>
 <script type="text/javascript" src="clipboard.js"></script>
@@ -121,11 +121,11 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('main_8cpp.html
 
 <p>: Main program body for the STM32 nutrient/water controller  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;<a class="el" href="main_8h_source.html">main.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="motor__driver_8h_source.html">motor_driver.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="valve_8h_source.html">valve.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="float_8h_source.html">float.h</a>&quot;</code><br />
-<code>#include &quot;<a class="el" href="probe_8h_source.html">probe.h</a>&quot;</code><br />
+<div class="textblock"><code>#include &quot;main.h&quot;</code><br />
+<code>#include &quot;motor_driver.h&quot;</code><br />
+<code>#include &quot;valve.h&quot;</code><br />
+<code>#include &quot;float.h&quot;</code><br />
+<code>#include &quot;probe.h&quot;</code><br />
 <code>#include &lt;cctype&gt;</code><br />
 <code>#include &lt;cstdio&gt;</code><br />
 <code>#include &lt;cstdlib&gt;</code><br />
@@ -167,15 +167,15 @@ Variables</h2></td></tr>
 <tr class="memitem:a25fc663547539bc49fecc0011bd76ab5" id="r_a25fc663547539bc49fecc0011bd76ab5"><td class="memItemLeft">TIM_HandleTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#a25fc663547539bc49fecc0011bd76ab5">htim1</a></td></tr>
 <tr class="memitem:a2cf715bef37f7e8ef385a30974a5f0d5" id="r_a2cf715bef37f7e8ef385a30974a5f0d5"><td class="memItemLeft">UART_HandleTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#a2cf715bef37f7e8ef385a30974a5f0d5">huart1</a></td></tr>
 <tr class="memitem:aa9479c261d65eecedd3d9582f7f0f89c" id="r_aa9479c261d65eecedd3d9582f7f0f89c"><td class="memItemLeft">UART_HandleTypeDef&#160;</td><td class="memItemRight"><a class="el" href="#aa9479c261d65eecedd3d9582f7f0f89c">huart2</a></td></tr>
-<tr class="memitem:a794d717430bb56bc09484be27e421581" id="r_a794d717430bb56bc09484be27e421581"><td class="memItemLeft"><a class="el" href="structmotor__t.html">motor_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#a794d717430bb56bc09484be27e421581">motor</a></td></tr>
+<tr class="memitem:a794d717430bb56bc09484be27e421581" id="r_a794d717430bb56bc09484be27e421581"><td class="memItemLeft">motor_t&#160;</td><td class="memItemRight"><a class="el" href="#a794d717430bb56bc09484be27e421581">motor</a></td></tr>
 <tr class="memdesc:a794d717430bb56bc09484be27e421581"><td class="mdescLeft">&#160;</td><td class="mdescRight">PWM motor object used for periodic aeration.  <br /></td></tr>
-<tr class="memitem:acacb56626a3fbca6dc05960abced27ae" id="r_acacb56626a3fbca6dc05960abced27ae"><td class="memItemLeft"><a class="el" href="structvalve__t.html">valve_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#acacb56626a3fbca6dc05960abced27ae">valve1</a></td></tr>
+<tr class="memitem:acacb56626a3fbca6dc05960abced27ae" id="r_acacb56626a3fbca6dc05960abced27ae"><td class="memItemLeft">valve_t&#160;</td><td class="memItemRight"><a class="el" href="#acacb56626a3fbca6dc05960abced27ae">valve1</a></td></tr>
 <tr class="memdesc:acacb56626a3fbca6dc05960abced27ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relay valve used to add water.  <br /></td></tr>
-<tr class="memitem:af9a6f05476b2df8c46259b2629a7a23a" id="r_af9a6f05476b2df8c46259b2629a7a23a"><td class="memItemLeft"><a class="el" href="structvalve__t.html">valve_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#af9a6f05476b2df8c46259b2629a7a23a">valve2</a></td></tr>
+<tr class="memitem:af9a6f05476b2df8c46259b2629a7a23a" id="r_af9a6f05476b2df8c46259b2629a7a23a"><td class="memItemLeft">valve_t&#160;</td><td class="memItemRight"><a class="el" href="#af9a6f05476b2df8c46259b2629a7a23a">valve2</a></td></tr>
 <tr class="memdesc:af9a6f05476b2df8c46259b2629a7a23a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Relay valve used to add nutrient solution/slop.  <br /></td></tr>
-<tr class="memitem:ab84991de69a42621cf3021db7886ec8e" id="r_ab84991de69a42621cf3021db7886ec8e"><td class="memItemLeft"><a class="el" href="structfloat__t.html">float_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ab84991de69a42621cf3021db7886ec8e">float1</a></td></tr>
+<tr class="memitem:ab84991de69a42621cf3021db7886ec8e" id="r_ab84991de69a42621cf3021db7886ec8e"><td class="memItemLeft">float_t&#160;</td><td class="memItemRight"><a class="el" href="#ab84991de69a42621cf3021db7886ec8e">float1</a></td></tr>
 <tr class="memdesc:ab84991de69a42621cf3021db7886ec8e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Float switch used to detect the tank water level.  <br /></td></tr>
-<tr class="memitem:ac04d177e721a5bd5ce6db73deb2c8495" id="r_ac04d177e721a5bd5ce6db73deb2c8495"><td class="memItemLeft"><a class="el" href="structtds__t.html">tds_t</a>&#160;</td><td class="memItemRight"><a class="el" href="#ac04d177e721a5bd5ce6db73deb2c8495">tds1</a></td></tr>
+<tr class="memitem:ac04d177e721a5bd5ce6db73deb2c8495" id="r_ac04d177e721a5bd5ce6db73deb2c8495"><td class="memItemLeft">tds_t&#160;</td><td class="memItemRight"><a class="el" href="#ac04d177e721a5bd5ce6db73deb2c8495">tds1</a></td></tr>
 <tr class="memdesc:ac04d177e721a5bd5ce6db73deb2c8495"><td class="mdescLeft">&#160;</td><td class="mdescRight">TDS probe state used for ADC sampling and UART reporting.  <br /></td></tr>
 <tr class="memitem:add40bd194904e7fcbca735288f03bb0e" id="r_add40bd194904e7fcbca735288f03bb0e"><td class="memItemLeft">uint8_t&#160;</td><td class="memItemRight"><a class="el" href="#add40bd194904e7fcbca735288f03bb0e">motor_enable</a> = 0</td></tr>
 <tr class="memdesc:add40bd194904e7fcbca735288f03bb0e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Nonzero when the aeration motor should be running.  <br /></td></tr>
@@ -284,15 +284,12 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 
 <p>This function is executed in case of error occurrence. </p>
-<p>Handle unrecoverable application or HAL configuration errors.</p>
 <dl class="retval"><dt>Return values</dt><dd>
   <table class="retval">
     <tr><td class="paramname">None</td><td></td></tr>
   </table>
   </dd>
 </dl>
-<p>This function is executed in case of error occurrence.</p>
-<p>This function disables interrupts and traps the firmware in an infinite loop. </p>
 
 </div>
 </div>
@@ -407,7 +404,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structfloat__t.html">float_t</a> float1</td>
+          <td class="memname">float_t float1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -495,7 +492,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structmotor__t.html">motor_t</a> motor</td>
+          <td class="memname">motor_t motor</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -559,7 +556,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structtds__t.html">tds_t</a> tds1</td>
+          <td class="memname">tds_t tds1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -575,7 +572,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structvalve__t.html">valve_t</a> valve1</td>
+          <td class="memname">valve_t valve1</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -591,7 +588,7 @@ Variables</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="structvalve__t.html">valve_t</a> valve2</td>
+          <td class="memname">valve_t valve2</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -613,7 +610,7 @@ Variables</h2></td></tr>
 <!-- start footer part -->
 <div id="nav-path" class="navpath"><!-- id is needed for treeview function! -->
   <ul>
-    <li class="navelem"><a href="dir_413f4e031a85da0d68269c6fd2f76e1c.html">Src</a></li><li class="navelem"><a href="main_8cpp.html">main.cpp</a></li>
+    <li class="navelem"><a href="dir_1e26994493a58d6bf59e9f04beb12239.html">plant_board_integrated_doxy</a></li><li class="navelem"><a href="dir_53d617c6c02b8bb15ad56e55b1a1828a.html">Core</a></li><li class="navelem"><a href="dir_8509a09111fcec20ce04bbffbe4d2768.html">Src</a></li><li class="navelem"><a href="main_8cpp.html">main.cpp</a></li>
     <li class="footer">Generated by <a href="https://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.17.0 </li>
   </ul>
 </div>

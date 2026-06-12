@@ -1,5 +1,5 @@
-\doxysection{Src/\+main.cpp File Reference}
-\hypertarget{main_8cpp}{}\label{main_8cpp}\index{Src/main.cpp@{Src/main.cpp}}
+\doxysection{plant\+\_\+board\+\_\+integrated\+\_\+doxy/\+\+Core/\+\+Src/\+main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{plant\_board\_integrated\_doxy/Core/Src/main.cpp@{plant\_board\_integrated\_doxy/Core/Src/main.cpp}}
 
 
 :\+ Main program body for the STM32 nutrient/\+water controller  
@@ -54,15 +54,15 @@ UART\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a2cf715bef37f7e8ef3
 \item 
 UART\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
 \item 
-\doxymbox{\hyperlink{structmotor__t}{motor\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_a794d717430bb56bc09484be27e421581}{motor}}
+motor\+\_\+t \doxymbox{\hyperlink{main_8cpp_a794d717430bb56bc09484be27e421581}{motor}}
 \begin{DoxyCompactList}\small\item\em PWM motor object used for periodic aeration. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_acacb56626a3fbca6dc05960abced27ae}{valve1}}
+valve\+\_\+t \doxymbox{\hyperlink{main_8cpp_acacb56626a3fbca6dc05960abced27ae}{valve1}}
 \begin{DoxyCompactList}\small\item\em Relay valve used to add water. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_af9a6f05476b2df8c46259b2629a7a23a}{valve2}}
+valve\+\_\+t \doxymbox{\hyperlink{main_8cpp_af9a6f05476b2df8c46259b2629a7a23a}{valve2}}
 \begin{DoxyCompactList}\small\item\em Relay valve used to add nutrient solution/\+slop. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_ab84991de69a42621cf3021db7886ec8e}{float1}}
+float\+\_\+t \doxymbox{\hyperlink{main_8cpp_ab84991de69a42621cf3021db7886ec8e}{float1}}
 \begin{DoxyCompactList}\small\item\em Float switch used to detect the tank water level. \end{DoxyCompactList}\item 
-\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_ac04d177e721a5bd5ce6db73deb2c8495}{tds1}}
+tds\+\_\+t \doxymbox{\hyperlink{main_8cpp_ac04d177e721a5bd5ce6db73deb2c8495}{tds1}}
 \begin{DoxyCompactList}\small\item\em TDS probe state used for ADC sampling and UART reporting. \end{DoxyCompactList}\item 
 uint8\+\_\+t \doxymbox{\hyperlink{main_8cpp_add40bd194904e7fcbca735288f03bb0e}{motor\+\_\+enable}} = 0
 \begin{DoxyCompactList}\small\item\em Nonzero when the aeration motor should be running. \end{DoxyCompactList}\item 
@@ -175,16 +175,12 @@ void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyPar
 
 This function is executed in case of error occurrence. 
 
-Handle unrecoverable application or HAL configuration errors.
-
 
 \begin{DoxyRetVals}{Return values}
 {\em None} & \\
 \hline
 \end{DoxyRetVals}
-This function is executed in case of error occurrence.
-
-This function disables interrupts and traps the firmware in an infinite loop. \Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\index{main.cpp@{main.cpp}!main@{main}}
+\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\index{main.cpp@{main.cpp}!main@{main}}
 \index{main@{main}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{main()}{main()}}
 {\footnotesize\ttfamily \label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
@@ -261,7 +257,7 @@ Current state-\/machine action being processed by the main loop.
 \index{float1@{float1}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{float1}{float1}}
 {\footnotesize\ttfamily \label{main_8cpp_ab84991de69a42621cf3021db7886ec8e} 
-\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} float1}
+float\+\_\+t float1}
 
 
 
@@ -305,7 +301,7 @@ HAL tick count for the end of the previous aeration cycle.
 \index{motor@{motor}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{motor}{motor}}
 {\footnotesize\ttfamily \label{main_8cpp_a794d717430bb56bc09484be27e421581} 
-\doxymbox{\hyperlink{structmotor__t}{motor\+\_\+t}} motor}
+motor\+\_\+t motor}
 
 
 
@@ -345,7 +341,7 @@ Latest TDS measurement in parts per million.
 \index{tds1@{tds1}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{tds1}{tds1}}
 {\footnotesize\ttfamily \label{main_8cpp_ac04d177e721a5bd5ce6db73deb2c8495} 
-\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} tds1}
+tds\+\_\+t tds1}
 
 
 
@@ -355,7 +351,7 @@ TDS probe state used for ADC sampling and UART reporting.
 \index{valve1@{valve1}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{valve1}{valve1}}
 {\footnotesize\ttfamily \label{main_8cpp_acacb56626a3fbca6dc05960abced27ae} 
-\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} valve1}
+valve\+\_\+t valve1}
 
 
 
@@ -365,7 +361,7 @@ Relay valve used to add water.
 \index{valve2@{valve2}!main.cpp@{main.cpp}}
 \doxysubsubsection{\texorpdfstring{valve2}{valve2}}
 {\footnotesize\ttfamily \label{main_8cpp_af9a6f05476b2df8c46259b2629a7a23a} 
-\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} valve2}
+valve\+\_\+t valve2}
 
 
 

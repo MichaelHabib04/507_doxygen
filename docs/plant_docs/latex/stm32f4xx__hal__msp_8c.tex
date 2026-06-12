@@ -1,5 +1,5 @@
-\doxysection{Src/\+stm32f4xx\+\_\+hal\+\_\+msp.c File Reference}
-\hypertarget{stm32f4xx__hal__msp_8c}{}\label{stm32f4xx__hal__msp_8c}\index{Src/stm32f4xx\_hal\_msp.c@{Src/stm32f4xx\_hal\_msp.c}}
+\doxysection{plant\+\_\+board\+\_\+integrated\+\_\+doxy/\+\+Core/\+\+Src/\+stm32f4xx\+\_\+hal\+\_\+msp.c File Reference}
+\hypertarget{stm32f4xx__hal__msp_8c}{}\label{stm32f4xx__hal__msp_8c}\index{plant\_board\_integrated\_doxy/Core/Src/stm32f4xx\_hal\_msp.c@{plant\_board\_integrated\_doxy/Core/Src/stm32f4xx\_hal\_msp.c}}
 
 
 This file provides code for the MSP Initialization and de-\/\+Initialization codes.  
@@ -10,7 +10,7 @@ This file provides code for the MSP Initialization and de-\/\+Initialization cod
 \begin{DoxyCompactItemize}
 \item 
 void \doxymbox{\hyperlink{stm32f4xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b}{HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init}} (TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}htim)
-\begin{DoxyCompactList}\small\item\em Complete timer GPIO post-\/initialization after PWM setup. \end{DoxyCompactList}\item 
+\item 
 void \doxymbox{\hyperlink{stm32f4xx__hal__msp_8c_ae4fb8e66865c87d0ebab74a726a6891f}{HAL\+\_\+\+Msp\+Init}} (void)
 \item 
 void \doxymbox{\hyperlink{stm32f4xx__hal__msp_8c_aa30863492d5c3103e3e8ce8a63dadd07}{HAL\+\_\+\+ADC\+\_\+\+Msp\+Init}} (ADC\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}hadc)
@@ -92,15 +92,6 @@ Initializes the Global MSP. \Hypertarget{stm32f4xx__hal__msp_8c_ae70bce6c39d0b57
 {\footnotesize\ttfamily \label{stm32f4xx__hal__msp_8c_ae70bce6c39d0b570a7523b86738cec4b} 
 void HAL\+\_\+\+TIM\+\_\+\+Msp\+Post\+Init (\begin{DoxyParamCaption}\item[{TIM\+\_\+\+Handle\+Type\+Def \texorpdfstring{$\ast$}{*}}]{htim}{}\end{DoxyParamCaption})}
 
-
-
-Complete timer GPIO post-\/initialization after PWM setup. 
-
-
-\begin{DoxyParams}{Parameters}
-{\em htim} & Pointer to the timer handle being post-\/initialized. \\
-\hline
-\end{DoxyParams}
 TIM1 GPIO Configuration PA8 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH1 PA9 -\/-\/-\/-\/-\/-\/\texorpdfstring{$>$}{>} TIM1\+\_\+\+CH2\Hypertarget{stm32f4xx__hal__msp_8c_af5f524564b3a99a9f87f45227309e866}\index{stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}!HAL\_TIM\_PWM\_MspDeInit@{HAL\_TIM\_PWM\_MspDeInit}}
 \index{HAL\_TIM\_PWM\_MspDeInit@{HAL\_TIM\_PWM\_MspDeInit}!stm32f4xx\_hal\_msp.c@{stm32f4xx\_hal\_msp.c}}
 \doxysubsubsection{\texorpdfstring{HAL\_TIM\_PWM\_MspDeInit()}{HAL\_TIM\_PWM\_MspDeInit()}}
