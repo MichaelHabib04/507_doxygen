@@ -1,0 +1,37 @@
+# Ignore generated Doxygen output
+docs/controller_docs/
+docs/plant_docs/
+docs/html/
+docs/latex/
+
+# Keep GitHub Pages entry files/assets if needed
+!docs/
+!docs/.nojekyll
+!docs/index.html
+!docs/images/
+
+# Keep source inputs for Doxygen
+!Controller_integrated_doxy/
+!Controller_integrated_doxy/Core/
+!Controller_integrated_doxy/Core/**
+!Controller_integrated_doxy/docs/
+!Controller_integrated_doxy/docs/**
+
+!plant_board_integrated_doxy/
+!plant_board_integrated_doxy/Core/
+!plant_board_integrated_doxy/Core/**
+!plant_board_integrated_doxy/docs/
+!plant_board_integrated_doxy/docs/**
+
+# Optional: ignore common build/editor junk
+*.o
+*.elf
+*.bin
+*.hex
+*.map
+*.lst
+*.log
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
