@@ -1,0 +1,437 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__conf_8h_source" xml:lang="en-US">
+<title>stm32f4xx_hal_conf.h</title>
+<indexterm><primary>Core/Inc/stm32f4xx_hal_conf.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+21 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+22 
+23 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+24 <emphasis role="preprocessor">#ifndef&#32;__STM32F4xx_HAL_CONF_H</emphasis>
+25 <emphasis role="preprocessor">#define&#32;__STM32F4xx_HAL_CONF_H</emphasis>
+26 
+27 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+28 &#32;<emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+29 <emphasis role="preprocessor">#endif</emphasis>
+30 
+31 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+32 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+33 
+34 <emphasis role="comment">/*&#32;##########################&#32;Module&#32;Selection&#32;##############################&#32;*/</emphasis>
+38 <emphasis role="preprocessor">#define&#32;HAL_MODULE_ENABLED</emphasis>
+39 
+40 &#32;&#32;<emphasis role="comment">/*&#32;#define&#32;HAL_CRYP_MODULE_ENABLED&#32;*/</emphasis>
+41 <emphasis role="preprocessor">#define&#32;HAL_ADC_MODULE_ENABLED</emphasis>
+42 <emphasis role="comment">/*&#32;#define&#32;HAL_CAN_MODULE_ENABLED&#32;*/</emphasis>
+43 <emphasis role="comment">/*&#32;#define&#32;HAL_CRC_MODULE_ENABLED&#32;*/</emphasis>
+44 <emphasis role="comment">/*&#32;#define&#32;HAL_CAN_LEGACY_MODULE_ENABLED&#32;*/</emphasis>
+45 <emphasis role="comment">/*&#32;#define&#32;HAL_DAC_MODULE_ENABLED&#32;*/</emphasis>
+46 <emphasis role="comment">/*&#32;#define&#32;HAL_DCMI_MODULE_ENABLED&#32;*/</emphasis>
+47 <emphasis role="comment">/*&#32;#define&#32;HAL_DMA2D_MODULE_ENABLED&#32;*/</emphasis>
+48 <emphasis role="comment">/*&#32;#define&#32;HAL_ETH_MODULE_ENABLED&#32;*/</emphasis>
+49 <emphasis role="comment">/*&#32;#define&#32;HAL_ETH_LEGACY_MODULE_ENABLED&#32;*/</emphasis>
+50 <emphasis role="comment">/*&#32;#define&#32;HAL_NAND_MODULE_ENABLED&#32;*/</emphasis>
+51 <emphasis role="comment">/*&#32;#define&#32;HAL_NOR_MODULE_ENABLED&#32;*/</emphasis>
+52 <emphasis role="comment">/*&#32;#define&#32;HAL_PCCARD_MODULE_ENABLED&#32;*/</emphasis>
+53 <emphasis role="comment">/*&#32;#define&#32;HAL_SRAM_MODULE_ENABLED&#32;*/</emphasis>
+54 <emphasis role="comment">/*&#32;#define&#32;HAL_SDRAM_MODULE_ENABLED&#32;*/</emphasis>
+55 <emphasis role="comment">/*&#32;#define&#32;HAL_HASH_MODULE_ENABLED&#32;*/</emphasis>
+56 <emphasis role="comment">/*&#32;#define&#32;HAL_I2C_MODULE_ENABLED&#32;*/</emphasis>
+57 <emphasis role="comment">/*&#32;#define&#32;HAL_I2S_MODULE_ENABLED&#32;*/</emphasis>
+58 <emphasis role="comment">/*&#32;#define&#32;HAL_IWDG_MODULE_ENABLED&#32;*/</emphasis>
+59 <emphasis role="comment">/*&#32;#define&#32;HAL_LTDC_MODULE_ENABLED&#32;*/</emphasis>
+60 <emphasis role="comment">/*&#32;#define&#32;HAL_RNG_MODULE_ENABLED&#32;*/</emphasis>
+61 <emphasis role="comment">/*&#32;#define&#32;HAL_RTC_MODULE_ENABLED&#32;*/</emphasis>
+62 <emphasis role="comment">/*&#32;#define&#32;HAL_SAI_MODULE_ENABLED&#32;*/</emphasis>
+63 <emphasis role="comment">/*&#32;#define&#32;HAL_SD_MODULE_ENABLED&#32;*/</emphasis>
+64 <emphasis role="comment">/*&#32;#define&#32;HAL_MMC_MODULE_ENABLED&#32;*/</emphasis>
+65 <emphasis role="comment">/*&#32;#define&#32;HAL_SPI_MODULE_ENABLED&#32;*/</emphasis>
+66 <emphasis role="preprocessor">#define&#32;HAL_TIM_MODULE_ENABLED</emphasis>
+67 <emphasis role="preprocessor">#define&#32;HAL_UART_MODULE_ENABLED</emphasis>
+68 <emphasis role="comment">/*&#32;#define&#32;HAL_USART_MODULE_ENABLED&#32;*/</emphasis>
+69 <emphasis role="comment">/*&#32;#define&#32;HAL_IRDA_MODULE_ENABLED&#32;*/</emphasis>
+70 <emphasis role="comment">/*&#32;#define&#32;HAL_SMARTCARD_MODULE_ENABLED&#32;*/</emphasis>
+71 <emphasis role="comment">/*&#32;#define&#32;HAL_SMBUS_MODULE_ENABLED&#32;*/</emphasis>
+72 <emphasis role="comment">/*&#32;#define&#32;HAL_WWDG_MODULE_ENABLED&#32;*/</emphasis>
+73 <emphasis role="comment">/*&#32;#define&#32;HAL_PCD_MODULE_ENABLED&#32;*/</emphasis>
+74 <emphasis role="comment">/*&#32;#define&#32;HAL_HCD_MODULE_ENABLED&#32;*/</emphasis>
+75 <emphasis role="comment">/*&#32;#define&#32;HAL_DSI_MODULE_ENABLED&#32;*/</emphasis>
+76 <emphasis role="comment">/*&#32;#define&#32;HAL_QSPI_MODULE_ENABLED&#32;*/</emphasis>
+77 <emphasis role="comment">/*&#32;#define&#32;HAL_QSPI_MODULE_ENABLED&#32;*/</emphasis>
+78 <emphasis role="comment">/*&#32;#define&#32;HAL_CEC_MODULE_ENABLED&#32;*/</emphasis>
+79 <emphasis role="comment">/*&#32;#define&#32;HAL_FMPI2C_MODULE_ENABLED&#32;*/</emphasis>
+80 <emphasis role="comment">/*&#32;#define&#32;HAL_FMPSMBUS_MODULE_ENABLED&#32;*/</emphasis>
+81 <emphasis role="comment">/*&#32;#define&#32;HAL_SPDIFRX_MODULE_ENABLED&#32;*/</emphasis>
+82 <emphasis role="comment">/*&#32;#define&#32;HAL_DFSDM_MODULE_ENABLED&#32;*/</emphasis>
+83 <emphasis role="comment">/*&#32;#define&#32;HAL_LPTIM_MODULE_ENABLED&#32;*/</emphasis>
+84 <emphasis role="preprocessor">#define&#32;HAL_GPIO_MODULE_ENABLED</emphasis>
+85 <emphasis role="preprocessor">#define&#32;HAL_EXTI_MODULE_ENABLED</emphasis>
+86 <emphasis role="preprocessor">#define&#32;HAL_DMA_MODULE_ENABLED</emphasis>
+87 <emphasis role="preprocessor">#define&#32;HAL_RCC_MODULE_ENABLED</emphasis>
+88 <emphasis role="preprocessor">#define&#32;HAL_FLASH_MODULE_ENABLED</emphasis>
+89 <emphasis role="preprocessor">#define&#32;HAL_PWR_MODULE_ENABLED</emphasis>
+90 <emphasis role="preprocessor">#define&#32;HAL_CORTEX_MODULE_ENABLED</emphasis>
+91 
+92 <emphasis role="comment">/*&#32;##########################&#32;HSE/HSI&#32;Values&#32;adaptation&#32;#####################&#32;*/</emphasis>
+98 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(HSE_VALUE)</emphasis>
+99 <emphasis role="preprocessor">&#32;&#32;#define&#32;HSE_VALUE&#32;&#32;&#32;&#32;25000000U&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+100 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HSE_VALUE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+101 
+102 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(HSE_STARTUP_TIMEOUT)</emphasis>
+103 <emphasis role="preprocessor">&#32;&#32;#define&#32;HSE_STARTUP_TIMEOUT&#32;&#32;&#32;&#32;100U&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+104 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HSE_STARTUP_TIMEOUT&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+105 
+111 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(HSI_VALUE)</emphasis>
+112 <emphasis role="preprocessor">&#32;&#32;#define&#32;HSI_VALUE&#32;&#32;&#32;&#32;((uint32_t)16000000U)&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+113 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HSI_VALUE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+114 
+118 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(LSI_VALUE)</emphasis>
+119 <emphasis role="preprocessor">&#32;#define&#32;LSI_VALUE&#32;&#32;32000U&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+120 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;LSI_VALUE&#32;*/</emphasis><emphasis role="preprocessor">&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis><emphasis role="preprocessor"></emphasis>
+126 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(LSE_VALUE)</emphasis>
+127 <emphasis role="preprocessor">&#32;#define&#32;LSE_VALUE&#32;&#32;32768U&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+128 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;LSE_VALUE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+129 
+130 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(LSE_STARTUP_TIMEOUT)</emphasis>
+131 <emphasis role="preprocessor">&#32;&#32;#define&#32;LSE_STARTUP_TIMEOUT&#32;&#32;&#32;&#32;5000U&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+132 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;LSE_STARTUP_TIMEOUT&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+133 
+139 <emphasis role="preprocessor">#if&#32;!defined&#32;&#32;(EXTERNAL_CLOCK_VALUE)</emphasis>
+140 <emphasis role="preprocessor">&#32;&#32;#define&#32;EXTERNAL_CLOCK_VALUE&#32;&#32;&#32;&#32;12288000U&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+141 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;EXTERNAL_CLOCK_VALUE&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+142 
+143 <emphasis role="comment">/*&#32;Tip:&#32;To&#32;avoid&#32;modifying&#32;this&#32;file&#32;each&#32;time&#32;you&#32;need&#32;to&#32;use&#32;different&#32;HSE,</emphasis>
+144 <emphasis role="comment">&#32;&#32;&#32;===&#32;&#32;you&#32;can&#32;define&#32;the&#32;HSE&#32;value&#32;in&#32;your&#32;toolchain&#32;compiler&#32;preprocessor.&#32;*/</emphasis>
+145 
+146 <emphasis role="comment">/*&#32;###########################&#32;System&#32;Configuration&#32;#########################&#32;*/</emphasis>
+150 <emphasis role="preprocessor">#define&#32;&#32;VDD_VALUE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;3300U&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+151 <emphasis role="preprocessor">#define&#32;&#32;TICK_INT_PRIORITY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;15U&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+152 <emphasis role="preprocessor">#define&#32;&#32;USE_RTOS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U</emphasis>
+153 <emphasis role="preprocessor">#define&#32;&#32;PREFETCH_ENABLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+154 <emphasis role="preprocessor">#define&#32;&#32;INSTRUCTION_CACHE_ENABLE&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+155 <emphasis role="preprocessor">#define&#32;&#32;DATA_CACHE_ENABLE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;1U</emphasis>
+156 
+157 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_ADC_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;ADC&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+158 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_CAN_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;CAN&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+159 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_CEC_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;CEC&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+160 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_CRYP_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;CRYP&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+161 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_DAC_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;DAC&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+162 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_DCMI_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;DCMI&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+163 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_DFSDM_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;DFSDM&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+164 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_DMA2D_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;DMA2D&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+165 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_DSI_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;DSI&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+166 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_ETH_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;ETH&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+167 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_HASH_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;HASH&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+168 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_HCD_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;HCD&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+169 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_I2C_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;I2C&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+170 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_FMPI2C_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;FMPI2C&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+171 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_FMPSMBUS_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;FMPSMBUS&#32;register&#32;callback&#32;disabled&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+172 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_I2S_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;I2S&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+173 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_IRDA_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;IRDA&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+174 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_LPTIM_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;LPTIM&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+175 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_LTDC_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;LTDC&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+176 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_MMC_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;MMC&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+177 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_NAND_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;NAND&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+178 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_NOR_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;NOR&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+179 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_PCCARD_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;PCCARD&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+180 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_PCD_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;PCD&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+181 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_QSPI_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;QSPI&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+182 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_RNG_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;RNG&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+183 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_RTC_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;RTC&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+184 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SAI_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SAI&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+185 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SD_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SD&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+186 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SMARTCARD_REGISTER_CALLBACKS&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SMARTCARD&#32;register&#32;callback&#32;disabled&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+187 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SDRAM_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SDRAM&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+188 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SRAM_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SRAM&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+189 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SPDIFRX_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SPDIFRX&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+190 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SMBUS_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SMBUS&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+191 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_SPI_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;SPI&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+192 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_TIM_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;TIM&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+193 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_UART_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;UART&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+194 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_USART_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;USART&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+195 <emphasis role="preprocessor">#define&#32;&#32;USE_HAL_WWDG_REGISTER_CALLBACKS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U&#32;</emphasis><emphasis role="comment">/*&#32;WWDG&#32;register&#32;callback&#32;disabled&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+196 
+197 <emphasis role="comment">/*&#32;##########################&#32;Assert&#32;Selection&#32;##############################&#32;*/</emphasis>
+202 <emphasis role="comment">/*&#32;#define&#32;USE_FULL_ASSERT&#32;&#32;&#32;&#32;1U&#32;*/</emphasis>
+203 
+204 <emphasis role="comment">/*&#32;##################&#32;Ethernet&#32;peripheral&#32;configuration&#32;#####################&#32;*/</emphasis>
+205 
+206 <emphasis role="comment">/*&#32;Section&#32;1&#32;:&#32;Ethernet&#32;peripheral&#32;configuration&#32;*/</emphasis>
+207 
+208 <emphasis role="comment">/*&#32;MAC&#32;ADDRESS:&#32;MAC_ADDR0:MAC_ADDR1:MAC_ADDR2:MAC_ADDR3:MAC_ADDR4:MAC_ADDR5&#32;*/</emphasis>
+209 <emphasis role="preprocessor">#define&#32;MAC_ADDR0&#32;&#32;&#32;2U</emphasis>
+210 <emphasis role="preprocessor">#define&#32;MAC_ADDR1&#32;&#32;&#32;0U</emphasis>
+211 <emphasis role="preprocessor">#define&#32;MAC_ADDR2&#32;&#32;&#32;0U</emphasis>
+212 <emphasis role="preprocessor">#define&#32;MAC_ADDR3&#32;&#32;&#32;0U</emphasis>
+213 <emphasis role="preprocessor">#define&#32;MAC_ADDR4&#32;&#32;&#32;0U</emphasis>
+214 <emphasis role="preprocessor">#define&#32;MAC_ADDR5&#32;&#32;&#32;0U</emphasis>
+215 
+216 <emphasis role="comment">/*&#32;Definition&#32;of&#32;the&#32;Ethernet&#32;driver&#32;buffers&#32;size&#32;and&#32;count&#32;*/</emphasis>
+217 <emphasis role="preprocessor">#define&#32;ETH_RX_BUF_SIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ETH_MAX_PACKET_SIZE&#32;</emphasis><emphasis role="comment">/*&#32;buffer&#32;size&#32;for&#32;receive&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+218 <emphasis role="preprocessor">#define&#32;ETH_TX_BUF_SIZE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;ETH_MAX_PACKET_SIZE&#32;</emphasis><emphasis role="comment">/*&#32;buffer&#32;size&#32;for&#32;transmit&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+219 <emphasis role="preprocessor">#define&#32;ETH_RXBUFNB&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4U&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;4&#32;Rx&#32;buffers&#32;of&#32;size&#32;ETH_RX_BUF_SIZE&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+220 <emphasis role="preprocessor">#define&#32;ETH_TXBUFNB&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;4U&#32;&#32;&#32;&#32;&#32;&#32;&#32;</emphasis><emphasis role="comment">/*&#32;4&#32;Tx&#32;buffers&#32;of&#32;size&#32;ETH_TX_BUF_SIZE&#32;&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+221 
+222 <emphasis role="comment">/*&#32;Section&#32;2:&#32;PHY&#32;configuration&#32;section&#32;*/</emphasis>
+223 
+224 <emphasis role="comment">/*&#32;DP83848_PHY_ADDRESS&#32;Address*/</emphasis>
+225 <emphasis role="preprocessor">#define&#32;DP83848_PHY_ADDRESS</emphasis>
+226 <emphasis role="comment">/*&#32;PHY&#32;Reset&#32;delay&#32;these&#32;values&#32;are&#32;based&#32;on&#32;a&#32;1&#32;ms&#32;Systick&#32;interrupt*/</emphasis>
+227 <emphasis role="preprocessor">#define&#32;PHY_RESET_DELAY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x000000FFU</emphasis>
+228 <emphasis role="comment">/*&#32;PHY&#32;Configuration&#32;delay&#32;*/</emphasis>
+229 <emphasis role="preprocessor">#define&#32;PHY_CONFIG_DELAY&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x00000FFFU</emphasis>
+230 
+231 <emphasis role="preprocessor">#define&#32;PHY_READ_TO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x0000FFFFU</emphasis>
+232 <emphasis role="preprocessor">#define&#32;PHY_WRITE_TO&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0x0000FFFFU</emphasis>
+233 
+234 <emphasis role="comment">/*&#32;Section&#32;3:&#32;Common&#32;PHY&#32;Registers&#32;*/</emphasis>
+235 
+236 <emphasis role="preprocessor">#define&#32;PHY_BCR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0000U)&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+237 <emphasis role="preprocessor">#define&#32;PHY_BSR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0001U)&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+238 
+239 <emphasis role="preprocessor">#define&#32;PHY_RESET&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x8000U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+240 <emphasis role="preprocessor">#define&#32;PHY_LOOPBACK&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x4000U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+241 <emphasis role="preprocessor">#define&#32;PHY_FULLDUPLEX_100M&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x2100U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+242 <emphasis role="preprocessor">#define&#32;PHY_HALFDUPLEX_100M&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x2000U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+243 <emphasis role="preprocessor">#define&#32;PHY_FULLDUPLEX_10M&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0100U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+244 <emphasis role="preprocessor">#define&#32;PHY_HALFDUPLEX_10M&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0000U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+245 <emphasis role="preprocessor">#define&#32;PHY_AUTONEGOTIATION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x1000U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+246 <emphasis role="preprocessor">#define&#32;PHY_RESTART_AUTONEGOTIATION&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0200U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+247 <emphasis role="preprocessor">#define&#32;PHY_POWERDOWN&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0800U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+248 <emphasis role="preprocessor">#define&#32;PHY_ISOLATE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0400U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+249 
+250 <emphasis role="preprocessor">#define&#32;PHY_AUTONEGO_COMPLETE&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0020U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+251 <emphasis role="preprocessor">#define&#32;PHY_LINKED_STATUS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0004U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+252 <emphasis role="preprocessor">#define&#32;PHY_JABBER_DETECTION&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t)0x0002U)&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+253 
+254 <emphasis role="comment">/*&#32;Section&#32;4:&#32;Extended&#32;PHY&#32;Registers&#32;*/</emphasis>
+255 <emphasis role="preprocessor">#define&#32;PHY_SR&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t))&#32;&#32;&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+256 
+257 <emphasis role="preprocessor">#define&#32;PHY_SPEED_STATUS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t))&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+258 <emphasis role="preprocessor">#define&#32;PHY_DUPLEX_STATUS&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;((uint16_t))&#32;&#32;</emphasis><emphasis role="preprocessor"></emphasis>
+259 
+260 <emphasis role="comment">/*&#32;##################&#32;SPI&#32;peripheral&#32;configuration&#32;##########################&#32;*/</emphasis>
+261 
+262 <emphasis role="comment">/*&#32;CRC&#32;FEATURE:&#32;Use&#32;to&#32;activate&#32;CRC&#32;feature&#32;inside&#32;HAL&#32;SPI&#32;Driver</emphasis>
+263 <emphasis role="comment">*&#32;Activated:&#32;CRC&#32;code&#32;is&#32;present&#32;inside&#32;driver</emphasis>
+264 <emphasis role="comment">*&#32;Deactivated:&#32;CRC&#32;code&#32;cleaned&#32;from&#32;driver</emphasis>
+265 <emphasis role="comment">*/</emphasis>
+266 
+267 <emphasis role="preprocessor">#define&#32;USE_SPI_CRC&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;&#32;0U</emphasis>
+268 
+269 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+273 
+274 <emphasis role="preprocessor">#ifdef&#32;HAL_RCC_MODULE_ENABLED</emphasis>
+275 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_rcc.h&quot;</emphasis>
+276 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_RCC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+277 
+278 <emphasis role="preprocessor">#ifdef&#32;HAL_GPIO_MODULE_ENABLED</emphasis>
+279 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_gpio.h&quot;</emphasis>
+280 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_GPIO_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+281 
+282 <emphasis role="preprocessor">#ifdef&#32;HAL_EXTI_MODULE_ENABLED</emphasis>
+283 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_exti.h&quot;</emphasis>
+284 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_EXTI_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+285 
+286 <emphasis role="preprocessor">#ifdef&#32;HAL_DMA_MODULE_ENABLED</emphasis>
+287 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_dma.h&quot;</emphasis>
+288 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_DMA_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+289 
+290 <emphasis role="preprocessor">#ifdef&#32;HAL_CORTEX_MODULE_ENABLED</emphasis>
+291 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_cortex.h&quot;</emphasis>
+292 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_CORTEX_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+293 
+294 <emphasis role="preprocessor">#ifdef&#32;HAL_ADC_MODULE_ENABLED</emphasis>
+295 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_adc.h&quot;</emphasis>
+296 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_ADC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+297 
+298 <emphasis role="preprocessor">#ifdef&#32;HAL_CAN_MODULE_ENABLED</emphasis>
+299 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_can.h&quot;</emphasis>
+300 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_CAN_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+301 
+302 <emphasis role="preprocessor">#ifdef&#32;HAL_CAN_LEGACY_MODULE_ENABLED</emphasis>
+303 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_can_legacy.h&quot;</emphasis>
+304 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_CAN_LEGACY_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+305 
+306 <emphasis role="preprocessor">#ifdef&#32;HAL_CRC_MODULE_ENABLED</emphasis>
+307 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_crc.h&quot;</emphasis>
+308 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_CRC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+309 
+310 <emphasis role="preprocessor">#ifdef&#32;HAL_CRYP_MODULE_ENABLED</emphasis>
+311 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_cryp.h&quot;</emphasis>
+312 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_CRYP_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+313 
+314 <emphasis role="preprocessor">#ifdef&#32;HAL_DMA2D_MODULE_ENABLED</emphasis>
+315 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_dma2d.h&quot;</emphasis>
+316 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_DMA2D_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+317 
+318 <emphasis role="preprocessor">#ifdef&#32;HAL_DAC_MODULE_ENABLED</emphasis>
+319 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_dac.h&quot;</emphasis>
+320 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_DAC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+321 
+322 <emphasis role="preprocessor">#ifdef&#32;HAL_DCMI_MODULE_ENABLED</emphasis>
+323 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_dcmi.h&quot;</emphasis>
+324 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_DCMI_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+325 
+326 <emphasis role="preprocessor">#ifdef&#32;HAL_ETH_MODULE_ENABLED</emphasis>
+327 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_eth.h&quot;</emphasis>
+328 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_ETH_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+329 
+330 <emphasis role="preprocessor">#ifdef&#32;HAL_ETH_LEGACY_MODULE_ENABLED</emphasis>
+331 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_eth_legacy.h&quot;</emphasis>
+332 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_ETH_LEGACY_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+333 
+334 <emphasis role="preprocessor">#ifdef&#32;HAL_FLASH_MODULE_ENABLED</emphasis>
+335 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_flash.h&quot;</emphasis>
+336 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_FLASH_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+337 
+338 <emphasis role="preprocessor">#ifdef&#32;HAL_SRAM_MODULE_ENABLED</emphasis>
+339 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_sram.h&quot;</emphasis>
+340 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SRAM_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+341 
+342 <emphasis role="preprocessor">#ifdef&#32;HAL_NOR_MODULE_ENABLED</emphasis>
+343 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_nor.h&quot;</emphasis>
+344 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_NOR_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+345 
+346 <emphasis role="preprocessor">#ifdef&#32;HAL_NAND_MODULE_ENABLED</emphasis>
+347 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_nand.h&quot;</emphasis>
+348 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_NAND_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+349 
+350 <emphasis role="preprocessor">#ifdef&#32;HAL_PCCARD_MODULE_ENABLED</emphasis>
+351 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_pccard.h&quot;</emphasis>
+352 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_PCCARD_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+353 
+354 <emphasis role="preprocessor">#ifdef&#32;HAL_SDRAM_MODULE_ENABLED</emphasis>
+355 <emphasis role="preprocessor">&#32;&#32;#include&#32;&quot;stm32f4xx_hal_sdram.h&quot;</emphasis>
+356 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SDRAM_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+357 
+358 <emphasis role="preprocessor">#ifdef&#32;HAL_HASH_MODULE_ENABLED</emphasis>
+359 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_hash.h&quot;</emphasis>
+360 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_HASH_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+361 
+362 <emphasis role="preprocessor">#ifdef&#32;HAL_I2C_MODULE_ENABLED</emphasis>
+363 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_i2c.h&quot;</emphasis>
+364 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_I2C_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+365 
+366 <emphasis role="preprocessor">#ifdef&#32;HAL_SMBUS_MODULE_ENABLED</emphasis>
+367 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_smbus.h&quot;</emphasis>
+368 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SMBUS_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+369 
+370 <emphasis role="preprocessor">#ifdef&#32;HAL_I2S_MODULE_ENABLED</emphasis>
+371 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_i2s.h&quot;</emphasis>
+372 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_I2S_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+373 
+374 <emphasis role="preprocessor">#ifdef&#32;HAL_IWDG_MODULE_ENABLED</emphasis>
+375 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_iwdg.h&quot;</emphasis>
+376 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_IWDG_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+377 
+378 <emphasis role="preprocessor">#ifdef&#32;HAL_LTDC_MODULE_ENABLED</emphasis>
+379 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_ltdc.h&quot;</emphasis>
+380 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_LTDC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+381 
+382 <emphasis role="preprocessor">#ifdef&#32;HAL_PWR_MODULE_ENABLED</emphasis>
+383 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_pwr.h&quot;</emphasis>
+384 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_PWR_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+385 
+386 <emphasis role="preprocessor">#ifdef&#32;HAL_RNG_MODULE_ENABLED</emphasis>
+387 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_rng.h&quot;</emphasis>
+388 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_RNG_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+389 
+390 <emphasis role="preprocessor">#ifdef&#32;HAL_RTC_MODULE_ENABLED</emphasis>
+391 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_rtc.h&quot;</emphasis>
+392 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_RTC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+393 
+394 <emphasis role="preprocessor">#ifdef&#32;HAL_SAI_MODULE_ENABLED</emphasis>
+395 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_sai.h&quot;</emphasis>
+396 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SAI_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+397 
+398 <emphasis role="preprocessor">#ifdef&#32;HAL_SD_MODULE_ENABLED</emphasis>
+399 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_sd.h&quot;</emphasis>
+400 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SD_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+401 
+402 <emphasis role="preprocessor">#ifdef&#32;HAL_SPI_MODULE_ENABLED</emphasis>
+403 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_spi.h&quot;</emphasis>
+404 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SPI_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+405 
+406 <emphasis role="preprocessor">#ifdef&#32;HAL_TIM_MODULE_ENABLED</emphasis>
+407 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_tim.h&quot;</emphasis>
+408 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_TIM_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+409 
+410 <emphasis role="preprocessor">#ifdef&#32;HAL_UART_MODULE_ENABLED</emphasis>
+411 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_uart.h&quot;</emphasis>
+412 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_UART_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+413 
+414 <emphasis role="preprocessor">#ifdef&#32;HAL_USART_MODULE_ENABLED</emphasis>
+415 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_usart.h&quot;</emphasis>
+416 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_USART_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+417 
+418 <emphasis role="preprocessor">#ifdef&#32;HAL_IRDA_MODULE_ENABLED</emphasis>
+419 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_irda.h&quot;</emphasis>
+420 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_IRDA_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+421 
+422 <emphasis role="preprocessor">#ifdef&#32;HAL_SMARTCARD_MODULE_ENABLED</emphasis>
+423 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_smartcard.h&quot;</emphasis>
+424 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SMARTCARD_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+425 
+426 <emphasis role="preprocessor">#ifdef&#32;HAL_WWDG_MODULE_ENABLED</emphasis>
+427 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_wwdg.h&quot;</emphasis>
+428 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_WWDG_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+429 
+430 <emphasis role="preprocessor">#ifdef&#32;HAL_PCD_MODULE_ENABLED</emphasis>
+431 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_pcd.h&quot;</emphasis>
+432 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_PCD_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+433 
+434 <emphasis role="preprocessor">#ifdef&#32;HAL_HCD_MODULE_ENABLED</emphasis>
+435 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_hcd.h&quot;</emphasis>
+436 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_HCD_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+437 
+438 <emphasis role="preprocessor">#ifdef&#32;HAL_DSI_MODULE_ENABLED</emphasis>
+439 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_dsi.h&quot;</emphasis>
+440 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_DSI_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+441 
+442 <emphasis role="preprocessor">#ifdef&#32;HAL_QSPI_MODULE_ENABLED</emphasis>
+443 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_qspi.h&quot;</emphasis>
+444 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_QSPI_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+445 
+446 <emphasis role="preprocessor">#ifdef&#32;HAL_CEC_MODULE_ENABLED</emphasis>
+447 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_cec.h&quot;</emphasis>
+448 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_CEC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+449 
+450 <emphasis role="preprocessor">#ifdef&#32;HAL_FMPI2C_MODULE_ENABLED</emphasis>
+451 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_fmpi2c.h&quot;</emphasis>
+452 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_FMPI2C_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+453 
+454 <emphasis role="preprocessor">#ifdef&#32;HAL_FMPSMBUS_MODULE_ENABLED</emphasis>
+455 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_fmpsmbus.h&quot;</emphasis>
+456 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_FMPSMBUS_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+457 
+458 <emphasis role="preprocessor">#ifdef&#32;HAL_SPDIFRX_MODULE_ENABLED</emphasis>
+459 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_spdifrx.h&quot;</emphasis>
+460 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_SPDIFRX_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+461 
+462 <emphasis role="preprocessor">#ifdef&#32;HAL_DFSDM_MODULE_ENABLED</emphasis>
+463 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_dfsdm.h&quot;</emphasis>
+464 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_DFSDM_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+465 
+466 <emphasis role="preprocessor">#ifdef&#32;HAL_LPTIM_MODULE_ENABLED</emphasis>
+467 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_lptim.h&quot;</emphasis>
+468 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_LPTIM_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+469 
+470 <emphasis role="preprocessor">#ifdef&#32;HAL_MMC_MODULE_ENABLED</emphasis>
+471 <emphasis role="preprocessor">&#32;#include&#32;&quot;stm32f4xx_hal_mmc.h&quot;</emphasis>
+472 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;HAL_MMC_MODULE_ENABLED&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+473 
+474 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+475 <emphasis role="preprocessor">#ifdef&#32;&#32;USE_FULL_ASSERT</emphasis><emphasis role="preprocessor"></emphasis>
+484 <emphasis role="preprocessor">&#32;&#32;#define&#32;assert_param(expr)&#32;((expr)&#32;?&#32;(void)0U&#32;:&#32;assert_failed((uint8_t&#32;*)__FILE__,&#32;__LINE__))</emphasis>
+485 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;-------------------------------------------------------&#32;*/</emphasis>
+486 &#32;&#32;<emphasis role="keywordtype">void</emphasis>&#32;assert_failed(uint8_t*&#32;file,&#32;uint32_t&#32;line);
+487 <emphasis role="preprocessor">#else</emphasis>
+488 <emphasis role="preprocessor">&#32;&#32;#define&#32;assert_param(expr)&#32;((void)0U)</emphasis>
+489 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;USE_FULL_ASSERT&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+490 
+491 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+492 }
+493 <emphasis role="preprocessor">#endif</emphasis>
+494 
+495 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__STM32F4xx_HAL_CONF_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

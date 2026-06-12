@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group__stm32f4xx__system" xml:lang="en-US">
+<title>
+<para>Stm32f4xx_system </para>
+</title>
+<indexterm><primary>Stm32f4xx_system</primary></indexterm>
+<simplesect>
+    <title>Topics    </title>
+        <itemizedlist>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___includes">STM32F4xx_System_Private_Includes</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___types_definitions">STM32F4xx_System_Private_TypesDefinitions</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___defines">STM32F4xx_System_Private_Defines</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___macros">STM32F4xx_System_Private_Macros</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___variables">STM32F4xx_System_Private_Variables</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___function_prototypes">STM32F4xx_System_Private_FunctionPrototypes</link></para>
+</listitem>
+            <listitem><para><link linkend="_group___s_t_m32_f4xx___system___private___functions">STM32F4xx_System_Private_Functions</link></para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+    <xi:include href="group___s_t_m32_f4xx___system___private___includes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_m32_f4xx___system___private___types_definitions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_m32_f4xx___system___private___defines.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_m32_f4xx___system___private___macros.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_m32_f4xx___system___private___variables.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_m32_f4xx___system___private___function_prototypes.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+    <xi:include href="group___s_t_m32_f4xx___system___private___functions.xml" xmlns:xi="http://www.w3.org/2001/XInclude"/>
+</section>

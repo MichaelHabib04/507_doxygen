@@ -1,0 +1,2 @@
+../Core/Src/valve.c:10:6:valve_open	1
+../Core/Src/valve.c:14:6:valve_close	1

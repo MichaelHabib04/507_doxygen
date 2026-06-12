@@ -1,0 +1,419 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_stm32f4xx__hal__msp_8c" xml:lang="en-US">
+<title>Core/Src/stm32f4xx_hal_msp.c File Reference</title>
+<indexterm><primary>Core/Src/stm32f4xx_hal_msp.c</primary></indexterm>
+<para>
+
+<para>This file provides code for the MSP Initialization and de-Initialization codes. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;main.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</link> (TIM_HandleTypeDef *htim)</para>
+
+<para>Complete timer GPIO post-initialization after PWM setup. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1ae4fb8e66865c87d0ebab74a726a6891f">HAL_MspInit</link> (void)</para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1aa30863492d5c3103e3e8ce8a63dadd07">HAL_ADC_MspInit</link> (ADC_HandleTypeDef *hadc)</para>
+
+<para>ADC MSP Initialization This function configures the hardware resources used in this example. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1a39b0f8e80268ab3e660ead921ad4b22f">HAL_ADC_MspDeInit</link> (ADC_HandleTypeDef *hadc)</para>
+
+<para>ADC MSP De-Initialization This function freeze the hardware resources used in this example. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1a24d5b9c609d8b753d95508419f4c1901">HAL_TIM_PWM_MspInit</link> (TIM_HandleTypeDef *htim_pwm)</para>
+
+<para>TIM_PWM MSP Initialization This function configures the hardware resources used in this example. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1af5f524564b3a99a9f87f45227309e866">HAL_TIM_PWM_MspDeInit</link> (TIM_HandleTypeDef *htim_pwm)</para>
+
+<para>TIM_PWM MSP De-Initialization This function freeze the hardware resources used in this example. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1a0e553b32211877322f949b14801bbfa7">HAL_UART_MspInit</link> (UART_HandleTypeDef *huart)</para>
+
+<para>UART MSP Initialization This function configures the hardware resources used in this example. </para>
+</listitem>
+            <listitem><para>void <link linkend="_stm32f4xx__hal__msp_8c_1a718f39804e3b910d738a0e1e46151188">HAL_UART_MspDeInit</link> (UART_HandleTypeDef *huart)</para>
+
+<para>UART MSP De-Initialization This function freeze the hardware resources used in this example. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>This file provides code for the MSP Initialization and de-Initialization codes. </para>
+
+<para><caution><title>Attention</title>
+
+<para></para>
+</caution>
+Copyright (c) 2026 STMicroelectronics. All rights reserved.</para>
+
+<para>This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-IS. </para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1a39b0f8e80268ab3e660ead921ad4b22f"/><section>
+    <title>HAL_ADC_MspDeInit()</title>
+<indexterm><primary>HAL_ADC_MspDeInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_ADC_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_MspDeInit (ADC_HandleTypeDef * hadc)</computeroutput></para><para>
+
+<para>ADC MSP De-Initialization This function freeze the hardware resources used in this example. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hadc</entry><entry>
+<para>ADC handle pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>ADC1 GPIO Configuration PA1 ------&gt; ADC1_IN1</para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1aa30863492d5c3103e3e8ce8a63dadd07"/><section>
+    <title>HAL_ADC_MspInit()</title>
+<indexterm><primary>HAL_ADC_MspInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_ADC_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_ADC_MspInit (ADC_HandleTypeDef * hadc)</computeroutput></para><para>
+
+<para>ADC MSP Initialization This function configures the hardware resources used in this example. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>hadc</entry><entry>
+<para>ADC handle pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>ADC1 GPIO Configuration PA1 ------&gt; ADC1_IN1</para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1ae4fb8e66865c87d0ebab74a726a6891f"/><section>
+    <title>HAL_MspInit()</title>
+<indexterm><primary>HAL_MspInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_MspInit (void )</computeroutput></para>
+<para>Initializes the Global MSP. </para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1ae70bce6c39d0b570a7523b86738cec4b"/><section>
+    <title>HAL_TIM_MspPostInit()</title>
+<indexterm><primary>HAL_TIM_MspPostInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_TIM_MspPostInit</secondary></indexterm>
+<para><computeroutput>void HAL_TIM_MspPostInit (TIM_HandleTypeDef * htim)</computeroutput></para><para>
+
+<para>Complete timer GPIO post-initialization after PWM setup. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>htim</entry><entry>
+<para>Pointer to the timer handle being post-initialized. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>TIM1 GPIO Configuration PA8 ------&gt; TIM1_CH1 PA9 ------&gt; TIM1_CH2</para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1af5f524564b3a99a9f87f45227309e866"/><section>
+    <title>HAL_TIM_PWM_MspDeInit()</title>
+<indexterm><primary>HAL_TIM_PWM_MspDeInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_TIM_PWM_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_TIM_PWM_MspDeInit (TIM_HandleTypeDef * htim_pwm)</computeroutput></para><para>
+
+<para>TIM_PWM MSP De-Initialization This function freeze the hardware resources used in this example. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>htim_pwm</entry><entry>
+<para>TIM_PWM handle pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1a24d5b9c609d8b753d95508419f4c1901"/><section>
+    <title>HAL_TIM_PWM_MspInit()</title>
+<indexterm><primary>HAL_TIM_PWM_MspInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_TIM_PWM_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_TIM_PWM_MspInit (TIM_HandleTypeDef * htim_pwm)</computeroutput></para><para>
+
+<para>TIM_PWM MSP Initialization This function configures the hardware resources used in this example. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>htim_pwm</entry><entry>
+<para>TIM_PWM handle pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1a718f39804e3b910d738a0e1e46151188"/><section>
+    <title>HAL_UART_MspDeInit()</title>
+<indexterm><primary>HAL_UART_MspDeInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_UART_MspDeInit</secondary></indexterm>
+<para><computeroutput>void HAL_UART_MspDeInit (UART_HandleTypeDef * huart)</computeroutput></para><para>
+
+<para>UART MSP De-Initialization This function freeze the hardware resources used in this example. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>huart</entry><entry>
+<para>UART handle pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>USART1 GPIO Configuration PA10 ------&gt; USART1_RX PA15 ------&gt; USART1_TX</para>
+
+<para>USART2 GPIO Configuration PA2 ------&gt; USART2_TX PA3 ------&gt; USART2_RX</para>
+</section>
+<anchor xml:id="_stm32f4xx__hal__msp_8c_1a0e553b32211877322f949b14801bbfa7"/><section>
+    <title>HAL_UART_MspInit()</title>
+<indexterm><primary>HAL_UART_MspInit</primary><secondary>stm32f4xx_hal_msp.c</secondary></indexterm>
+<indexterm><primary>stm32f4xx_hal_msp.c</primary><secondary>HAL_UART_MspInit</secondary></indexterm>
+<para><computeroutput>void HAL_UART_MspInit (UART_HandleTypeDef * huart)</computeroutput></para><para>
+
+<para>UART MSP Initialization This function configures the hardware resources used in this example. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>huart</entry><entry>
+<para>UART handle pointer </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                
+                <formalpara>
+                    <title>
+Return values</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>None</entry><entry>
+<para></para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+
+<para>USART1 GPIO Configuration PA10 ------&gt; USART1_RX PA15 ------&gt; USART1_TX</para>
+
+<para>USART2 GPIO Configuration PA2 ------&gt; USART2_TX PA3 ------&gt; USART2_RX</para>
+</section>
+</section>
+</section>

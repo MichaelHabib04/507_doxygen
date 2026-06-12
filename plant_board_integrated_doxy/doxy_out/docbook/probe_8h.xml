@@ -1,0 +1,259 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_probe_8h" xml:lang="en-US">
+<title>Core/Inc/probe.h File Reference</title>
+<indexterm><primary>Core/Inc/probe.h</primary></indexterm>
+<para>
+
+<para>Interface for reading and reporting TDS probe measurements. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal.h&quot;<?linebreak?>#include &lt;stdint.h&gt;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structtds__t">tds_t</link></para>
+
+<para>Runtime state and peripheral handles for a TDS probe. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_probe_8h_1a1418504529dfe3b2d2a1408f1a69b1c6">tds_init</link> (<link linkend="_structtds__t">tds_t</link> *tds, ADC_HandleTypeDef *hadc, UART_HandleTypeDef *huart, float vref)</para>
+
+<para>Initialize a TDS probe state structure. </para>
+</listitem>
+            <listitem><para>float <link linkend="_probe_8h_1ad2c191421817da3548d6f5828caf601e">tds_read_ppm</link> (<link linkend="_structtds__t">tds_t</link> *tds)</para>
+
+<para>Read the TDS probe and calculate the compensated ppm value. </para>
+</listitem>
+            <listitem><para>void <link linkend="_probe_8h_1a1a6f9be411334b54153823e297f2b309">tds_uart_print</link> (<link linkend="_structtds__t">tds_t</link> *tds)</para>
+
+<para>Print the most recent TDS reading over UART. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Interface for reading and reporting TDS probe measurements. </para>
+
+<para>This module reads a TDS probe through an ADC channel, converts the ADC count to voltage, applies temperature compensation, estimates parts-per-million, and can print the latest reading over UART.</para>
+
+<para><formalpara><title>Date</title>
+
+<para>Created on Jun 11, 2026 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>malai </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_probe_8h_1a1418504529dfe3b2d2a1408f1a69b1c6"/><section>
+    <title>tds_init()</title>
+<indexterm><primary>tds_init</primary><secondary>probe.h</secondary></indexterm>
+<indexterm><primary>probe.h</primary><secondary>tds_init</secondary></indexterm>
+<para><computeroutput>void tds_init (<link linkend="_structtds__t">tds_t</link> * tds, ADC_HandleTypeDef * hadc, UART_HandleTypeDef * huart, float vref)</computeroutput></para><para>
+
+<para>Initialize a TDS probe state structure. </para>
+</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tds</entry><entry>
+<para>Pointer to the TDS state structure to initialize. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hadc</entry><entry>
+<para>ADC handle used for probe sampling. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>huart</entry><entry>
+<para>UART handle used for reporting probe values. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>vref</entry><entry>
+<para>ADC reference voltage in volts.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                The probe starts with zeroed ADC, voltage, and ppm values. Temperature is set to 25 degrees Celsius, which is the reference temperature for the compensation calculation used by <link linkend="_probe_8c_1ad2c191421817da3548d6f5828caf601e">tds_read_ppm()</link>.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tds</entry><entry>
+<para>Pointer to the TDS state structure to initialize. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>hadc</entry><entry>
+<para>ADC handle used for probe sampling. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>huart</entry><entry>
+<para>UART handle used for reporting probe values. </para>
+</entry>
+                            </row>
+                            <row>
+<entry>vref</entry><entry>
+<para>ADC reference voltage in volts. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_probe_8h_1ad2c191421817da3548d6f5828caf601e"/><section>
+    <title>tds_read_ppm()</title>
+<indexterm><primary>tds_read_ppm</primary><secondary>probe.h</secondary></indexterm>
+<indexterm><primary>probe.h</primary><secondary>tds_read_ppm</secondary></indexterm>
+<para><computeroutput>float tds_read_ppm (<link linkend="_structtds__t">tds_t</link> * tds)</computeroutput></para><para>
+
+<para>Read the TDS probe and calculate the compensated ppm value. </para>
+</para>
+
+<para>Sample the ADC and calculate the compensated TDS value.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tds</entry><entry>
+<para>Pointer to the initialized TDS state structure. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Latest TDS estimate in parts per million.</para>
+</formalpara>
+Read the TDS probe and calculate the compensated ppm value.</para>
+
+<para>The ADC reading is converted to volts using the configured reference voltage. A temperature compensation factor is applied before the TDS polynomial is evaluated.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tds</entry><entry>
+<para>Pointer to the initialized TDS state structure. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                <formalpara><title>Returns</title>
+
+<para>Latest TDS estimate in parts per million. </para>
+</formalpara>
+</para>
+</section>
+<anchor xml:id="_probe_8h_1a1a6f9be411334b54153823e297f2b309"/><section>
+    <title>tds_uart_print()</title>
+<indexterm><primary>tds_uart_print</primary><secondary>probe.h</secondary></indexterm>
+<indexterm><primary>probe.h</primary><secondary>tds_uart_print</secondary></indexterm>
+<para><computeroutput>void tds_uart_print (<link linkend="_structtds__t">tds_t</link> * tds)</computeroutput></para><para>
+
+<para>Print the most recent TDS reading over UART. </para>
+</para>
+
+<para>Print the most recent ADC, voltage, and TDS values over UART.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tds</entry><entry>
+<para>Pointer to the initialized TDS state structure.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Print the most recent TDS reading over UART.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>tds</entry><entry>
+<para>Pointer to the initialized TDS state structure. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

@@ -1,0 +1,50 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_dir_b596f468b52957496e4f78b80e029268" xml:lang="en-US">
+<title>Core/Src Directory Reference</title>
+<indexterm><primary>Core/Src Directory Reference</primary></indexterm>
+<simplesect>
+    <title>Files    </title>
+        <itemizedlist>
+            <listitem><para>file <link linkend="_float_8c">float.c</link></para>
+
+<para>Implementation of the float switch GPIO read helper. </para>
+</listitem>
+            <listitem><para>file <link linkend="_main_8cpp">main.cpp</link></para>
+
+<para>: Main program body for the STM32 nutrient/water controller </para>
+</listitem>
+            <listitem><para>file <link linkend="_motor__driver_8c">motor_driver.c</link></para>
+
+<para>Implementation of the PWM motor driver helpers. </para>
+</listitem>
+            <listitem><para>file <link linkend="_probe_8c">probe.c</link></para>
+
+<para>Implementation of TDS probe sampling, conversion, and UART reporting. </para>
+</listitem>
+            <listitem><para>file <link linkend="_stm32f4xx__hal__msp_8c">stm32f4xx_hal_msp.c</link></para>
+
+<para>This file provides code for the MSP Initialization and de-Initialization codes. </para>
+</listitem>
+            <listitem><para>file <link linkend="_stm32f4xx__it_8c">stm32f4xx_it.c</link></para>
+
+<para>Interrupt Service Routines. </para>
+</listitem>
+            <listitem><para>file <link linkend="_syscalls_8c">syscalls.c</link></para>
+
+<para>STM32CubeIDE Minimal System calls file. </para>
+</listitem>
+            <listitem><para>file <link linkend="_sysmem_8c">sysmem.c</link></para>
+
+<para>STM32CubeIDE System Memory calls file. </para>
+</listitem>
+            <listitem><para>file <link linkend="_system__stm32f4xx_8c">system_stm32f4xx.c</link></para>
+
+<para>CMSIS Cortex-M4 Device Peripheral Access Layer System Source File. </para>
+</listitem>
+            <listitem><para>file <link linkend="_valve_8c">valve.c</link></para>
+
+<para>Implementation of relay-controlled valve helpers. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+</section>

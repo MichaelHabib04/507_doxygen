@@ -1,0 +1,162 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_valve_8h" xml:lang="en-US">
+<title>Core/Inc/valve.h File Reference</title>
+<indexterm><primary>Core/Inc/valve.h</primary></indexterm>
+<para>
+
+<para>Relay-controlled valve interface. </para>
+ 
+</para>
+<programlisting linenumbering="unnumbered">#include &quot;stm32f4xx_hal.h&quot;<?linebreak?></programlisting><simplesect>
+    <title>Classes    </title>
+        <itemizedlist>
+            <listitem><para>struct <link linkend="_structvalve__t">valve_t</link></para>
+
+<para>GPIO configuration for a relay-controlled valve. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<simplesect>
+    <title>Functions    </title>
+        <itemizedlist>
+            <listitem><para>void <link linkend="_valve_8h_1a75a34bba40281d9babf4010f64f9e233">valve_open</link> (<link linkend="_structvalve__t">valve_t</link> *p_valve)</para>
+
+<para>Open the valve by setting the relay GPIO pin high. </para>
+</listitem>
+            <listitem><para>void <link linkend="_valve_8h_1a6c83dc7aed505a5af939d9d62d07a9e7">valve_close</link> (<link linkend="_structvalve__t">valve_t</link> *p_valve)</para>
+
+<para>Close the valve by setting the relay GPIO pin low. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Relay-controlled valve interface. </para>
+
+<para>This module wraps GPIO writes used to open and close solenoid valves through relay outputs.</para>
+
+<para><formalpara><title>Date</title>
+
+<para>Created on Jun 4, 2026 </para>
+</formalpara>
+<formalpara><title>Author</title>
+
+<para>malaika </para>
+</formalpara>
+</para>
+</section>
+<section>
+<title>Function Documentation</title>
+<anchor xml:id="_valve_8h_1a6c83dc7aed505a5af939d9d62d07a9e7"/><section>
+    <title>valve_close()</title>
+<indexterm><primary>valve_close</primary><secondary>valve.h</secondary></indexterm>
+<indexterm><primary>valve.h</primary><secondary>valve_close</secondary></indexterm>
+<para><computeroutput>void valve_close (<link linkend="_structvalve__t">valve_t</link> * p_valve)</computeroutput></para><para>
+
+<para>Close the valve by setting the relay GPIO pin low. </para>
+</para>
+
+<para>Close the valve by setting the configured relay output low.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p_valve</entry><entry>
+<para>Pointer to the valve GPIO configuration.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Close the valve by setting the relay GPIO pin low.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p_valve</entry><entry>
+<para>Pointer to the valve GPIO configuration. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+<anchor xml:id="_valve_8h_1a75a34bba40281d9babf4010f64f9e233"/><section>
+    <title>valve_open()</title>
+<indexterm><primary>valve_open</primary><secondary>valve.h</secondary></indexterm>
+<indexterm><primary>valve.h</primary><secondary>valve_open</secondary></indexterm>
+<para><computeroutput>void valve_open (<link linkend="_structvalve__t">valve_t</link> * p_valve)</computeroutput></para><para>
+
+<para>Open the valve by setting the relay GPIO pin high. </para>
+</para>
+
+<para>Open the valve by setting the configured relay output high.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p_valve</entry><entry>
+<para>Pointer to the valve GPIO configuration.</para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                Open the valve by setting the relay GPIO pin high.</para>
+
+<para>
+                <formalpara>
+                    <title>
+Parameters</title>
+                    <para>
+                    <table frame="all">
+                        <tgroup cols="2" align="left" colsep="1" rowsep="1">
+                        <colspec colwidth="1*"/>
+                        <colspec colwidth="4*"/>
+                        <tbody>
+                            <row>
+<entry>p_valve</entry><entry>
+<para>Pointer to the valve GPIO configuration. </para>
+</entry>
+                            </row>
+                        </tbody>
+                        </tgroup>
+                    </table>
+                    </para>
+                </formalpara>
+                </para>
+</section>
+</section>
+</section>

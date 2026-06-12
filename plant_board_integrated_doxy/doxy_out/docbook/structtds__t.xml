@@ -1,0 +1,119 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_structtds__t" xml:lang="en-US">
+<title>tds_t Struct Reference</title>
+<indexterm><primary>tds_t</primary></indexterm>
+<para>
+
+<para>Runtime state and peripheral handles for a TDS probe. </para>
+ 
+</para>
+<para>
+<computeroutput>#include &lt;probe.h&gt;</computeroutput>
+</para>
+<simplesect>
+    <title>Public Attributes    </title>
+        <itemizedlist>
+            <listitem><para>ADC_HandleTypeDef * <link linkend="_structtds__t_1a9b294a6452e3ccd0a750856ffbec2efa">hadc</link></para>
+
+<para>ADC handle used to sample the probe voltage. </para>
+</listitem>
+            <listitem><para>UART_HandleTypeDef * <link linkend="_structtds__t_1a2638bbd28a4105d7e17993fbb52548cb">huart</link></para>
+
+<para>UART handle used to print debug or telemetry messages. </para>
+</listitem>
+            <listitem><para>uint32_t <link linkend="_structtds__t_1ab488fd98a7de0006341f5cf47f91d035">adc_value</link></para>
+
+<para>Most recent raw 12-bit ADC conversion value. </para>
+</listitem>
+            <listitem><para>float <link linkend="_structtds__t_1afc9423a6ab5c6c54fe5d53eecebab779">voltage</link></para>
+
+<para>Most recent probe voltage in volts. </para>
+</listitem>
+            <listitem><para>float <link linkend="_structtds__t_1a7d924f493b980ff573c5fe8146e20326">ppm</link></para>
+
+<para>Most recent estimated total dissolved solids value in ppm. </para>
+</listitem>
+            <listitem><para>float <link linkend="_structtds__t_1ad5c71db1edd602c9f3449bea3a9b557e">temperature_c</link></para>
+
+<para>Water temperature used for compensation in degrees Celsius. </para>
+</listitem>
+            <listitem><para>float <link linkend="_structtds__t_1a7e19e74d8e4af6841bf43e93cd92c0c9">vref</link></para>
+
+<para>ADC reference voltage in volts. </para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+
+<para>Runtime state and peripheral handles for a TDS probe. </para>
+</section>
+<section>
+<title>Member Data Documentation</title>
+<anchor xml:id="_structtds__t_1ab488fd98a7de0006341f5cf47f91d035"/><section>
+    <title>adc_value</title>
+<indexterm><primary>adc_value</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>adc_value</secondary></indexterm>
+<para><computeroutput>uint32_t tds_t::adc_value</computeroutput></para><para>
+
+<para>Most recent raw 12-bit ADC conversion value. </para>
+</para>
+</section>
+<anchor xml:id="_structtds__t_1a9b294a6452e3ccd0a750856ffbec2efa"/><section>
+    <title>hadc</title>
+<indexterm><primary>hadc</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>hadc</secondary></indexterm>
+<para><computeroutput>ADC_HandleTypeDef* tds_t::hadc</computeroutput></para><para>
+
+<para>ADC handle used to sample the probe voltage. </para>
+</para>
+</section>
+<anchor xml:id="_structtds__t_1a2638bbd28a4105d7e17993fbb52548cb"/><section>
+    <title>huart</title>
+<indexterm><primary>huart</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>huart</secondary></indexterm>
+<para><computeroutput>UART_HandleTypeDef* tds_t::huart</computeroutput></para><para>
+
+<para>UART handle used to print debug or telemetry messages. </para>
+</para>
+</section>
+<anchor xml:id="_structtds__t_1a7d924f493b980ff573c5fe8146e20326"/><section>
+    <title>ppm</title>
+<indexterm><primary>ppm</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>ppm</secondary></indexterm>
+<para><computeroutput>float tds_t::ppm</computeroutput></para><para>
+
+<para>Most recent estimated total dissolved solids value in ppm. </para>
+</para>
+</section>
+<anchor xml:id="_structtds__t_1ad5c71db1edd602c9f3449bea3a9b557e"/><section>
+    <title>temperature_c</title>
+<indexterm><primary>temperature_c</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>temperature_c</secondary></indexterm>
+<para><computeroutput>float tds_t::temperature_c</computeroutput></para><para>
+
+<para>Water temperature used for compensation in degrees Celsius. </para>
+</para>
+</section>
+<anchor xml:id="_structtds__t_1afc9423a6ab5c6c54fe5d53eecebab779"/><section>
+    <title>voltage</title>
+<indexterm><primary>voltage</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>voltage</secondary></indexterm>
+<para><computeroutput>float tds_t::voltage</computeroutput></para><para>
+
+<para>Most recent probe voltage in volts. </para>
+</para>
+</section>
+<anchor xml:id="_structtds__t_1a7e19e74d8e4af6841bf43e93cd92c0c9"/><section>
+    <title>vref</title>
+<indexterm><primary>vref</primary><secondary>tds_t</secondary></indexterm>
+<indexterm><primary>tds_t</primary><secondary>vref</secondary></indexterm>
+<para><computeroutput>float tds_t::vref</computeroutput></para><para>
+
+<para>ADC reference voltage in volts. </para>
+</para>
+</section>
+<para>
+The documentation for this struct was generated from the following file:</para>
+Core/Inc/<link linkend="_probe_8h">probe.h</link></section>
+</section>

@@ -1,0 +1,25 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_valve_8h_source" xml:lang="en-US">
+<title>valve.h</title>
+<indexterm><primary>Core/Inc/valve.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+11 
+12 <emphasis role="preprocessor">#ifndef&#32;INC_VALVE_H_</emphasis>
+13 <emphasis role="preprocessor">#define&#32;INC_VALVE_H_</emphasis>
+14 
+15 <emphasis role="preprocessor">#include&#32;&quot;stm32f4xx_hal.h&quot;</emphasis>
+16 
+20 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct</emphasis>{
+22 &#32;&#32;&#32;&#32;GPIO_TypeDef*&#32;<link linkend="_structvalve__t_1ab25c7ed0e3e1faaccedf94bda262962e">gpio_Relay</link>;
+23 
+25 &#32;&#32;&#32;&#32;uint16_t&#32;<link linkend="_structvalve__t_1a80e0db80509fb9eee27d7d0676117a99">pin_Relay</link>;
+26 <emphasis role="comment">//&#32;&#32;GPIO_TypeDef*&#32;Relay2_GPIO_Port;</emphasis>
+27 <emphasis role="comment">//&#32;&#32;uint16_t&#32;Relay2_Pin;</emphasis>
+28 }&#32;<link linkend="_structvalve__t">valve_t</link>;
+29 
+35 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_valve_8h_1a75a34bba40281d9babf4010f64f9e233">valve_open</link>(<link linkend="_structvalve__t">valve_t</link>*&#32;p_valve);
+36 
+42 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_valve_8h_1a6c83dc7aed505a5af939d9d62d07a9e7">valve_close</link>(<link linkend="_structvalve__t">valve_t</link>*&#32;p_valve);
+43 
+44 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INC_VALVE_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

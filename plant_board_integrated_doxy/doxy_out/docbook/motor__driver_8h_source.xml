@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_motor__driver_8h_source" xml:lang="en-US">
+<title>motor_driver.h</title>
+<indexterm><primary>Core/Inc/motor_driver.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 
+11 
+12 <emphasis role="preprocessor">#ifndef&#32;INC_MOTOR_DRIVER_H_</emphasis>
+13 <emphasis role="preprocessor">#define&#32;INC_MOTOR_DRIVER_H_</emphasis>
+14 
+15 <emphasis role="preprocessor">#include&#32;&quot;stm32f4xx_hal.h&quot;</emphasis>
+16 
+23 <emphasis role="keyword">typedef</emphasis>&#32;<emphasis role="keyword">struct&#32;</emphasis>{
+24 
+26 &#32;&#32;&#32;&#32;uint16_t&#32;&#32;&#32;&#32;<link linkend="_structmotor__t_1a63072e0bf315d555693c5fbd0ced0003">motor_out_1</link>;
+27 
+29 &#32;&#32;&#32;&#32;uint16_t&#32;&#32;&#32;&#32;<link linkend="_structmotor__t_1a8c75fcb0db73c098528643c385376a14">motor_out_2</link>;
+30 
+32 &#32;&#32;&#32;&#32;TIM_HandleTypeDef*&#32;<link linkend="_structmotor__t_1a773d5dfb4db57609948b961bbfec6197">htim</link>;
+33 
+34 
+35 }&#32;<link linkend="_structmotor__t">motor_t</link>;
+36 
+42 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_motor__driver_8h_1a27bc74646055fb9862777972ca045762">motor_chan_enable</link>(<link linkend="_structmotor__t">motor_t</link>*&#32;p_mot);
+43 
+50 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_motor__driver_8h_1a20d545bdb85184d9810dd083450e9fa7">motor_set_duty_cycle</link>(<link linkend="_structmotor__t">motor_t</link>*&#32;p_mot,&#32;int8_t&#32;duty_cycle);
+51 
+57 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_motor__driver_8h_1a3034b03c31e563473cc3ae76caf81b4a">motor_stop</link>(<link linkend="_structmotor__t">motor_t</link>*&#32;p_mot);
+58 
+59 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;INC_MOTOR_DRIVER_H_&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

@@ -1,0 +1,373 @@
+\doxysection{Core/\+\+Src/\+main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{Core/Src/main.cpp@{Core/Src/main.cpp}}
+
+
+:\+ Main program body for the STM32 nutrient/\+water controller  
+
+
+{\ttfamily \+\#include "{}main.\+h"{}}\newline
+{\ttfamily \+\#include "{}motor\+\_\+driver.\+h"{}}\newline
+{\ttfamily \+\#include "{}valve.\+h"{}}\newline
+{\ttfamily \+\#include "{}float.\+h"{}}\newline
+{\ttfamily \+\#include "{}probe.\+h"{}}\newline
+{\ttfamily \+\#include $<$cctype$>$}\newline
+{\ttfamily \+\#include $<$cstdio$>$}\newline
+{\ttfamily \+\#include $<$cstdlib$>$}\newline
+{\ttfamily \+\#include $<$cstring$>$}\newline
+{\ttfamily \+\#include $<$string$>$}\newline
+\doxysubsubsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\+\#define \doxymbox{\hyperlink{main_8cpp_a2970729b154b93dc81b9ba28280c7e94}{ppm\+\_\+threshold}}~100.\+0f
+\begin{DoxyCompactList}\small\item\em TDS threshold, in ppm, below which nutrient solution is added. \end{DoxyCompactList}\item 
+\+\#define \doxymbox{\hyperlink{main_8cpp_a78951de667f43d68054456ebd2e854db}{ESP\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE}}~1024
+\begin{DoxyCompactList}\small\item\em Size of the circular receive buffer used for ESP UART data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Enumerations}
+\begin{DoxyCompactItemize}
+\item 
+enum class \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccf}{Actions}} \{ \newline
+\doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfa4e60a1d86ca7576027a2b0b361786f85}{Add\+\_\+\+Water}}
+, \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfa1690c8dd965e9779398299d5040c1e0e}{Add\+\_\+\+Slop}}
+, \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfac36e5c3437139ef1ad9dc63c80c418e7}{Controller\+\_\+\+Mode}}
+, \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfaf847ae64a300ad05332be0a8bb4f0399}{Automatic\+\_\+\+Mode}}
+, \newline
+\doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfae8c0086b7ffc699e0aa07c3c526adadd}{Waiting\+\_\+\+For\+\_\+\+Command}}
+ \}
+\begin{DoxyCompactList}\small\item\em High-\/level actions that can be requested by the TCP controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em Configure the STM32 system clock tree. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em Application entry point. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+ADC\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a22b804736f5648d52f639b2647d4ed13}{hadc1}}
+\item 
+TIM\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a25fc663547539bc49fecc0011bd76ab5}{htim1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_aa9479c261d65eecedd3d9582f7f0f89c}{huart2}}
+\item 
+\doxymbox{\hyperlink{structmotor__t}{motor\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_a794d717430bb56bc09484be27e421581}{motor}}
+\begin{DoxyCompactList}\small\item\em PWM motor object used for periodic aeration. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_acacb56626a3fbca6dc05960abced27ae}{valve1}}
+\begin{DoxyCompactList}\small\item\em Relay valve used to add water. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_af9a6f05476b2df8c46259b2629a7a23a}{valve2}}
+\begin{DoxyCompactList}\small\item\em Relay valve used to add nutrient solution/\+slop. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_ab84991de69a42621cf3021db7886ec8e}{float1}}
+\begin{DoxyCompactList}\small\item\em Float switch used to detect the tank water level. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} \doxymbox{\hyperlink{main_8cpp_ac04d177e721a5bd5ce6db73deb2c8495}{tds1}}
+\begin{DoxyCompactList}\small\item\em TDS probe state used for ADC sampling and UART reporting. \end{DoxyCompactList}\item 
+uint8\+\_\+t \doxymbox{\hyperlink{main_8cpp_add40bd194904e7fcbca735288f03bb0e}{motor\+\_\+enable}} = 0
+\begin{DoxyCompactList}\small\item\em Nonzero when the aeration motor should be running. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{main_8cpp_ab08914c74b6da903ae93a2953c3084aa}{last\+\_\+motor\+\_\+cycle\+\_\+tick}} = 0
+\begin{DoxyCompactList}\small\item\em HAL tick count for the end of the previous aeration cycle. \end{DoxyCompactList}\item 
+uint32\+\_\+t \doxymbox{\hyperlink{main_8cpp_a9fd51e268f66844639b7f3e43e6bf141}{motor\+\_\+start\+\_\+tick}} = 0
+\begin{DoxyCompactList}\small\item\em HAL tick count when the current aeration run started. \end{DoxyCompactList}\item 
+float \doxymbox{\hyperlink{main_8cpp_a6f4743eb84c8c58ea92d5da1eae37893}{ppm}}
+\begin{DoxyCompactList}\small\item\em Latest TDS measurement in parts per million. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{main_8cpp_a7ed001dcd0619395166686f01a58af58}{controller\+\_\+paired}} = false
+\begin{DoxyCompactList}\small\item\em True after the remote controller sends the pairing message. \end{DoxyCompactList}\item 
+bool \doxymbox{\hyperlink{main_8cpp_ac003aacf0659dde0f89361a5431dea61}{automatic\+\_\+mode}} = false
+\begin{DoxyCompactList}\small\item\em True when automatic tank-\/control behavior is enabled. \end{DoxyCompactList}\item 
+\doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccf}{Actions}} \doxymbox{\hyperlink{main_8cpp_ae6cef83686c17d8c908dd4a28190b9fe}{current\+\_\+action}} = \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfae8c0086b7ffc699e0aa07c3c526adadd}{Actions::\+\+Waiting\+\_\+\+For\+\_\+\+Command}}
+\begin{DoxyCompactList}\small\item\em Current state-\/machine action being processed by the main loop. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+:\+ Main program body for the STM32 nutrient/\+water controller 
+
+\begin{DoxyAttention}{Attention}
+
+\end{DoxyAttention}
+Copyright (c) 2026 STMicroelectronics. All rights reserved.
+
+This software is licensed under terms that can be found in the LICENSE file in the root directory of this software component. If no LICENSE file comes with this software, it is provided AS-\/\+IS. 
+
+\label{main_8cpp_doc-define-members}
+\Hypertarget{main_8cpp_doc-define-members}
+\doxysubsection{Macro Definition Documentation}
+\Hypertarget{main_8cpp_a78951de667f43d68054456ebd2e854db}\index{main.cpp@{main.cpp}!ESP\_RX\_BUF\_SIZE@{ESP\_RX\_BUF\_SIZE}}
+\index{ESP\_RX\_BUF\_SIZE@{ESP\_RX\_BUF\_SIZE}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ESP\_RX\_BUF\_SIZE}{ESP\_RX\_BUF\_SIZE}}
+{\footnotesize\ttfamily \label{main_8cpp_a78951de667f43d68054456ebd2e854db} 
+\+\#define ESP\+\_\+\+RX\+\_\+\+BUF\+\_\+\+SIZE~1024}
+
+
+
+Size of the circular receive buffer used for ESP UART data. 
+
+\Hypertarget{main_8cpp_a2970729b154b93dc81b9ba28280c7e94}\index{main.cpp@{main.cpp}!ppm\_threshold@{ppm\_threshold}}
+\index{ppm\_threshold@{ppm\_threshold}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ppm\_threshold}{ppm\_threshold}}
+{\footnotesize\ttfamily \label{main_8cpp_a2970729b154b93dc81b9ba28280c7e94} 
+\+\#define ppm\+\_\+threshold~100.\+0f}
+
+
+
+TDS threshold, in ppm, below which nutrient solution is added. 
+
+
+
+\label{main_8cpp_doc-enum-members}
+\Hypertarget{main_8cpp_doc-enum-members}
+\doxysubsection{Enumeration Type Documentation}
+\Hypertarget{main_8cpp_a250372292659bed7ae290d8621f88ccf}\index{main.cpp@{main.cpp}!Actions@{Actions}}
+\index{Actions@{Actions}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Actions}{Actions}}
+{\footnotesize\ttfamily \label{main_8cpp_a250372292659bed7ae290d8621f88ccf} 
+enum class \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccf}{Actions}}\hspace{0.3cm}{\ttfamily [strong]}}
+
+
+
+High-\/level actions that can be requested by the TCP controller. 
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Add\_Water@{Add\_Water}!main.cpp@{main.cpp}}
+\index{main.cpp@{main.cpp}!Add\_Water@{Add\_Water}}
+}\Hypertarget{main_8cpp_a250372292659bed7ae290d8621f88ccfa4e60a1d86ca7576027a2b0b361786f85}\label{main_8cpp_a250372292659bed7ae290d8621f88ccfa4e60a1d86ca7576027a2b0b361786f85} 
+Add\+\_\+\+Water&Add water until the float switch indicates the target level. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Add\_Slop@{Add\_Slop}!main.cpp@{main.cpp}}
+\index{main.cpp@{main.cpp}!Add\_Slop@{Add\_Slop}}
+}\Hypertarget{main_8cpp_a250372292659bed7ae290d8621f88ccfa1690c8dd965e9779398299d5040c1e0e}\label{main_8cpp_a250372292659bed7ae290d8621f88ccfa1690c8dd965e9779398299d5040c1e0e} 
+Add\+\_\+\+Slop&Add nutrient solution/\+slop and report the current TDS value. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Controller\_Mode@{Controller\_Mode}!main.cpp@{main.cpp}}
+\index{main.cpp@{main.cpp}!Controller\_Mode@{Controller\_Mode}}
+}\Hypertarget{main_8cpp_a250372292659bed7ae290d8621f88ccfac36e5c3437139ef1ad9dc63c80c418e7}\label{main_8cpp_a250372292659bed7ae290d8621f88ccfac36e5c3437139ef1ad9dc63c80c418e7} 
+Controller\+\_\+\+Mode&Return control to manual/\+controller-\/command mode. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Automatic\_Mode@{Automatic\_Mode}!main.cpp@{main.cpp}}
+\index{main.cpp@{main.cpp}!Automatic\_Mode@{Automatic\_Mode}}
+}\Hypertarget{main_8cpp_a250372292659bed7ae290d8621f88ccfaf847ae64a300ad05332be0a8bb4f0399}\label{main_8cpp_a250372292659bed7ae290d8621f88ccfaf847ae64a300ad05332be0a8bb4f0399} 
+Automatic\+\_\+\+Mode&Automatically manage water level and TDS concentration. \\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{Waiting\_For\_Command@{Waiting\_For\_Command}!main.cpp@{main.cpp}}
+\index{main.cpp@{main.cpp}!Waiting\_For\_Command@{Waiting\_For\_Command}}
+}\Hypertarget{main_8cpp_a250372292659bed7ae290d8621f88ccfae8c0086b7ffc699e0aa07c3c526adadd}\label{main_8cpp_a250372292659bed7ae290d8621f88ccfae8c0086b7ffc699e0aa07c3c526adadd} 
+Waiting\+\_\+\+For\+\_\+\+Command&Idle state while waiting for the next TCP command. \\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{main_8cpp_doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a1730ffe1e560465665eb47d9264826f9}\index{main.cpp@{main.cpp}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1730ffe1e560465665eb47d9264826f9} 
+void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+Handle unrecoverable application or HAL configuration errors.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+This function is executed in case of error occurrence.
+
+This function disables interrupts and traps the firmware in an infinite loop. \Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Application entry point. 
+
+Initializes peripherals, connects the ESP-\/01 to Wi\+Fi, waits for controller pairing, then repeatedly processes water, nutrient, automatic-\/mode, and aeration control logic.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & This function does not return during normal operation. \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8cpp_a70af21c671abfcc773614a9a4f63d920}\index{main.cpp@{main.cpp}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily \label{main_8cpp_a70af21c671abfcc773614a9a4f63d920} 
+void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+Configure the STM32 system clock tree. 
+
+The firmware uses the internal HSI oscillator and PLL configuration generated by STM32\+Cube\+IDE.
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\label{main_8cpp_doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_ac003aacf0659dde0f89361a5431dea61}\index{main.cpp@{main.cpp}!automatic\_mode@{automatic\_mode}}
+\index{automatic\_mode@{automatic\_mode}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{automatic\_mode}{automatic\_mode}}
+{\footnotesize\ttfamily \label{main_8cpp_ac003aacf0659dde0f89361a5431dea61} 
+bool automatic\+\_\+mode = false}
+
+
+
+True when automatic tank-\/control behavior is enabled. 
+
+\Hypertarget{main_8cpp_a7ed001dcd0619395166686f01a58af58}\index{main.cpp@{main.cpp}!controller\_paired@{controller\_paired}}
+\index{controller\_paired@{controller\_paired}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{controller\_paired}{controller\_paired}}
+{\footnotesize\ttfamily \label{main_8cpp_a7ed001dcd0619395166686f01a58af58} 
+bool controller\+\_\+paired = false}
+
+
+
+True after the remote controller sends the pairing message. 
+
+\Hypertarget{main_8cpp_ae6cef83686c17d8c908dd4a28190b9fe}\index{main.cpp@{main.cpp}!current\_action@{current\_action}}
+\index{current\_action@{current\_action}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{current\_action}{current\_action}}
+{\footnotesize\ttfamily \label{main_8cpp_ae6cef83686c17d8c908dd4a28190b9fe} 
+\doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccf}{Actions}} current\+\_\+action = \doxymbox{\hyperlink{main_8cpp_a250372292659bed7ae290d8621f88ccfae8c0086b7ffc699e0aa07c3c526adadd}{Actions::\+\+Waiting\+\_\+\+For\+\_\+\+Command}}}
+
+
+
+Current state-\/machine action being processed by the main loop. 
+
+\Hypertarget{main_8cpp_ab84991de69a42621cf3021db7886ec8e}\index{main.cpp@{main.cpp}!float1@{float1}}
+\index{float1@{float1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{float1}{float1}}
+{\footnotesize\ttfamily \label{main_8cpp_ab84991de69a42621cf3021db7886ec8e} 
+\doxymbox{\hyperlink{structfloat__t}{float\+\_\+t}} float1}
+
+
+
+Float switch used to detect the tank water level. 
+
+\Hypertarget{main_8cpp_a22b804736f5648d52f639b2647d4ed13}\index{main.cpp@{main.cpp}!hadc1@{hadc1}}
+\index{hadc1@{hadc1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hadc1}{hadc1}}
+{\footnotesize\ttfamily \label{main_8cpp_a22b804736f5648d52f639b2647d4ed13} 
+ADC\+\_\+\+Handle\+Type\+Def hadc1}
+
+\Hypertarget{main_8cpp_a25fc663547539bc49fecc0011bd76ab5}\index{main.cpp@{main.cpp}!htim1@{htim1}}
+\index{htim1@{htim1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{htim1}{htim1}}
+{\footnotesize\ttfamily \label{main_8cpp_a25fc663547539bc49fecc0011bd76ab5} 
+TIM\+\_\+\+Handle\+Type\+Def htim1}
+
+\Hypertarget{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}\index{main.cpp@{main.cpp}!huart1@{huart1}}
+\index{huart1@{huart1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily \label{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5} 
+UART\+\_\+\+Handle\+Type\+Def huart1}
+
+\Hypertarget{main_8cpp_aa9479c261d65eecedd3d9582f7f0f89c}\index{main.cpp@{main.cpp}!huart2@{huart2}}
+\index{huart2@{huart2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{huart2}{huart2}}
+{\footnotesize\ttfamily \label{main_8cpp_aa9479c261d65eecedd3d9582f7f0f89c} 
+UART\+\_\+\+Handle\+Type\+Def huart2}
+
+\Hypertarget{main_8cpp_ab08914c74b6da903ae93a2953c3084aa}\index{main.cpp@{main.cpp}!last\_motor\_cycle\_tick@{last\_motor\_cycle\_tick}}
+\index{last\_motor\_cycle\_tick@{last\_motor\_cycle\_tick}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{last\_motor\_cycle\_tick}{last\_motor\_cycle\_tick}}
+{\footnotesize\ttfamily \label{main_8cpp_ab08914c74b6da903ae93a2953c3084aa} 
+uint32\+\_\+t last\+\_\+motor\+\_\+cycle\+\_\+tick = 0}
+
+
+
+HAL tick count for the end of the previous aeration cycle. 
+
+\Hypertarget{main_8cpp_a794d717430bb56bc09484be27e421581}\index{main.cpp@{main.cpp}!motor@{motor}}
+\index{motor@{motor}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{motor}{motor}}
+{\footnotesize\ttfamily \label{main_8cpp_a794d717430bb56bc09484be27e421581} 
+\doxymbox{\hyperlink{structmotor__t}{motor\+\_\+t}} motor}
+
+
+
+PWM motor object used for periodic aeration. 
+
+\Hypertarget{main_8cpp_add40bd194904e7fcbca735288f03bb0e}\index{main.cpp@{main.cpp}!motor\_enable@{motor\_enable}}
+\index{motor\_enable@{motor\_enable}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{motor\_enable}{motor\_enable}}
+{\footnotesize\ttfamily \label{main_8cpp_add40bd194904e7fcbca735288f03bb0e} 
+uint8\+\_\+t motor\+\_\+enable = 0}
+
+
+
+Nonzero when the aeration motor should be running. 
+
+\Hypertarget{main_8cpp_a9fd51e268f66844639b7f3e43e6bf141}\index{main.cpp@{main.cpp}!motor\_start\_tick@{motor\_start\_tick}}
+\index{motor\_start\_tick@{motor\_start\_tick}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{motor\_start\_tick}{motor\_start\_tick}}
+{\footnotesize\ttfamily \label{main_8cpp_a9fd51e268f66844639b7f3e43e6bf141} 
+uint32\+\_\+t motor\+\_\+start\+\_\+tick = 0}
+
+
+
+HAL tick count when the current aeration run started. 
+
+\Hypertarget{main_8cpp_a6f4743eb84c8c58ea92d5da1eae37893}\index{main.cpp@{main.cpp}!ppm@{ppm}}
+\index{ppm@{ppm}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ppm}{ppm}}
+{\footnotesize\ttfamily \label{main_8cpp_a6f4743eb84c8c58ea92d5da1eae37893} 
+float ppm}
+
+
+
+Latest TDS measurement in parts per million. 
+
+\Hypertarget{main_8cpp_ac04d177e721a5bd5ce6db73deb2c8495}\index{main.cpp@{main.cpp}!tds1@{tds1}}
+\index{tds1@{tds1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{tds1}{tds1}}
+{\footnotesize\ttfamily \label{main_8cpp_ac04d177e721a5bd5ce6db73deb2c8495} 
+\doxymbox{\hyperlink{structtds__t}{tds\+\_\+t}} tds1}
+
+
+
+TDS probe state used for ADC sampling and UART reporting. 
+
+\Hypertarget{main_8cpp_acacb56626a3fbca6dc05960abced27ae}\index{main.cpp@{main.cpp}!valve1@{valve1}}
+\index{valve1@{valve1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{valve1}{valve1}}
+{\footnotesize\ttfamily \label{main_8cpp_acacb56626a3fbca6dc05960abced27ae} 
+\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} valve1}
+
+
+
+Relay valve used to add water. 
+
+\Hypertarget{main_8cpp_af9a6f05476b2df8c46259b2629a7a23a}\index{main.cpp@{main.cpp}!valve2@{valve2}}
+\index{valve2@{valve2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{valve2}{valve2}}
+{\footnotesize\ttfamily \label{main_8cpp_af9a6f05476b2df8c46259b2629a7a23a} 
+\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} valve2}
+
+
+
+Relay valve used to add nutrient solution/\+slop. 
+

@@ -1,0 +1,12 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_annotated" xml:lang="en-US">
+<title>Class List</title>
+Here are the classes, structs, unions and interfaces with brief descriptions:<link linkend="_structfloat__t">float_t</link>
+<para>GPIO configuration for a float switch input </para>
+<link linkend="_structmotor__t">motor_t</link>
+<para>Timer channel configuration for a PWM-controlled motor </para>
+<link linkend="_structtds__t">tds_t</link>
+<para>Runtime state and peripheral handles for a TDS probe </para>
+<link linkend="_structvalve__t">valve_t</link>
+<para>GPIO configuration for a relay-controlled valve </para>
+</section>

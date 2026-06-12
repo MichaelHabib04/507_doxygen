@@ -1,0 +1,70 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_main_8h_source" xml:lang="en-US">
+<title>main.h</title>
+<indexterm><primary>Core/Inc/main.h</primary></indexterm>
+Go to the documentation of this file.<programlisting linenumbering="unnumbered">1 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Header&#32;*/</emphasis>
+20 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Header&#32;*/</emphasis>
+21 
+22 <emphasis role="comment">/*&#32;Define&#32;to&#32;prevent&#32;recursive&#32;inclusion&#32;-------------------------------------*/</emphasis>
+23 <emphasis role="preprocessor">#ifndef&#32;__MAIN_H</emphasis>
+24 <emphasis role="preprocessor">#define&#32;__MAIN_H</emphasis>
+25 
+26 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+27 <emphasis role="keyword">extern</emphasis>&#32;<emphasis role="stringliteral">&quot;C&quot;</emphasis>&#32;{
+28 <emphasis role="preprocessor">#endif</emphasis>
+29 
+30 <emphasis role="comment">/*&#32;Includes&#32;------------------------------------------------------------------*/</emphasis>
+31 <emphasis role="preprocessor">#include&#32;&quot;stm32f4xx_hal.h&quot;</emphasis>
+32 
+33 <emphasis role="comment">/*&#32;Private&#32;includes&#32;----------------------------------------------------------*/</emphasis>
+34 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Includes&#32;*/</emphasis>
+35 
+36 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Includes&#32;*/</emphasis>
+37 
+38 <emphasis role="comment">/*&#32;Exported&#32;types&#32;------------------------------------------------------------*/</emphasis>
+39 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;ET&#32;*/</emphasis>
+40 
+41 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;ET&#32;*/</emphasis>
+42 
+43 <emphasis role="comment">/*&#32;Exported&#32;constants&#32;--------------------------------------------------------*/</emphasis>
+44 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EC&#32;*/</emphasis>
+45 
+46 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EC&#32;*/</emphasis>
+47 
+48 <emphasis role="comment">/*&#32;Exported&#32;macro&#32;------------------------------------------------------------*/</emphasis>
+49 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EM&#32;*/</emphasis>
+50 
+51 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EM&#32;*/</emphasis>
+52 
+58 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_main_8h_1ae70bce6c39d0b570a7523b86738cec4b">HAL_TIM_MspPostInit</link>(TIM_HandleTypeDef&#32;*htim);
+59 
+60 <emphasis role="comment">/*&#32;Exported&#32;functions&#32;prototypes&#32;---------------------------------------------*/</emphasis>
+66 <emphasis role="keywordtype">void</emphasis>&#32;<link linkend="_main_8h_1a1730ffe1e560465665eb47d9264826f9">Error_Handler</link>(<emphasis role="keywordtype">void</emphasis>);
+67 
+68 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;EFP&#32;*/</emphasis>
+69 
+70 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;EFP&#32;*/</emphasis>
+71 
+72 <emphasis role="comment">/*&#32;Private&#32;defines&#32;-----------------------------------------------------------*/</emphasis>
+74 <emphasis role="preprocessor">#define&#32;Float_Pin&#32;GPIO_PIN_13</emphasis>
+75 
+77 <emphasis role="preprocessor">#define&#32;Float_GPIO_Port&#32;GPIOB</emphasis>
+78 
+80 <emphasis role="preprocessor">#define&#32;Relay1_Pin&#32;GPIO_PIN_14</emphasis>
+81 
+83 <emphasis role="preprocessor">#define&#32;Relay1_GPIO_Port&#32;GPIOB</emphasis>
+84 
+86 <emphasis role="preprocessor">#define&#32;Relay2_Pin&#32;GPIO_PIN_15</emphasis>
+87 
+89 <emphasis role="preprocessor">#define&#32;Relay2_GPIO_Port&#32;GPIOB</emphasis>
+90 
+91 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;BEGIN&#32;Private&#32;defines&#32;*/</emphasis>
+92 
+93 <emphasis role="comment">/*&#32;USER&#32;CODE&#32;END&#32;Private&#32;defines&#32;*/</emphasis>
+94 
+95 <emphasis role="preprocessor">#ifdef&#32;__cplusplus</emphasis>
+96 }
+97 <emphasis role="preprocessor">#endif</emphasis>
+98 
+99 <emphasis role="preprocessor">#endif&#32;</emphasis><emphasis role="comment">/*&#32;__MAIN_H&#32;*/</emphasis><emphasis role="preprocessor"></emphasis>
+</programlisting></section>

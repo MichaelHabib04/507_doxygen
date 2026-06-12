@@ -1,0 +1,36 @@
+<?xml version='1.0' encoding='UTF-8' standalone='no'?>
+<section xmlns="http://docbook.org/ns/docbook" version="5.0" xmlns:xlink="http://www.w3.org/1999/xlink" xml:id="_group___s_t_m32_f4xx___system___private___includes" xml:lang="en-US">
+<title>
+<para>STM32F4xx_System_Private_Includes </para>
+</title>
+<indexterm><primary>STM32F4xx_System_Private_Includes</primary></indexterm>
+<simplesect>
+    <title>Macros    </title>
+        <itemizedlist>
+            <listitem><para>#define <link linkend="_group___s_t_m32_f4xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb">HSE_VALUE</link>&#160;&#160;&#160;((uint32_t)25000000)</para>
+</listitem>
+            <listitem><para>#define <link linkend="_group___s_t_m32_f4xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37">HSI_VALUE</link>&#160;&#160;&#160;((uint32_t)16000000)</para>
+</listitem>
+        </itemizedlist>
+</simplesect>
+<section>
+<title>Detailed Description</title>
+</section>
+<section>
+<title>Macro Definition Documentation</title>
+<anchor xml:id="_group___s_t_m32_f4xx___system___private___includes_1gaeafcff4f57440c60e64812dddd13e7cb"/><section>
+    <title>HSE_VALUE</title>
+<indexterm><primary>HSE_VALUE</primary><secondary>STM32F4xx_System_Private_Includes</secondary></indexterm>
+<indexterm><primary>STM32F4xx_System_Private_Includes</primary><secondary>HSE_VALUE</secondary></indexterm>
+<para><computeroutput>#define HSE_VALUE&#160;&#160;&#160;((uint32_t)25000000)</computeroutput></para>
+<para>Default value of the External oscillator in Hz </para>
+</section>
+<anchor xml:id="_group___s_t_m32_f4xx___system___private___includes_1gaaa8c76e274d0f6dd2cefb5d0b17fbc37"/><section>
+    <title>HSI_VALUE</title>
+<indexterm><primary>HSI_VALUE</primary><secondary>STM32F4xx_System_Private_Includes</secondary></indexterm>
+<indexterm><primary>STM32F4xx_System_Private_Includes</primary><secondary>HSI_VALUE</secondary></indexterm>
+<para><computeroutput>#define HSI_VALUE&#160;&#160;&#160;((uint32_t)16000000)</computeroutput></para>
+<para>Value of the Internal oscillator in Hz </para>
+</section>
+</section>
+</section>

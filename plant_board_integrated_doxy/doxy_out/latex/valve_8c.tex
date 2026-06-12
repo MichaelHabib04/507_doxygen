@@ -1,0 +1,79 @@
+\doxysection{Core/\+\+Src/\+valve.c File Reference}
+\hypertarget{valve_8c}{}\label{valve_8c}\index{Core/Src/valve.c@{Core/Src/valve.c}}
+
+
+Implementation of relay-\/controlled valve helpers.  
+
+
+{\ttfamily \+\#include "{}valve.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{valve_8c_a75a34bba40281d9babf4010f64f9e233}{valve\+\_\+open}} (\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+\_\+valve)
+\begin{DoxyCompactList}\small\item\em Open the valve by setting the configured relay output high. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{valve_8c_a6c83dc7aed505a5af939d9d62d07a9e7}{valve\+\_\+close}} (\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \texorpdfstring{$\ast$}{*}p\+\_\+valve)
+\begin{DoxyCompactList}\small\item\em Close the valve by setting the configured relay output low. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Implementation of relay-\/controlled valve helpers. 
+
+\begin{DoxyDate}{Date}
+Created on Jun 4, 2026 
+\end{DoxyDate}
+\begin{DoxyAuthor}{Author}
+malaika 
+\end{DoxyAuthor}
+
+
+\label{valve_8c_doc-func-members}
+\Hypertarget{valve_8c_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{valve_8c_a6c83dc7aed505a5af939d9d62d07a9e7}\index{valve.c@{valve.c}!valve\_close@{valve\_close}}
+\index{valve\_close@{valve\_close}!valve.c@{valve.c}}
+\doxysubsubsection{\texorpdfstring{valve\_close()}{valve\_close()}}
+{\footnotesize\ttfamily \label{valve_8c_a6c83dc7aed505a5af939d9d62d07a9e7} 
+void valve\+\_\+close (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+valve}{}\end{DoxyParamCaption})}
+
+
+
+Close the valve by setting the configured relay output low. 
+
+Close the valve by setting the relay GPIO pin low.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+valve} & Pointer to the valve GPIO configuration.\\
+\hline
+\end{DoxyParams}
+Close the valve by setting the configured relay output low.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+valve} & Pointer to the valve GPIO configuration. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{valve_8c_a75a34bba40281d9babf4010f64f9e233}\index{valve.c@{valve.c}!valve\_open@{valve\_open}}
+\index{valve\_open@{valve\_open}!valve.c@{valve.c}}
+\doxysubsubsection{\texorpdfstring{valve\_open()}{valve\_open()}}
+{\footnotesize\ttfamily \label{valve_8c_a75a34bba40281d9babf4010f64f9e233} 
+void valve\+\_\+open (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{structvalve__t}{valve\+\_\+t}} \texorpdfstring{$\ast$}{*}}]{p\+\_\+valve}{}\end{DoxyParamCaption})}
+
+
+
+Open the valve by setting the configured relay output high. 
+
+Open the valve by setting the relay GPIO pin high.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+valve} & Pointer to the valve GPIO configuration.\\
+\hline
+\end{DoxyParams}
+Open the valve by setting the configured relay output high.
+
+
+\begin{DoxyParams}{Parameters}
+{\em p\+\_\+valve} & Pointer to the valve GPIO configuration. \\
+\hline
+\end{DoxyParams}
