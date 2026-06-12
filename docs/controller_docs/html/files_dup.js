@@ -1,4 +1,4 @@
 var files_dup =
 [
-    [ "Core", "dir_c6310732a22f63c0c2fc5595561e68f1.html", "dir_c6310732a22f63c0c2fc5595561e68f1" ]
+    [ "Controller_integrated_doxy", "dir_a27517b2c9a9ca81562a518b97e1dabf.html", "dir_a27517b2c9a9ca81562a518b97e1dabf" ]
 ];

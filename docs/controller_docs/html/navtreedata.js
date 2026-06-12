@@ -52,7 +52,7 @@ var NAVTREE =
 var NAVTREEINDEX =
 [
 "_i_s31_f_l3726_a_8cpp.html",
-"stm32f4xx__it_8h.html#a6303e1f258cbdc1f970ce579cc015623"
+"stm32f4xx__it_8h.html#a3150f74512510287a942624aa9b44cc5"
 ];
 
 const SYNCONMSG = 'click to disable panel synchronization';

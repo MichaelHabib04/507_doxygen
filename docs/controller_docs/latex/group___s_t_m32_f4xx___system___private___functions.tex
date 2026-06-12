@@ -6,10 +6,12 @@
 void \doxymbox{\hyperlink{group___s_t_m32_f4xx___system___private___functions_ga93f514700ccf00d08dbdcff7f1224eb2}{System\+Init}} (void)
 \begin{DoxyCompactList}\small\item\em Setup the microcontroller system Initialize the FPU setting, vector table location and External memory configuration. \end{DoxyCompactList}\item 
 void \doxymbox{\hyperlink{group___s_t_m32_f4xx___system___private___functions_gae0c36a9591fe6e9c45ecb21a794f0f0f}{System\+Core\+Clock\+Update}} (void)
-\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable according to Clock Register Values. The System\+Core\+Clock variable contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\begin{DoxyCompactList}\small\item\em Update System\+Core\+Clock variable according to Clock Register Values. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
 
 \doxysubsubsubsection{Detailed Description}
+
+
 
 
 \label{group___s_t_m32_f4xx___system___private___functions_doc-func-members}
@@ -23,7 +25,9 @@ void System\+Core\+Clock\+Update (\begin{DoxyParamCaption}\item[{void}]{}{}\end{
 
 
 
-Update System\+Core\+Clock variable according to Clock Register Values. The System\+Core\+Clock variable contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters. 
+Update System\+Core\+Clock variable according to Clock Register Values. 
+
+The System\+Core\+Clock variable contains the core clock (HCLK), it can be used by the user application to setup the Sys\+Tick timer or configure other parameters.
 
 \begin{DoxyNote}{Note}
 Each time the core clock (HCLK) changes, this function must be called to update System\+Core\+Clock variable value. Otherwise, any configuration based on this variable will be incorrect. ~\newline

@@ -1,5 +1,5 @@
-\doxysection{Core/\+\+Inc/\+stm32f4xx\+\_\+hal\+\_\+conf.h File Reference}
-\hypertarget{stm32f4xx__hal__conf_8h}{}\label{stm32f4xx__hal__conf_8h}\index{Core/Inc/stm32f4xx\_hal\_conf.h@{Core/Inc/stm32f4xx\_hal\_conf.h}}
+\doxysection{Controller\+\_\+integrated\+\_\+doxy/\+\+Core/\+\+Inc/\+stm32f4xx\+\_\+hal\+\_\+conf.h File Reference}
+\hypertarget{stm32f4xx__hal__conf_8h}{}\label{stm32f4xx__hal__conf_8h}\index{Controller\_integrated\_doxy/Core/Inc/stm32f4xx\_hal\_conf.h@{Controller\_integrated\_doxy/Core/Inc/stm32f4xx\_hal\_conf.h}}
 {\ttfamily \+\#include "{}stm32f4xx\+\_\+hal\+\_\+rcc.\+h"{}}\newline
 {\ttfamily \+\#include "{}stm32f4xx\+\_\+hal\+\_\+gpio.\+h"{}}\newline
 {\ttfamily \+\#include "{}stm32f4xx\+\_\+hal\+\_\+exti.\+h"{}}\newline
@@ -33,11 +33,11 @@
 \+\#define \doxymbox{\hyperlink{stm32f4xx__hal__conf_8h_aa9b5a3a425901e097de70092dbe31e0f}{HAL\+\_\+\+CORTEX\+\_\+\+MODULE\+\_\+\+ENABLED}}
 \item 
 \+\#define \doxymbox{\hyperlink{stm32f4xx__hal__conf_8h_aeafcff4f57440c60e64812dddd13e7cb}{HSE\+\_\+\+VALUE}}~25000000U
-\begin{DoxyCompactList}\small\item\em Adjust the value of External High Speed oscillator (HSE) used in your application. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Adjust the value of External High Speed oscillator (HSE) used in your application. \end{DoxyCompactList}\item 
 \+\#define \doxymbox{\hyperlink{stm32f4xx__hal__conf_8h_a68ecbc9b0a1a40a1ec9d18d5e9747c4f}{HSE\+\_\+\+STARTUP\+\_\+\+TIMEOUT}}~100U
 \item 
 \+\#define \doxymbox{\hyperlink{stm32f4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37}{HSI\+\_\+\+VALUE}}~((uint32\+\_\+t)16000000U)
-\begin{DoxyCompactList}\small\item\em Internal High Speed oscillator (HSI) value. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). \end{DoxyCompactList}\item 
+\begin{DoxyCompactList}\small\item\em Internal High Speed oscillator (HSI) value. \end{DoxyCompactList}\item 
 \+\#define \doxymbox{\hyperlink{stm32f4xx__hal__conf_8h_a4872023e65449c0506aac3ea6bec99e9}{LSI\+\_\+\+VALUE}}~32000U
 \begin{DoxyCompactList}\small\item\em Internal Low Speed oscillator (LSI) value. \end{DoxyCompactList}\item 
 \+\#define \doxymbox{\hyperlink{stm32f4xx__hal__conf_8h_a7bbb9d19e5189a6ccd0fb6fa6177d20d}{LSE\+\_\+\+VALUE}}~32768U
@@ -350,9 +350,9 @@ Time out for HSE start up, in ms \Hypertarget{stm32f4xx__hal__conf_8h_aeafcff4f5
 
 
 
-Adjust the value of External High Speed oscillator (HSE) used in your application. This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). 
+Adjust the value of External High Speed oscillator (HSE) used in your application. 
 
-Value of the External oscillator in Hz \Hypertarget{stm32f4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37}\index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!HSI\_VALUE@{HSI\_VALUE}}
+This value is used by the RCC HAL module to compute the system frequency (when HSE is used as system clock source, directly or through the PLL). Value of the External oscillator in Hz \Hypertarget{stm32f4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37}\index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!HSI\_VALUE@{HSI\_VALUE}}
 \index{HSI\_VALUE@{HSI\_VALUE}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{HSI\_VALUE}{HSI\_VALUE}}
 {\footnotesize\ttfamily \label{stm32f4xx__hal__conf_8h_aaa8c76e274d0f6dd2cefb5d0b17fbc37} 
@@ -360,9 +360,9 @@ Value of the External oscillator in Hz \Hypertarget{stm32f4xx__hal__conf_8h_aaa8
 
 
 
-Internal High Speed oscillator (HSI) value. This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). 
+Internal High Speed oscillator (HSI) value. 
 
-Value of the Internal oscillator in Hz \Hypertarget{stm32f4xx__hal__conf_8h_a3379989d46599c7e19a43f42e9145a4a}\index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!INSTRUCTION\_CACHE\_ENABLE@{INSTRUCTION\_CACHE\_ENABLE}}
+This value is used by the RCC HAL module to compute the system frequency (when HSI is used as system clock source, directly or through the PLL). Value of the Internal oscillator in Hz \Hypertarget{stm32f4xx__hal__conf_8h_a3379989d46599c7e19a43f42e9145a4a}\index{stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}!INSTRUCTION\_CACHE\_ENABLE@{INSTRUCTION\_CACHE\_ENABLE}}
 \index{INSTRUCTION\_CACHE\_ENABLE@{INSTRUCTION\_CACHE\_ENABLE}!stm32f4xx\_hal\_conf.h@{stm32f4xx\_hal\_conf.h}}
 \doxysubsubsection{\texorpdfstring{INSTRUCTION\_CACHE\_ENABLE}{INSTRUCTION\_CACHE\_ENABLE}}
 {\footnotesize\ttfamily \label{stm32f4xx__hal__conf_8h_a3379989d46599c7e19a43f42e9145a4a} 

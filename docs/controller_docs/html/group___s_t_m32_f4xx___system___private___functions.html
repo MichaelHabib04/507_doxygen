@@ -124,7 +124,7 @@ Functions</h2></td></tr>
 <tr class="memitem:ga93f514700ccf00d08dbdcff7f1224eb2" id="r_ga93f514700ccf00d08dbdcff7f1224eb2"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#ga93f514700ccf00d08dbdcff7f1224eb2">SystemInit</a> (void)</td></tr>
 <tr class="memdesc:ga93f514700ccf00d08dbdcff7f1224eb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Setup the microcontroller system Initialize the FPU setting, vector table location and External memory configuration.  <br /></td></tr>
 <tr class="memitem:gae0c36a9591fe6e9c45ecb21a794f0f0f" id="r_gae0c36a9591fe6e9c45ecb21a794f0f0f"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#gae0c36a9591fe6e9c45ecb21a794f0f0f">SystemCoreClockUpdate</a> (void)</td></tr>
-<tr class="memdesc:gae0c36a9591fe6e9c45ecb21a794f0f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters.  <br /></td></tr>
+<tr class="memdesc:gae0c36a9591fe6e9c45ecb21a794f0f0f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update SystemCoreClock variable according to Clock Register Values.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
 <div class="textblock"></div><a name="doc-func-members" id="doc-func-members"></a><h2 id="header-doc-func-members" class="groupheader">Function Documentation</h2>
@@ -143,7 +143,8 @@ Functions</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Update SystemCoreClock variable according to Clock Register Values. The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters. </p>
+<p>Update SystemCoreClock variable according to Clock Register Values. </p>
+<p>The SystemCoreClock variable contains the core clock (HCLK), it can be used by the user application to setup the SysTick timer or configure other parameters.</p>
 <dl class="section note"><dt>Note</dt><dd>Each time the core clock (HCLK) changes, this function must be called to update SystemCoreClock variable value. Otherwise, any configuration based on this variable will be incorrect. <br  />
 </dd>
 <dd>
