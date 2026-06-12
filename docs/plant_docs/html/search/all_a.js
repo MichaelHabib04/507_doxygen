@@ -1,13 +1,7 @@
 var searchData=
 [
-  ['main_0',['main',['../main_8cpp.html#a840291bc02cba5474a4cb46a9b9566fe',1,'main.cpp']]],
-  ['main_2ecpp_1',['main.cpp',['../main_8cpp.html',1,'']]],
-  ['memmanage_5fhandler_2',['MemManage_Handler',['../stm32f4xx__it_8c.html#a3150f74512510287a942624aa9b44cc5',1,'stm32f4xx_it.c']]],
-  ['motor_3',['motor',['../main_8cpp.html#a794d717430bb56bc09484be27e421581',1,'main.cpp']]],
-  ['motor_5fchan_5fenable_4',['motor_chan_enable',['../motor__driver_8c.html#a27bc74646055fb9862777972ca045762',1,'motor_driver.c']]],
-  ['motor_5fdriver_2ec_5',['motor_driver.c',['../motor__driver_8c.html',1,'']]],
-  ['motor_5fenable_6',['motor_enable',['../main_8cpp.html#add40bd194904e7fcbca735288f03bb0e',1,'main.cpp']]],
-  ['motor_5fset_5fduty_5fcycle_7',['motor_set_duty_cycle',['../motor__driver_8c.html#a20d545bdb85184d9810dd083450e9fa7',1,'motor_driver.c']]],
-  ['motor_5fstart_5ftick_8',['motor_start_tick',['../main_8cpp.html#a9fd51e268f66844639b7f3e43e6bf141',1,'main.cpp']]],
-  ['motor_5fstop_9',['motor_stop',['../motor__driver_8c.html#a3034b03c31e563473cc3ae76caf81b4a',1,'motor_driver.c']]]
+  ['last_5fmotor_5fcycle_5ftick_0',['last_motor_cycle_tick',['../main_8cpp.html#ab08914c74b6da903ae93a2953c3084aa',1,'main.cpp']]],
+  ['lse_5fstartup_5ftimeout_1',['LSE_STARTUP_TIMEOUT',['../stm32f4xx__hal__conf_8h.html#a85e6fc812dc26f7161a04be2568a5462',1,'stm32f4xx_hal_conf.h']]],
+  ['lse_5fvalue_2',['LSE_VALUE',['../stm32f4xx__hal__conf_8h.html#a7bbb9d19e5189a6ccd0fb6fa6177d20d',1,'stm32f4xx_hal_conf.h']]],
+  ['lsi_5fvalue_3',['LSI_VALUE',['../stm32f4xx__hal__conf_8h.html#a4872023e65449c0506aac3ea6bec99e9',1,'stm32f4xx_hal_conf.h']]]
 ];

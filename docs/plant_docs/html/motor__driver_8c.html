@@ -121,16 +121,16 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('motor__driver_
 
 <p>Implementation of the PWM motor driver helpers.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;motor_driver.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="motor__driver_8h_source.html">motor_driver.h</a>&quot;</code><br />
 <code>#include &quot;stdlib.h&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a27bc74646055fb9862777972ca045762" id="r_a27bc74646055fb9862777972ca045762"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27bc74646055fb9862777972ca045762">motor_chan_enable</a> (motor_t *p_mot)</td></tr>
+<tr class="memitem:a27bc74646055fb9862777972ca045762" id="r_a27bc74646055fb9862777972ca045762"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a27bc74646055fb9862777972ca045762">motor_chan_enable</a> (<a class="el" href="structmotor__t.html">motor_t</a> *p_mot)</td></tr>
 <tr class="memdesc:a27bc74646055fb9862777972ca045762"><td class="mdescLeft">&#160;</td><td class="mdescRight">Start PWM output with interrupts enabled on both motor channels.  <br /></td></tr>
-<tr class="memitem:a20d545bdb85184d9810dd083450e9fa7" id="r_a20d545bdb85184d9810dd083450e9fa7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20d545bdb85184d9810dd083450e9fa7">motor_set_duty_cycle</a> (motor_t *p_mot, int8_t duty_cycle)</td></tr>
+<tr class="memitem:a20d545bdb85184d9810dd083450e9fa7" id="r_a20d545bdb85184d9810dd083450e9fa7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a20d545bdb85184d9810dd083450e9fa7">motor_set_duty_cycle</a> (<a class="el" href="structmotor__t.html">motor_t</a> *p_mot, int8_t duty_cycle)</td></tr>
 <tr class="memdesc:a20d545bdb85184d9810dd083450e9fa7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the motor drive duty cycle.  <br /></td></tr>
-<tr class="memitem:a3034b03c31e563473cc3ae76caf81b4a" id="r_a3034b03c31e563473cc3ae76caf81b4a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3034b03c31e563473cc3ae76caf81b4a">motor_stop</a> (motor_t *p_mot)</td></tr>
+<tr class="memitem:a3034b03c31e563473cc3ae76caf81b4a" id="r_a3034b03c31e563473cc3ae76caf81b4a"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a3034b03c31e563473cc3ae76caf81b4a">motor_stop</a> (<a class="el" href="structmotor__t.html">motor_t</a> *p_mot)</td></tr>
 <tr class="memdesc:a3034b03c31e563473cc3ae76caf81b4a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Stop the motor by clearing both PWM compare registers.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -147,13 +147,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void motor_chan_enable </td>
           <td>(</td>
-          <td class="paramtype">motor_t *</td>          <td class="paramname"><span class="paramname"><em>p_mot</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structmotor__t.html">motor_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p_mot</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Start PWM output with interrupts enabled on both motor channels. </p>
+<p>Start PWM output on both configured motor channels.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mot</td><td>Pointer to the motor configuration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Start PWM output with interrupts enabled on both motor channels.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_mot</td><td>Pointer to the motor configuration. </td></tr>
@@ -172,7 +180,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void motor_set_duty_cycle </td>
           <td>(</td>
-          <td class="paramtype">motor_t *</td>          <td class="paramname"><span class="paramname"><em>p_mot</em></span>, </td>
+          <td class="paramtype"><a class="el" href="structmotor__t.html">motor_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p_mot</em></span>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -183,7 +191,16 @@ Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Set the motor drive duty cycle. </p>
+<p>Set the motor duty cycle as a percentage of the timer period.</p>
 <p>The duty cycle is converted from a percentage to a timer compare value using the timer auto-reload register. The second output channel is set to zero.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mot</td><td>Pointer to the motor configuration. </td></tr>
+    <tr><td class="paramname">duty_cycle</td><td>Duty cycle percentage from 0 to 100.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Set the motor drive duty cycle.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_mot</td><td>Pointer to the motor configuration. </td></tr>
@@ -203,13 +220,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void motor_stop </td>
           <td>(</td>
-          <td class="paramtype">motor_t *</td>          <td class="paramname"><span class="paramname"><em>p_mot</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structmotor__t.html">motor_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p_mot</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Stop the motor by clearing both PWM compare registers. </p>
+<p>Stop the motor by setting both PWM compare values to zero.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_mot</td><td>Pointer to the motor configuration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Stop the motor by clearing both PWM compare registers.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_mot</td><td>Pointer to the motor configuration. </td></tr>

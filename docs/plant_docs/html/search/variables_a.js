@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['valve1_0',['valve1',['../main_8cpp.html#acacb56626a3fbca6dc05960abced27ae',1,'main.cpp']]],
-  ['valve2_1',['valve2',['../main_8cpp.html#af9a6f05476b2df8c46259b2629a7a23a',1,'main.cpp']]]
+  ['tds1_0',['tds1',['../main_8cpp.html#ac04d177e721a5bd5ce6db73deb2c8495',1,'main.cpp']]],
+  ['temperature_5fc_1',['temperature_c',['../structtds__t.html#ad5c71db1edd602c9f3449bea3a9b557e',1,'tds_t']]]
 ];

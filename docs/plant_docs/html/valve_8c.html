@@ -121,13 +121,13 @@ document.addEventListener('DOMContentLoaded',() => { initNavTree('valve_8c.html'
 
 <p>Implementation of relay-controlled valve helpers.  
 <a href="#details">More...</a></p>
-<div class="textblock"><code>#include &quot;valve.h&quot;</code><br />
+<div class="textblock"><code>#include &quot;<a class="el" href="valve_8h_source.html">valve.h</a>&quot;</code><br />
 </div><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 id="header-func-members" class="groupheader"><a id="func-members" name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a75a34bba40281d9babf4010f64f9e233" id="r_a75a34bba40281d9babf4010f64f9e233"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a75a34bba40281d9babf4010f64f9e233">valve_open</a> (valve_t *p_valve)</td></tr>
+<tr class="memitem:a75a34bba40281d9babf4010f64f9e233" id="r_a75a34bba40281d9babf4010f64f9e233"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a75a34bba40281d9babf4010f64f9e233">valve_open</a> (<a class="el" href="structvalve__t.html">valve_t</a> *p_valve)</td></tr>
 <tr class="memdesc:a75a34bba40281d9babf4010f64f9e233"><td class="mdescLeft">&#160;</td><td class="mdescRight">Open the valve by setting the configured relay output high.  <br /></td></tr>
-<tr class="memitem:a6c83dc7aed505a5af939d9d62d07a9e7" id="r_a6c83dc7aed505a5af939d9d62d07a9e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c83dc7aed505a5af939d9d62d07a9e7">valve_close</a> (valve_t *p_valve)</td></tr>
+<tr class="memitem:a6c83dc7aed505a5af939d9d62d07a9e7" id="r_a6c83dc7aed505a5af939d9d62d07a9e7"><td class="memItemLeft">void&#160;</td><td class="memItemRight"><a class="el" href="#a6c83dc7aed505a5af939d9d62d07a9e7">valve_close</a> (<a class="el" href="structvalve__t.html">valve_t</a> *p_valve)</td></tr>
 <tr class="memdesc:a6c83dc7aed505a5af939d9d62d07a9e7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Close the valve by setting the configured relay output low.  <br /></td></tr>
 </table>
 <a name="details" id="details"></a><h2 id="header-details" class="groupheader">Detailed Description</h2>
@@ -144,13 +144,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void valve_close </td>
           <td>(</td>
-          <td class="paramtype">valve_t *</td>          <td class="paramname"><span class="paramname"><em>p_valve</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structvalve__t.html">valve_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p_valve</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Close the valve by setting the configured relay output low. </p>
+<p>Close the valve by setting the relay GPIO pin low.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_valve</td><td>Pointer to the valve GPIO configuration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Close the valve by setting the configured relay output low.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_valve</td><td>Pointer to the valve GPIO configuration. </td></tr>
@@ -169,13 +177,21 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">void valve_open </td>
           <td>(</td>
-          <td class="paramtype">valve_t *</td>          <td class="paramname"><span class="paramname"><em>p_valve</em></span></td><td>)</td>
+          <td class="paramtype"><a class="el" href="structvalve__t.html">valve_t</a> *</td>          <td class="paramname"><span class="paramname"><em>p_valve</em></span></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
 
 <p>Open the valve by setting the configured relay output high. </p>
+<p>Open the valve by setting the relay GPIO pin high.</p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">p_valve</td><td>Pointer to the valve GPIO configuration.</td></tr>
+  </table>
+  </dd>
+</dl>
+<p>Open the valve by setting the configured relay output high.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">p_valve</td><td>Pointer to the valve GPIO configuration. </td></tr>
