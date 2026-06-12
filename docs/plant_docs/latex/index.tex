@@ -38,6 +38,13 @@ Due to the mounting holes on the controller board being unusable, a controller h
 
  
 \begin{DoxyImage}%
+\includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{controller_layout.png}%
+\doxyfigcaption{Controller Board Layout}%
+\end{DoxyImage}
+   
+
+ 
+\begin{DoxyImage}%
 \includegraphics[width=\textwidth,height=\textheight/2,keepaspectratio=true]{controller.png}%
 \doxyfigcaption{Controller as depicted in Fusion}%
 \end{DoxyImage}
@@ -166,4 +173,92 @@ The serial clock on the LCD was also routed to the wrong pin on the MCU. Due to 
 
 Well… it doesn’t work anymore. Here are some videos we took while it was! This video consists of clips of each individual functionality (sensors and actuators) as well as a video of the autonomous mode where the tank self-\/regulates.
 
-\href{https://youtu.be/ZvsrLwSTyi8}{\texttt{https:\+/\+/\+youtu.\+be/\+\+Zvsr\+Lw\+STyi8}} 
+\href{https://youtu.be/ZvsrLwSTyi8}{\texttt{https:\+/\+/\+youtu.\+be/\+\+Zvsr\+Lw\+STyi8}}
+
+{\bfseries{Bill Of Materials}}
+
+Controller Board BOM
+
+
+\begin{DoxyTable}{7}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Designators  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Qty  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Comment  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Footprint  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}LCSC PN  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Digi\+Key PN  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Alt Digi\+Key PN  \\
+B1, B2, B3, B4  &4  &TPS645-\/5\+NC105  &SOP450\+P919\+X345-\/4N  &C19191549  &&\\
+BOOT0  &1  &STM32\+F429\+VGT6\+TR-\/\+CONTROLLERSTM32\+F429\+VGT6\+TR\+\_\+\+PACKAGE  &STM32\+F429\+VGT6\+TR\+\_\+\+PACKAGE  &C2052958  &&\\
+C1, C4, C5, C6, C7, C8, C12, C13, C14, C15, C16, C18  &12  &100nF  &"{}0805"{}  &C1711  &&\\
+C2, C3  &2  &4.\+7uF  &"{}0805"{}  &C1779  &&\\
+C9, C10, C11, C17, C19  &5  &1uF  &"{}0805"{}  &C28323  &&\\
+ESP8622  &1  &ESP8266\+\_\+\+ESP-\/01\+HDRVR8\+W64\+P254\+\_\+2\+X4\+\_\+1016\+X508\+X254B  &HDRVR8\+W64\+P254\+\_\+2\+X4\+\_\+1016\+X508\+X254B  &&\href{https://www.amazon.com/dp/B010N1ROQS?ref=ppx_yo2ov_dt_b_fed_asin_title}{\texttt{https:\+/\+/\+www.\+amazon.\+com/\+dp/\+\+B010\+N1\+ROQS?ref=ppx\+\_\+yo2ov\+\_\+dt\+\_\+b\+\_\+fed\+\_\+asin\+\_\+title}}  &\\
+J1  &1  &UX60\+SC-\/\+MB-\/5\+ST  &UX60\+SC-\/\+MB-\/5\+ST  &&WM17116\+CT-\/\+ND  &\\
+J2  &1  &2828XX-\/2282837-\/2  &TERMBLK\+\_\+508-\/2N  &&A98333-\/\+ND  &\\
+JP1  &1  &PINHD-\/1\+X6  &1X06  &&SAM1029-\/06-\/\+ND  &\\
+JP2  &1  &PINHD-\/1\+X6  &1X06  &&&\\
+R1, R2, R3, R4, R27, R30, R31, R32  &8  &10K  &RESC2012\+X65  &C17414  &&\\
+R5, R6, R7, R8, R9, R10, R11, R12, R16, R17, R18, R19, R20, R21, R22, R23  &16  &100  &RESC2012\+X65  &C17408  &&\\
+R13, R14  &2  &10K  &RESC1005\+X40  &C17414  &&\\
+R15, R24, R25, R26  &4  &10  &RESC2012\+X65  &C17415  &&\\
+R28  &1  &2K  &RESC1005\+X40  &C17604  &&\\
+S1, S2  &2  &SPST-\/\+NO\+\_\+\+SWITCH\+\_\+\+KMR2  &KMR2  &C221675  &&\\
+TP1, TP2, TP3, TP4, TP5, TP6  &6  &TP\+\_\+5005\+\_\+\+COMPACT  &TP-\/\+KEYSTONE-\/\+COMPACT  &&&36-\/5005-\/ND  \\
+U\$2, U\$3, U\$4, U\$5  &4  &KB2450\+YWHDRVR8\+W50\+P254\+\_\+1\+X8\+\_\+2004\+X486\+X610B  &HDRVR8\+W50\+P254\+\_\+1\+X8\+\_\+2004\+X486\+X610B  &C17393516  &&\\
+U\$6  &1  &IS31\+FL3726\+A-\/\+ZLS4-\/\+TR  &SOP65\+P640\+X120-\/25\+T150\+X270N  &C3190920  &&\\
+U\$7  &1  &522712069\+\_\+\+RIBBONHDRRA\+\_\+\+SMD\+\_\+20\+S25\+P100\+\_\+1\+X20\+\_\+2200\+X670\+X300  &HDRRA\+\_\+\+SMD\+\_\+20\+S25\+P100\+\_\+1\+X20\+\_\+2200\+X670\+X300  &C3168975  &&\\
+U\$9  &1  &AM4825P  &SOIC127\+P600\+X175-\/8N  &C5444618  &&NTMS4177\+PR2\+GCT-\/\+ND  \\
+IC5  &1  &ME6206\+A30\+M3G  &SOT-\/23  &C487911  &&296-\/28778-\/1-\/ND  \\
+\end{DoxyTable}
+
+
+Main Board BOM
+
+
+\begin{DoxyTable}{5}{}{}{1}
+\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Designators  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Comment  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Footprint  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}LCSC PN  &\SetCell{c,bg=\tableheadbgcolor,font=\bfseries}Digi\+Key PN  \\
+C1, C4  &22u  &0805  &C45783  &N/\+A  \\
+C2, C5, C9, C10, C11, C12, C13, C14, C32, C33, C37, C38, C16, C18, C22, C26, C20, C24, C25, C28  &100n  &0805  &CL21\+B104\+KBCNNNC  &N/\+A  \\
+C3  &10p  &0805  &CL10\+C100\+JB8\+NNNC  &N/\+A  \\
+C6, C7, C15, C30, C31  &1u  &0805  &CL21\+B105\+KBFNNNE  &N/\+A  \\
+C8, C21, C23  &4.\+7u  &0805  &CL21\+A475\+KAQNNNE  &N/\+A  \\
+C15, C17, C27, C29, C19  &10u  &0805  &CL21\+A106\+KAYNNNE  &N/\+A  \\
+C36  &1 n  &0805  &CL21\+C102\+JBCNNNC  &N/\+A  \\
+D1  &CHIP-\/\+FLAT-\/\+R\+\_\+0603-\/0.\+55\+MM  &0603  &C2286  &CP-\/036\+BHPJTR-\/\+ND  \\
+D2, D3  &DIODEDO-\/214\+AC(SMA)  &DO-\/214\+AC  &C84633  &N/\+A  \\
+D4, D5, D6, D7  &1N4148\+WL  &SOD-\/\+FL  &C2908120  &N/\+A  \\
+D8  &1N5819W  &SOT-\/123\+FL  &N/\+A  &~\newline
+1655-\/1N5819\+WTR-\/\+ND  \\
+D10  &CHIP-\/\+FLAT-\/\+R\+\_\+0603-\/0.\+55\+MM  &0603  &C2286  &CP-\/036\+BHPJTR-\/\+ND  \\
+DRV1  &DRV8837  &WSON  &C191000  &N/\+A  \\
+FB2  &BLM18\+PG121\+SN1D  &0603  &C14709  &N/\+A  \\
+FUSE1  &ERB-\/\+RG2\+R00V  &1  &N/\+A  &P16739\+TR-\/\+ND  \\
+IC1  &TPS56425  &SOT-\/563  &C19191267  &N/\+A  \\
+IC2  &LMV324M  &SOIC-\/14  &C529562  &N/\+A  \\
+IC3  &CD4060\+BM  &SOIC-\/16  &C32699  &N/\+A  \\
+IC4  &TPS40600\+DBVR  &SOT-\/753  &N/\+A  &296-\/27004-\/2-\/ND  \\
+IC5  &ME6206\+A30\+M3G  &SOT-\/23  &C487911  &N/\+A  \\
+J1  &548190572CONN\+\_\+\+SD-\/54819-\/027\+\_\+\+MOL  &&N/\+A  &\\
+J2  &2828XX-\/4282834-\/4  &&N/\+A  &\\
+J3, J6  &2828XX-\/2282837-\/2  &&N/\+A  &\\
+J5  &3-\/PIN SMD  &&N/\+A  &\\
+JP1  &PINHD-\/1\+X6  &&N/\+A  &\\
+JP2  &JST-\/\+PH2  &&N/\+A  &\\
+L1  &18m  &&&\\
+LDO1  &TLV1117\+LV33\+DCYR  &SOT-\/23  &N/\+A  &~\newline
+296-\/28778-\/2-\/ND  \\
+MCU1  &STM32\+F411\+CEU6  &QFN-\/49  &C60420  &N/\+A  \\
+PFET1  &AM4825P  &SOIC-\/8  &N/\+A  &~\newline
+5318-\/AM4825\+P-\/\+ND  \\
+R1, R4, R9, R10, R11, R16, R17, R18, R19, R20, R21, R23, R24, R26  &10K  &0805  &C17414  &N/\+A  \\
+R2  &210k  &0805  &C17547  &N/\+A  \\
+R3, R6  &30k  &0805  &C17621  &N/\+A  \\
+R5  &220k  &0805  &C17556  &N/\+A  \\
+R7  &120  &0805  &C17437  &N/\+A  \\
+R8, R22  &10  &0805  &C17415  &N/\+A  \\
+R12, R25  &100K  &0805  &C149504  &N/\+A  \\
+R13  &6.\+8K  &0805  &C17772  &N/\+A  \\
+R14  &1M  &0805  &C17514  &N/\+A  \\
+R15, R27  &5.\+6K  &0805  &C4382  &N/\+A  \\
+RELAY1, RELAY2  &AQV101\+AZ  &&N/\+A  &255-\/2105-\/2-\/ND  \\
+S1  &SPST-\/\+NO\+\_\+\+SWITCH\+\_\+\+KMR2  &&&\\
+S2  &SPDT\+\_\+\+SWITCH\+\_\+\+CL-\/\+SB-\/12\+B-\/01T  &&&\\
+TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8  &TP\+\_\+5005\+\_\+\+COMPACT  &&N/\+A  &36-\/5005-\/ND  \\
+U\$1  &PJ-\/036\+BH-\/\+SMT-\/\+TRPJ-\/036\+BH-\/\+SMT-\/\+TR  &&N/\+A  &CP-\/036\+BHPJTR-\/\+ND  \\
+WI1  &ESP8266\+\_\+\+ESP-\/01\+HDRVR8\+W64\+P254\+\_\+2\+X4\+\_\+1016\+X508\+X254B  &&N/\+A  &\\
+\end{DoxyTable}

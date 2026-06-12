@@ -135,6 +135,10 @@ Assembled rig based on CAD</div></div>
     <p>The board was designed to take M3 screws, and the enclosure contains several 3D printed standoffs with heatset inserts to mount the board. Additionally, the enclosure mounts to the wooden veneer with M5 nuts and bolts. All wire lengths given with any sensors and actuators were found to be sufficiently sized, so a makeshift harness was created by zip tying cables together and feeding it into a hole in the enclosure.</p>
 <p>Due to the mounting holes on the controller board being unusable, a controller housing was designed with slots to fit the board into.</p>
 <div class="image">
+<img src="controller_layout.png" alt=""/>
+<div class="caption">
+Controller Board Layout</div></div>
+    <div class="image">
 <img src="controller.png" alt=""/>
 <div class="caption">
 Controller as depicted in Fusion</div></div>
@@ -204,7 +208,157 @@ Controller Bodge</div></div>
     <p>The serial clock on the LCD was also routed to the wrong pin on the MCU. Due to the correct MCU pin and incorrect MCU pin being adjacent to each other (as well as both not requiring usage), both pins were bridged together with solder to allow correct signals to flow to the correct pin. The CUBEMX file was also updated to ensure the incorrect pin was not used.</p>
 <p><b>Final Product</b></p>
 <p>Well… it doesn’t work anymore. Here are some videos we took while it was! This video consists of clips of each individual functionality (sensors and actuators) as well as a video of the autonomous mode where the tank self-regulates.</p>
-<p><a href="https://youtu.be/ZvsrLwSTyi8">https://youtu.be/ZvsrLwSTyi8</a> </p>
+<p><a href="https://youtu.be/ZvsrLwSTyi8">https://youtu.be/ZvsrLwSTyi8</a></p>
+<p><b>Bill Of Materials</b></p>
+<p>Controller Board BOM</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Designators  </th><th class="markdownTableHeadNone">Qty  </th><th class="markdownTableHeadNone">Comment  </th><th class="markdownTableHeadNone">Footprint  </th><th class="markdownTableHeadNone">LCSC PN  </th><th class="markdownTableHeadNone">DigiKey PN  </th><th class="markdownTableHeadNone">Alt DigiKey PN  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">B1, B2, B3, B4  </td><td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">TPS645-5NC105  </td><td class="markdownTableBodyNone">SOP450P919X345-4N  </td><td class="markdownTableBodyNone">C19191549  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">BOOT0  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">STM32F429VGT6TR-CONTROLLERSTM32F429VGT6TR_PACKAGE  </td><td class="markdownTableBodyNone">STM32F429VGT6TR_PACKAGE  </td><td class="markdownTableBodyNone">C2052958  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C1, C4, C5, C6, C7, C8, C12, C13, C14, C15, C16, C18  </td><td class="markdownTableBodyNone">12  </td><td class="markdownTableBodyNone">100nF  </td><td class="markdownTableBodyNone">"0805"  </td><td class="markdownTableBodyNone">C1711  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">C2, C3  </td><td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">4.7uF  </td><td class="markdownTableBodyNone">"0805"  </td><td class="markdownTableBodyNone">C1779  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C9, C10, C11, C17, C19  </td><td class="markdownTableBodyNone">5  </td><td class="markdownTableBodyNone">1uF  </td><td class="markdownTableBodyNone">"0805"  </td><td class="markdownTableBodyNone">C28323  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">ESP8622  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">ESP8266_ESP-01HDRVR8W64P254_2X4_1016X508X254B  </td><td class="markdownTableBodyNone">HDRVR8W64P254_2X4_1016X508X254B  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"><a href="https://www.amazon.com/dp/B010N1ROQS?ref=ppx_yo2ov_dt_b_fed_asin_title">https://www.amazon.com/dp/B010N1ROQS?ref=ppx_yo2ov_dt_b_fed_asin_title</a>  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">J1  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">UX60SC-MB-5ST  </td><td class="markdownTableBodyNone">UX60SC-MB-5ST  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">WM17116CT-ND  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">J2  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">2828XX-2282837-2  </td><td class="markdownTableBodyNone">TERMBLK_508-2N  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">A98333-ND  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">JP1  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">PINHD-1X6  </td><td class="markdownTableBodyNone">1X06  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">SAM1029-06-ND  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">JP2  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">PINHD-1X6  </td><td class="markdownTableBodyNone">1X06  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R1, R2, R3, R4, R27, R30, R31, R32  </td><td class="markdownTableBodyNone">8  </td><td class="markdownTableBodyNone">10K  </td><td class="markdownTableBodyNone">RESC2012X65  </td><td class="markdownTableBodyNone">C17414  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R5, R6, R7, R8, R9, R10, R11, R12, R16, R17, R18, R19, R20, R21, R22, R23  </td><td class="markdownTableBodyNone">16  </td><td class="markdownTableBodyNone">100  </td><td class="markdownTableBodyNone">RESC2012X65  </td><td class="markdownTableBodyNone">C17408  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R13, R14  </td><td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">10K  </td><td class="markdownTableBodyNone">RESC1005X40  </td><td class="markdownTableBodyNone">C17414  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R15, R24, R25, R26  </td><td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">10  </td><td class="markdownTableBodyNone">RESC2012X65  </td><td class="markdownTableBodyNone">C17415  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R28  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">2K  </td><td class="markdownTableBodyNone">RESC1005X40  </td><td class="markdownTableBodyNone">C17604  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">S1, S2  </td><td class="markdownTableBodyNone">2  </td><td class="markdownTableBodyNone">SPST-NO_SWITCH_KMR2  </td><td class="markdownTableBodyNone">KMR2  </td><td class="markdownTableBodyNone">C221675  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">TP1, TP2, TP3, TP4, TP5, TP6  </td><td class="markdownTableBodyNone">6  </td><td class="markdownTableBodyNone">TP_5005_COMPACT  </td><td class="markdownTableBodyNone">TP-KEYSTONE-COMPACT  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">36-5005-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">U$2, U$3, U$4, U$5  </td><td class="markdownTableBodyNone">4  </td><td class="markdownTableBodyNone">KB2450YWHDRVR8W50P254_1X8_2004X486X610B  </td><td class="markdownTableBodyNone">HDRVR8W50P254_1X8_2004X486X610B  </td><td class="markdownTableBodyNone">C17393516  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">U$6  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">IS31FL3726A-ZLS4-TR  </td><td class="markdownTableBodyNone">SOP65P640X120-25T150X270N  </td><td class="markdownTableBodyNone">C3190920  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">U$7  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">522712069_RIBBONHDRRA_SMD_20S25P100_1X20_2200X670X300  </td><td class="markdownTableBodyNone">HDRRA_SMD_20S25P100_1X20_2200X670X300  </td><td class="markdownTableBodyNone">C3168975  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">U$9  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">AM4825P  </td><td class="markdownTableBodyNone">SOIC127P600X175-8N  </td><td class="markdownTableBodyNone">C5444618  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">NTMS4177PR2GCT-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">IC5  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">ME6206A30M3G  </td><td class="markdownTableBodyNone">SOT-23  </td><td class="markdownTableBodyNone">C487911  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">296-28778-1-ND  </td></tr>
+</table>
+<p>Main Board BOM</p>
+<table class="markdownTable">
+<tr class="markdownTableHead">
+<th class="markdownTableHeadNone">Designators  </th><th class="markdownTableHeadNone">Comment  </th><th class="markdownTableHeadNone">Footprint  </th><th class="markdownTableHeadNone">LCSC PN  </th><th class="markdownTableHeadNone">DigiKey PN  </th></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C1, C4  </td><td class="markdownTableBodyNone">22u  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C45783  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">C2, C5, C9, C10, C11, C12, C13, C14, C32, C33, C37, C38, C16, C18, C22, C26, C20, C24, C25, C28  </td><td class="markdownTableBodyNone">100n  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">CL21B104KBCNNNC  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C3  </td><td class="markdownTableBodyNone">10p  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">CL10C100JB8NNNC  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">C6, C7, C15, C30, C31  </td><td class="markdownTableBodyNone">1u  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">CL21B105KBFNNNE  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C8, C21, C23  </td><td class="markdownTableBodyNone">4.7u  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">CL21A475KAQNNNE  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">C15, C17, C27, C29, C19  </td><td class="markdownTableBodyNone">10u  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">CL21A106KAYNNNE  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">C36  </td><td class="markdownTableBodyNone">1 n  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">CL21C102JBCNNNC  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">D1  </td><td class="markdownTableBodyNone">CHIP-FLAT-R_0603-0.55MM  </td><td class="markdownTableBodyNone">0603  </td><td class="markdownTableBodyNone">C2286  </td><td class="markdownTableBodyNone">CP-036BHPJTR-ND  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">D2, D3  </td><td class="markdownTableBodyNone">DIODEDO-214AC(SMA)  </td><td class="markdownTableBodyNone">DO-214AC  </td><td class="markdownTableBodyNone">C84633  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">D4, D5, D6, D7  </td><td class="markdownTableBodyNone">1N4148WL  </td><td class="markdownTableBodyNone">SOD-FL  </td><td class="markdownTableBodyNone">C2908120  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">D8  </td><td class="markdownTableBodyNone">1N5819W  </td><td class="markdownTableBodyNone">SOT-123FL  </td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"><br  />
+1655-1N5819WTR-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">D10  </td><td class="markdownTableBodyNone">CHIP-FLAT-R_0603-0.55MM  </td><td class="markdownTableBodyNone">0603  </td><td class="markdownTableBodyNone">C2286  </td><td class="markdownTableBodyNone">CP-036BHPJTR-ND  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">DRV1  </td><td class="markdownTableBodyNone">DRV8837  </td><td class="markdownTableBodyNone">WSON  </td><td class="markdownTableBodyNone">C191000  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">FB2  </td><td class="markdownTableBodyNone">BLM18PG121SN1D  </td><td class="markdownTableBodyNone">0603  </td><td class="markdownTableBodyNone">C14709  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">FUSE1  </td><td class="markdownTableBodyNone">ERB-RG2R00V  </td><td class="markdownTableBodyNone">1  </td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone">P16739TR-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">IC1  </td><td class="markdownTableBodyNone">TPS56425  </td><td class="markdownTableBodyNone">SOT-563  </td><td class="markdownTableBodyNone">C19191267  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">IC2  </td><td class="markdownTableBodyNone">LMV324M  </td><td class="markdownTableBodyNone">SOIC-14  </td><td class="markdownTableBodyNone">C529562  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">IC3  </td><td class="markdownTableBodyNone">CD4060BM  </td><td class="markdownTableBodyNone">SOIC-16  </td><td class="markdownTableBodyNone">C32699  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">IC4  </td><td class="markdownTableBodyNone">TPS40600DBVR  </td><td class="markdownTableBodyNone">SOT-753  </td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone">296-27004-2-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">IC5  </td><td class="markdownTableBodyNone">ME6206A30M3G  </td><td class="markdownTableBodyNone">SOT-23  </td><td class="markdownTableBodyNone">C487911  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">J1  </td><td class="markdownTableBodyNone">548190572CONN_SD-54819-027_MOL  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">J2  </td><td class="markdownTableBodyNone">2828XX-4282834-4  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">J3, J6  </td><td class="markdownTableBodyNone">2828XX-2282837-2  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">J5  </td><td class="markdownTableBodyNone">3-PIN SMD  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">JP1  </td><td class="markdownTableBodyNone">PINHD-1X6  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">JP2  </td><td class="markdownTableBodyNone">JST-PH2  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">L1  </td><td class="markdownTableBodyNone">18m  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">LDO1  </td><td class="markdownTableBodyNone">TLV1117LV33DCYR  </td><td class="markdownTableBodyNone">SOT-23  </td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"><br  />
+296-28778-2-ND  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">MCU1  </td><td class="markdownTableBodyNone">STM32F411CEU6  </td><td class="markdownTableBodyNone">QFN-49  </td><td class="markdownTableBodyNone">C60420  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">PFET1  </td><td class="markdownTableBodyNone">AM4825P  </td><td class="markdownTableBodyNone">SOIC-8  </td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"><br  />
+5318-AM4825P-ND  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R1, R4, R9, R10, R11, R16, R17, R18, R19, R20, R21, R23, R24, R26  </td><td class="markdownTableBodyNone">10K  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17414  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R2  </td><td class="markdownTableBodyNone">210k  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17547  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R3, R6  </td><td class="markdownTableBodyNone">30k  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17621  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R5  </td><td class="markdownTableBodyNone">220k  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17556  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R7  </td><td class="markdownTableBodyNone">120  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17437  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R8, R22  </td><td class="markdownTableBodyNone">10  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17415  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R12, R25  </td><td class="markdownTableBodyNone">100K  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C149504  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R13  </td><td class="markdownTableBodyNone">6.8K  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17772  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">R14  </td><td class="markdownTableBodyNone">1M  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C17514  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">R15, R27  </td><td class="markdownTableBodyNone">5.6K  </td><td class="markdownTableBodyNone">0805  </td><td class="markdownTableBodyNone">C4382  </td><td class="markdownTableBodyNone">N/A  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">RELAY1, RELAY2  </td><td class="markdownTableBodyNone">AQV101AZ  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone">255-2105-2-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">S1  </td><td class="markdownTableBodyNone">SPST-NO_SWITCH_KMR2  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">S2  </td><td class="markdownTableBodyNone">SPDT_SWITCH_CL-SB-12B-01T  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone"></td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">TP1, TP2, TP3, TP4, TP5, TP6, TP7, TP8  </td><td class="markdownTableBodyNone">TP_5005_COMPACT  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone">36-5005-ND  </td></tr>
+<tr class="markdownTableRowOdd">
+<td class="markdownTableBodyNone">U$1  </td><td class="markdownTableBodyNone">PJ-036BH-SMT-TRPJ-036BH-SMT-TR  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone">CP-036BHPJTR-ND  </td></tr>
+<tr class="markdownTableRowEven">
+<td class="markdownTableBodyNone">WI1  </td><td class="markdownTableBodyNone">ESP8266_ESP-01HDRVR8W64P254_2X4_1016X508X254B  </td><td class="markdownTableBodyNone"></td><td class="markdownTableBodyNone">N/A  </td><td class="markdownTableBodyNone"></td></tr>
+</table>
 </div></div><!-- PageDoc -->
 <a href="doxygen_crawl.html"></a>
 </div><!-- contents -->
