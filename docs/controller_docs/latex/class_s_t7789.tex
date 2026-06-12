@@ -1,0 +1,97 @@
+\doxysection{ST7789 Class Reference}
+\hypertarget{class_s_t7789}{}\label{class_s_t7789}\index{ST7789@{ST7789}}
+
+
+{\ttfamily \+\#include $<$ST7789.\+h$>$}
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_s_t7789_a76624643e2ccaede796fe48b40b7a4ca}{ST7789}} (GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}sck\+Port, uint16\+\_\+t sck\+Pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}mosi\+Port, uint16\+\_\+t mosi\+Pin, GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}rst\+Port, uint16\+\_\+t rst\+Pin)
+\item 
+void \doxymbox{\hyperlink{class_s_t7789_ade34128caca402550afa0d3fdea1971e}{init}} ()
+\item 
+void \doxymbox{\hyperlink{class_s_t7789_a259b07d5e71de1aec4ddaa7abeca0667}{draw\+Pixel}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t color)
+\item 
+void \doxymbox{\hyperlink{class_s_t7789_a8838fe474eb0659124803e9c95b0f1b3}{fill\+Screen}} (uint16\+\_\+t color)
+\item 
+void \doxymbox{\hyperlink{class_s_t7789_aa3250ff5a43df57284fb687b518951e3}{fill\+Rect}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, uint16\+\_\+t color)
+\item 
+void \doxymbox{\hyperlink{class_s_t7789_a88cd4a7737e35ff9a7ce27f2a1b65a85}{draw\+Image}} (uint16\+\_\+t x, uint16\+\_\+t y, uint16\+\_\+t w, uint16\+\_\+t h, const uint16\+\_\+t \texorpdfstring{$\ast$}{*}image565)
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+static constexpr uint16\+\_\+t \doxymbox{\hyperlink{class_s_t7789_aa779863a1ab5f62c2203252543785f9a}{WIDTH}} = 240
+\item 
+static constexpr uint16\+\_\+t \doxymbox{\hyperlink{class_s_t7789_a88355ed16c81c1d84373ff1480725e27}{HEIGHT}} = 320
+\end{DoxyCompactItemize}
+
+
+\label{class_s_t7789_doc-constructors}
+\Hypertarget{class_s_t7789_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_s_t7789_a76624643e2ccaede796fe48b40b7a4ca}\index{ST7789@{ST7789}!ST7789@{ST7789}}
+\index{ST7789@{ST7789}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{ST7789()}{ST7789()}}
+{\footnotesize\ttfamily \label{class_s_t7789_a76624643e2ccaede796fe48b40b7a4ca} 
+ST7789::\+\+ST7789 (\begin{DoxyParamCaption}\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{sck\+Port}{, }\item[{uint16\+\_\+t}]{sck\+Pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{mosi\+Port}{, }\item[{uint16\+\_\+t}]{mosi\+Pin}{, }\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{rst\+Port}{, }\item[{uint16\+\_\+t}]{rst\+Pin}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_s_t7789_doc-func-members}
+\Hypertarget{class_s_t7789_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_s_t7789_a88cd4a7737e35ff9a7ce27f2a1b65a85}\index{ST7789@{ST7789}!drawImage@{drawImage}}
+\index{drawImage@{drawImage}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{drawImage()}{drawImage()}}
+{\footnotesize\ttfamily \label{class_s_t7789_a88cd4a7737e35ff9a7ce27f2a1b65a85} 
+void ST7789::\+draw\+Image (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{w}{, }\item[{uint16\+\_\+t}]{h}{, }\item[{const uint16\+\_\+t \texorpdfstring{$\ast$}{*}}]{image565}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_s_t7789_a259b07d5e71de1aec4ddaa7abeca0667}\index{ST7789@{ST7789}!drawPixel@{drawPixel}}
+\index{drawPixel@{drawPixel}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{drawPixel()}{drawPixel()}}
+{\footnotesize\ttfamily \label{class_s_t7789_a259b07d5e71de1aec4ddaa7abeca0667} 
+void ST7789::\+draw\+Pixel (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_s_t7789_aa3250ff5a43df57284fb687b518951e3}\index{ST7789@{ST7789}!fillRect@{fillRect}}
+\index{fillRect@{fillRect}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{fillRect()}{fillRect()}}
+{\footnotesize\ttfamily \label{class_s_t7789_aa3250ff5a43df57284fb687b518951e3} 
+void ST7789::\+fill\+Rect (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{x}{, }\item[{uint16\+\_\+t}]{y}{, }\item[{uint16\+\_\+t}]{w}{, }\item[{uint16\+\_\+t}]{h}{, }\item[{uint16\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_s_t7789_a8838fe474eb0659124803e9c95b0f1b3}\index{ST7789@{ST7789}!fillScreen@{fillScreen}}
+\index{fillScreen@{fillScreen}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{fillScreen()}{fillScreen()}}
+{\footnotesize\ttfamily \label{class_s_t7789_a8838fe474eb0659124803e9c95b0f1b3} 
+void ST7789::\+fill\+Screen (\begin{DoxyParamCaption}\item[{uint16\+\_\+t}]{color}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_s_t7789_ade34128caca402550afa0d3fdea1971e}\index{ST7789@{ST7789}!init@{init}}
+\index{init@{init}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{init()}{init()}}
+{\footnotesize\ttfamily \label{class_s_t7789_ade34128caca402550afa0d3fdea1971e} 
+void ST7789::\+init (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_s_t7789_doc-variable-members}
+\Hypertarget{class_s_t7789_doc-variable-members}
+\doxysubsection{Member Data Documentation}
+\Hypertarget{class_s_t7789_a88355ed16c81c1d84373ff1480725e27}\index{ST7789@{ST7789}!HEIGHT@{HEIGHT}}
+\index{HEIGHT@{HEIGHT}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{HEIGHT}{HEIGHT}}
+{\footnotesize\ttfamily \label{class_s_t7789_a88355ed16c81c1d84373ff1480725e27} 
+uint16\+\_\+t ST7789::\+\+HEIGHT = 320\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+\Hypertarget{class_s_t7789_aa779863a1ab5f62c2203252543785f9a}\index{ST7789@{ST7789}!WIDTH@{WIDTH}}
+\index{WIDTH@{WIDTH}!ST7789@{ST7789}}
+\doxysubsubsection{\texorpdfstring{WIDTH}{WIDTH}}
+{\footnotesize\ttfamily \label{class_s_t7789_aa779863a1ab5f62c2203252543785f9a} 
+uint16\+\_\+t ST7789::\+\+WIDTH = 240\hspace{0.3cm}{\ttfamily [static]}, {\ttfamily [constexpr]}}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Core/\+\+Inc/\+\doxymbox{\hyperlink{_s_t7789_8h}{ST7789.\+h}}\item 
+Core/\+\+Src/\+\doxymbox{\hyperlink{_s_t7789_8cpp}{ST7789.\+cpp}}\end{DoxyCompactItemize}

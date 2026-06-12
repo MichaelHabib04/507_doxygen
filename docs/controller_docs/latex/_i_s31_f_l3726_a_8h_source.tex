@@ -1,0 +1,80 @@
+\doxysection{IS31\+FL3726\+A.\+h}
+\hypertarget{_i_s31_f_l3726_a_8h_source}{}\label{_i_s31_f_l3726_a_8h_source}\index{Core/Inc/IS31FL3726A.h@{Core/Inc/IS31FL3726A.h}}
+\doxymbox{\hyperlink{_i_s31_f_l3726_a_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ }
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <cstdint>}}
+\DoxyCodeLine{00005\ }
+\DoxyCodeLine{00006\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_i_s31_f_l3726_a_a37b6b0134e6f7e9043bdf38654920e0e}{IS31FL3726A}}}
+\DoxyCodeLine{00007\ \{}
+\DoxyCodeLine{00008\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00009\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\_t\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_ad7893ab471c458946231c723c28fc3ea}{ROW\_COUNT}}\ =\ 4;}
+\DoxyCodeLine{00010\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{constexpr}\ uint8\_t\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a48b2a4aa9f83003de37443f732cbf81a}{COLUMN\_COUNT}}\ =\ 4;}
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \ \ \ \ \textcolor{comment}{/*}}
+\DoxyCodeLine{00013\ \textcolor{comment}{\ \ \ \ \ \ \ \ Constructor\ order\ matches\ the\ real\ IS31FL3726A\ control\ pins:}}
+\DoxyCodeLine{00014\ \textcolor{comment}{}}
+\DoxyCodeLine{00015\ \textcolor{comment}{\ \ \ \ \ \ \ \ serIn\ \ -\/>\ IS31FL3726A\ SERIAL\_IN}}
+\DoxyCodeLine{00016\ \textcolor{comment}{\ \ \ \ \ \ \ \ clk\ \ \ \ -\/>\ IS31FL3726A\ CLK}}
+\DoxyCodeLine{00017\ \textcolor{comment}{\ \ \ \ \ \ \ \ latch\ \ -\/>\ IS31FL3726A\ LATCH}}
+\DoxyCodeLine{00018\ \textcolor{comment}{}}
+\DoxyCodeLine{00019\ \textcolor{comment}{\ \ \ \ \ \ \ \ Current\ CubeMX\ mapping:}}
+\DoxyCodeLine{00020\ \textcolor{comment}{\ \ \ \ \ \ \ \ LED\_LATCH\ \ =\ PE12}}
+\DoxyCodeLine{00021\ \textcolor{comment}{\ \ \ \ \ \ \ \ LED\_SER\_IN\ =\ PE13}}
+\DoxyCodeLine{00022\ \textcolor{comment}{\ \ \ \ \ \ \ \ LED\_CLK\ \ \ \ =\ PE14}}
+\DoxyCodeLine{00023\ \textcolor{comment}{\ \ \ \ */}}
+\DoxyCodeLine{00024\ \ \ \ \ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a37b6b0134e6f7e9043bdf38654920e0e}{IS31FL3726A}}(GPIO\_TypeDef*\ serInPort,}
+\DoxyCodeLine{00025\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ serInPin,}
+\DoxyCodeLine{00026\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ clkPort,}
+\DoxyCodeLine{00027\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ clkPin,}
+\DoxyCodeLine{00028\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ GPIO\_TypeDef*\ latchPort,}
+\DoxyCodeLine{00029\ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ \ uint16\_t\ latchPin);}
+\DoxyCodeLine{00030\ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a766fabf8a5a580c82d9b7394f4c91dd4}{begin}}(\textcolor{keywordtype}{bool}\ clearLeds\ =\ \textcolor{keyword}{true});}
+\DoxyCodeLine{00032\ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a4604c75f3424df053fda1ce42a9c4baf}{clear}}();}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a20e111856249959e9222b8917133ec34}{allOn}}();}
+\DoxyCodeLine{00035\ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a4da05379cf21b6b3021b0b71a7d58990}{setLed}}(uint8\_t\ row,\ uint8\_t\ column,\ \textcolor{keywordtype}{bool}\ on);}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a1fdd07bf42ea212fd31af9be8fb9b863}{toggleLed}}(uint8\_t\ row,\ uint8\_t\ column);}
+\DoxyCodeLine{00038\ }
+\DoxyCodeLine{00039\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a6ba427f0edde348e25a43bcb309f69cb}{setRow}}(uint8\_t\ row,\ \textcolor{keywordtype}{bool}\ on);}
+\DoxyCodeLine{00040\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a0a244355901bb8487660d694729424fc}{setColumn}}(uint8\_t\ column,\ \textcolor{keywordtype}{bool}\ on);}
+\DoxyCodeLine{00041\ }
+\DoxyCodeLine{00042\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a33a6f52289aad8c3c7246a613d5d29a0}{toggleRow}}(uint8\_t\ row);}
+\DoxyCodeLine{00043\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_ad5a5554787a39a5151ba5ce681dd28b3}{toggleColumn}}(uint8\_t\ column);}
+\DoxyCodeLine{00044\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a193bc35b89e08da4930981a4feafa4a3}{setRaw}}(uint16\_t\ value);}
+\DoxyCodeLine{00046\ \ \ \ \ uint16\_t\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a707be27567f87fc228f280709866e5be}{raw}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00047\ }
+\DoxyCodeLine{00048\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_i_s31_f_l3726_a_a1ccfb04b9bd04ecaf984c8a21846a677}{show}}();}
+\DoxyCodeLine{00049\ }
+\DoxyCodeLine{00050\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00051\ \ \ \ \ GPIO\_TypeDef*\ serInPort\_;}
+\DoxyCodeLine{00052\ \ \ \ \ uint16\_t\ serInPin\_;}
+\DoxyCodeLine{00053\ }
+\DoxyCodeLine{00054\ \ \ \ \ GPIO\_TypeDef*\ clkPort\_;}
+\DoxyCodeLine{00055\ \ \ \ \ uint16\_t\ clkPin\_;}
+\DoxyCodeLine{00056\ }
+\DoxyCodeLine{00057\ \ \ \ \ GPIO\_TypeDef*\ latchPort\_;}
+\DoxyCodeLine{00058\ \ \ \ \ uint16\_t\ latchPin\_;}
+\DoxyCodeLine{00059\ }
+\DoxyCodeLine{00060\ \ \ \ \ uint16\_t\ state\_\ =\ 0x0000;}
+\DoxyCodeLine{00061\ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ validLedAddress(uint8\_t\ row,\ uint8\_t\ column);}
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ validRow(uint8\_t\ row);}
+\DoxyCodeLine{00064\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ validColumn(uint8\_t\ column);}
+\DoxyCodeLine{00065\ }
+\DoxyCodeLine{00066\ \ \ \ \ \textcolor{keyword}{static}\ uint8\_t\ outputIndex(uint8\_t\ row,\ uint8\_t\ column);}
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ maskForLed(uint8\_t\ row,\ uint8\_t\ column);}
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ maskForRow(uint8\_t\ row);}
+\DoxyCodeLine{00069\ \ \ \ \ \textcolor{keyword}{static}\ uint16\_t\ maskForColumn(uint8\_t\ column);}
+\DoxyCodeLine{00070\ }
+\DoxyCodeLine{00071\ \ \ \ \ \textcolor{keywordtype}{void}\ shift16(uint16\_t\ value);}
+\DoxyCodeLine{00072\ \ \ \ \ \textcolor{keywordtype}{void}\ pulseClock();}
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ pulseLatch();}
+\DoxyCodeLine{00074\ \};}
+
+\end{DoxyCode}

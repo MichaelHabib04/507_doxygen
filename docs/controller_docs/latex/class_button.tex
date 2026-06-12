@@ -1,0 +1,131 @@
+\doxysection{Button Class Reference}
+\hypertarget{class_button}{}\label{class_button}\index{Button@{Button}}
+
+
+{\ttfamily \+\#include $<$button.\+h$>$}
+
+\doxysubsubsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+enum \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{State}} \{ \newline
+\doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a98a9255a9a1ca36353e7692dd532a081}{INACTIVE}}
+, \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a2e9ecd5c73c25486cd10add21379ad19}{DB\+\_\+\+PRESS}}
+, \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a2e515aeaab1c943310f4967133711a07}{ACTIVE}}
+, \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6ad3592df1a34d79497e108c6da7672171}{WAIT\+\_\+\+RELEASE}}
+, \newline
+\doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a0b2e8eb91ec162f374178be30333bdb3}{DB\+\_\+\+RELEASE}}
+ \}
+\end{DoxyCompactItemize}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\doxymbox{\hyperlink{class_button_a61b35b69e9586135774635178f7dfcd7}{Button}} (GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}port, uint16\+\_\+t pin, bool holdable)
+\item 
+bool \doxymbox{\hyperlink{class_button_ad56b64e1bc7b3643cabf9eb49cc10249}{easy\+\_\+update}} ()
+\item 
+void \doxymbox{\hyperlink{class_button_ad8e030c1c8846d43f3126047d4a3667f}{update}} ()
+\item 
+void \doxymbox{\hyperlink{class_button_ac9fdcae010e5072366ab0e11ded0ca33}{tick}} ()
+\item 
+bool \doxymbox{\hyperlink{class_button_a54b4312f35f61df1cf3fe132514e2fcd}{pressed}} () const
+\item 
+\doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{State}} \doxymbox{\hyperlink{class_button_a4da3b657addd6f8487cf754abd75455e}{state}} () const
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{class_button}{Button} driver object class. Enables button object with built-\/in DB. 
+
+\label{class_button_doc-enum-members}
+\Hypertarget{class_button_doc-enum-members}
+\doxysubsection{Member Enumeration Documentation}
+\Hypertarget{class_button_ae15938c6b06f6bbf909314f987938fd6}\index{Button@{Button}!State@{State}}
+\index{State@{State}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{State}{State}}
+{\footnotesize\ttfamily \label{class_button_ae15938c6b06f6bbf909314f987938fd6} 
+enum \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{Button::\+\+State}}}
+
+\begin{DoxyEnumFields}[2]{Enumerator}
+\raisebox{\heightof{T}}[0pt][0pt]{\index{INACTIVE@{INACTIVE}!Button@{Button}}
+\index{Button@{Button}!INACTIVE@{INACTIVE}}
+}\Hypertarget{class_button_ae15938c6b06f6bbf909314f987938fd6a98a9255a9a1ca36353e7692dd532a081}\label{class_button_ae15938c6b06f6bbf909314f987938fd6a98a9255a9a1ca36353e7692dd532a081} 
+INACTIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DB\_PRESS@{DB\_PRESS}!Button@{Button}}
+\index{Button@{Button}!DB\_PRESS@{DB\_PRESS}}
+}\Hypertarget{class_button_ae15938c6b06f6bbf909314f987938fd6a2e9ecd5c73c25486cd10add21379ad19}\label{class_button_ae15938c6b06f6bbf909314f987938fd6a2e9ecd5c73c25486cd10add21379ad19} 
+DB\+\_\+\+PRESS&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{ACTIVE@{ACTIVE}!Button@{Button}}
+\index{Button@{Button}!ACTIVE@{ACTIVE}}
+}\Hypertarget{class_button_ae15938c6b06f6bbf909314f987938fd6a2e515aeaab1c943310f4967133711a07}\label{class_button_ae15938c6b06f6bbf909314f987938fd6a2e515aeaab1c943310f4967133711a07} 
+ACTIVE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{WAIT\_RELEASE@{WAIT\_RELEASE}!Button@{Button}}
+\index{Button@{Button}!WAIT\_RELEASE@{WAIT\_RELEASE}}
+}\Hypertarget{class_button_ae15938c6b06f6bbf909314f987938fd6ad3592df1a34d79497e108c6da7672171}\label{class_button_ae15938c6b06f6bbf909314f987938fd6ad3592df1a34d79497e108c6da7672171} 
+WAIT\+\_\+\+RELEASE&\\
+\hline
+
+\raisebox{\heightof{T}}[0pt][0pt]{\index{DB\_RELEASE@{DB\_RELEASE}!Button@{Button}}
+\index{Button@{Button}!DB\_RELEASE@{DB\_RELEASE}}
+}\Hypertarget{class_button_ae15938c6b06f6bbf909314f987938fd6a0b2e8eb91ec162f374178be30333bdb3}\label{class_button_ae15938c6b06f6bbf909314f987938fd6a0b2e8eb91ec162f374178be30333bdb3} 
+DB\+\_\+\+RELEASE&\\
+\hline
+
+\end{DoxyEnumFields}
+
+
+\label{class_button_doc-constructors}
+\Hypertarget{class_button_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_button_a61b35b69e9586135774635178f7dfcd7}\index{Button@{Button}!Button@{Button}}
+\index{Button@{Button}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{Button()}{Button()}}
+{\footnotesize\ttfamily \label{class_button_a61b35b69e9586135774635178f7dfcd7} 
+Button::\+\+Button (\begin{DoxyParamCaption}\item[{GPIO\+\_\+\+Type\+Def \texorpdfstring{$\ast$}{*}}]{port}{, }\item[{uint16\+\_\+t}]{pin}{, }\item[{bool}]{holdable}{}\end{DoxyParamCaption})}
+
+
+
+\label{class_button_doc-func-members}
+\Hypertarget{class_button_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_button_ad56b64e1bc7b3643cabf9eb49cc10249}\index{Button@{Button}!easy\_update@{easy\_update}}
+\index{easy\_update@{easy\_update}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{easy\_update()}{easy\_update()}}
+{\footnotesize\ttfamily \label{class_button_ad56b64e1bc7b3643cabf9eb49cc10249} 
+bool Button::\+easy\+\_\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_button_a54b4312f35f61df1cf3fe132514e2fcd}\index{Button@{Button}!pressed@{pressed}}
+\index{pressed@{pressed}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{pressed()}{pressed()}}
+{\footnotesize\ttfamily \label{class_button_a54b4312f35f61df1cf3fe132514e2fcd} 
+bool Button::\+pressed (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_button_a4da3b657addd6f8487cf754abd75455e}\index{Button@{Button}!state@{state}}
+\index{state@{state}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{state()}{state()}}
+{\footnotesize\ttfamily \label{class_button_a4da3b657addd6f8487cf754abd75455e} 
+\doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{Button::\+\+State}} Button::\+state (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+\Hypertarget{class_button_ac9fdcae010e5072366ab0e11ded0ca33}\index{Button@{Button}!tick@{tick}}
+\index{tick@{tick}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{tick()}{tick()}}
+{\footnotesize\ttfamily \label{class_button_ac9fdcae010e5072366ab0e11ded0ca33} 
+void Button::\+tick (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{class_button_ad8e030c1c8846d43f3126047d4a3667f}\index{Button@{Button}!update@{update}}
+\index{update@{update}!Button@{Button}}
+\doxysubsubsection{\texorpdfstring{update()}{update()}}
+{\footnotesize\ttfamily \label{class_button_ad8e030c1c8846d43f3126047d4a3667f} 
+void Button::\+update (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+The documentation for this class was generated from the following files:\+\begin{DoxyCompactItemize}
+\item 
+Core/\+\+Inc/\+\doxymbox{\hyperlink{button_8h}{button.\+h}}\item 
+Core/\+\+Src/\+\doxymbox{\hyperlink{button_8cpp}{button.\+cpp}}\end{DoxyCompactItemize}

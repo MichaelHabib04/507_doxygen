@@ -1,0 +1,159 @@
+\doxysection{Core/\+\+Src/\+main.cpp File Reference}
+\hypertarget{main_8cpp}{}\label{main_8cpp}\index{Core/Src/main.cpp@{Core/Src/main.cpp}}
+{\ttfamily \+\#include "{}main.\+h"{}}\newline
+{\ttfamily \+\#include $<$iostream$>$}\newline
+{\ttfamily \+\#include "{}button.\+h"{}}\newline
+{\ttfamily \+\#include "{}ST7789.\+h"{}}\newline
+{\ttfamily \+\#include "{}images.\+h"{}}\newline
+{\ttfamily \+\#include "{}IS31\+FL3726\+A.\+h"{}}\newline
+\doxysubsubsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \doxymbox{\hyperlink{main_8cpp_a70af21c671abfcc773614a9a4f63d920}{System\+Clock\+\_\+\+Config}} (void)
+\begin{DoxyCompactList}\small\item\em System Clock Configuration. \end{DoxyCompactList}\item 
+int \doxymbox{\hyperlink{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}{main}} (void)
+\begin{DoxyCompactList}\small\item\em The application entry point. \end{DoxyCompactList}\item 
+void \doxymbox{\hyperlink{main_8cpp_a1730ffe1e560465665eb47d9264826f9}{Error\+\_\+\+Handler}} (void)
+\begin{DoxyCompactList}\small\item\em This function is executed in case of error occurrence. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Variables}
+\begin{DoxyCompactItemize}
+\item 
+SPI\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a9c6222bae4d0328dd843ae099623b40b}{hspi1}}
+\item 
+SPI\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_ab9da65f935e805137e2eb4e18c5ab224}{hspi2}}
+\item 
+SPI\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_aec51920045aad7f70cbfd1f58228d866}{hspi3}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a25a82fcf0cd24eb6d39977cb5864cec8}{huart5}}
+\item 
+UART\+\_\+\+Handle\+Type\+Def \doxymbox{\hyperlink{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}{huart1}}
+\item 
+\doxymbox{\hyperlink{class_button}{Button}} \doxymbox{\hyperlink{main_8cpp_ae819ec77ee7b625587e835cdff15f230}{user\+Button1}} (\doxymbox{\hyperlink{main_8h_adcd6c40ce56ca990a77e4b3ae69dffd8}{Button1\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a5ff36741a6856e4c17ca099cbc0fdb8e}{Button1\+\_\+\+Pin}}, true)
+\item 
+\doxymbox{\hyperlink{class_button}{Button}} \doxymbox{\hyperlink{main_8cpp_aa8bf4af46800c9ccb22bb676504f67f2}{user\+Button2}} (\doxymbox{\hyperlink{main_8h_aee8b6729f352c31e23e856276856d0ca}{Button2\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a1f90a9c1cf8eda94077208e98da7630b}{Button2\+\_\+\+Pin}}, false)
+\item 
+\doxymbox{\hyperlink{class_button}{Button}} \doxymbox{\hyperlink{main_8cpp_a901fe4437c135ca0dad682c18dfc6f93}{user\+Button3}} (\doxymbox{\hyperlink{main_8h_af5620f77fad04bf7e58844965728a61b}{Button3\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_acddae970ed8c16dcf058f446818f400b}{Button3\+\_\+\+Pin}}, false)
+\item 
+\doxymbox{\hyperlink{class_button}{Button}} \doxymbox{\hyperlink{main_8cpp_a0f025ffd4742211b8f65c3c72840316a}{user\+Button4}} (\doxymbox{\hyperlink{main_8h_acdfb7a35c3106c826252c2de1daa31f3}{Button4\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a78b4f3a18cf4e52fd1e3fbc2fdd11efe}{Button4\+\_\+\+Pin}}, false)
+\item 
+\doxymbox{\hyperlink{class_i_s31_f_l3726_a}{IS31\+FL3726A}} \doxymbox{\hyperlink{main_8cpp_add968250376b13755967c8603d611c3a}{led\+Driver}} (\doxymbox{\hyperlink{main_8h_aa9e355181361fb144f31f6c6426e690a}{LED\+\_\+\+SER\+\_\+\+IN\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a8a2ef85e0c660ed6c835f073e4441634}{LED\+\_\+\+SER\+\_\+\+IN\+\_\+\+Pin}}, \doxymbox{\hyperlink{main_8h_ac4a1bb215144d3f86fea4f3982dada29}{LED\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a18b1f86cf1c8fb6b932e34fd325d8a23}{LED\+\_\+\+CLK\+\_\+\+Pin}}, \doxymbox{\hyperlink{main_8h_a03734bb82e2cf3164f609634b820e960}{LED\+\_\+\+LATCH\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_aa7b17fb92ff7d8e7d59e12b4abde27d4}{LED\+\_\+\+LATCH\+\_\+\+Pin}})
+\end{DoxyCompactItemize}
+
+
+\label{main_8cpp_doc-func-members}
+\Hypertarget{main_8cpp_doc-func-members}
+\doxysubsection{Function Documentation}
+\Hypertarget{main_8cpp_a1730ffe1e560465665eb47d9264826f9}\index{main.cpp@{main.cpp}!Error\_Handler@{Error\_Handler}}
+\index{Error\_Handler@{Error\_Handler}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{Error\_Handler()}{Error\_Handler()}}
+{\footnotesize\ttfamily \label{main_8cpp_a1730ffe1e560465665eb47d9264826f9} 
+void Error\+\_\+\+Handler (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+This function is executed in case of error occurrence. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe}\index{main.cpp@{main.cpp}!main@{main}}
+\index{main@{main}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{main()}{main()}}
+{\footnotesize\ttfamily \label{main_8cpp_a840291bc02cba5474a4cb46a9b9566fe} 
+int main (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+The application entry point. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em int} & \\
+\hline
+\end{DoxyRetVals}
+\Hypertarget{main_8cpp_a70af21c671abfcc773614a9a4f63d920}\index{main.cpp@{main.cpp}!SystemClock\_Config@{SystemClock\_Config}}
+\index{SystemClock\_Config@{SystemClock\_Config}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{SystemClock\_Config()}{SystemClock\_Config()}}
+{\footnotesize\ttfamily \label{main_8cpp_a70af21c671abfcc773614a9a4f63d920} 
+void System\+Clock\+\_\+\+Config (\begin{DoxyParamCaption}\item[{void}]{}{}\end{DoxyParamCaption})}
+
+
+
+System Clock Configuration. 
+
+
+\begin{DoxyRetVals}{Return values}
+{\em None} & \\
+\hline
+\end{DoxyRetVals}
+Configure the main internal regulator output voltage
+
+Initializes the RCC Oscillators according to the specified parameters in the RCC\+\_\+\+Osc\+Init\+Type\+Def structure.
+
+Initializes the CPU, AHB and APB buses clocks
+
+\label{main_8cpp_doc-var-members}
+\Hypertarget{main_8cpp_doc-var-members}
+\doxysubsection{Variable Documentation}
+\Hypertarget{main_8cpp_a9c6222bae4d0328dd843ae099623b40b}\index{main.cpp@{main.cpp}!hspi1@{hspi1}}
+\index{hspi1@{hspi1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hspi1}{hspi1}}
+{\footnotesize\ttfamily \label{main_8cpp_a9c6222bae4d0328dd843ae099623b40b} 
+SPI\+\_\+\+Handle\+Type\+Def hspi1}
+
+\Hypertarget{main_8cpp_ab9da65f935e805137e2eb4e18c5ab224}\index{main.cpp@{main.cpp}!hspi2@{hspi2}}
+\index{hspi2@{hspi2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hspi2}{hspi2}}
+{\footnotesize\ttfamily \label{main_8cpp_ab9da65f935e805137e2eb4e18c5ab224} 
+SPI\+\_\+\+Handle\+Type\+Def hspi2}
+
+\Hypertarget{main_8cpp_aec51920045aad7f70cbfd1f58228d866}\index{main.cpp@{main.cpp}!hspi3@{hspi3}}
+\index{hspi3@{hspi3}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{hspi3}{hspi3}}
+{\footnotesize\ttfamily \label{main_8cpp_aec51920045aad7f70cbfd1f58228d866} 
+SPI\+\_\+\+Handle\+Type\+Def hspi3}
+
+\Hypertarget{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5}\index{main.cpp@{main.cpp}!huart1@{huart1}}
+\index{huart1@{huart1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{huart1}{huart1}}
+{\footnotesize\ttfamily \label{main_8cpp_a2cf715bef37f7e8ef385a30974a5f0d5} 
+UART\+\_\+\+Handle\+Type\+Def huart1}
+
+\Hypertarget{main_8cpp_a25a82fcf0cd24eb6d39977cb5864cec8}\index{main.cpp@{main.cpp}!huart5@{huart5}}
+\index{huart5@{huart5}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{huart5}{huart5}}
+{\footnotesize\ttfamily \label{main_8cpp_a25a82fcf0cd24eb6d39977cb5864cec8} 
+UART\+\_\+\+Handle\+Type\+Def huart5}
+
+\Hypertarget{main_8cpp_add968250376b13755967c8603d611c3a}\index{main.cpp@{main.cpp}!ledDriver@{ledDriver}}
+\index{ledDriver@{ledDriver}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{ledDriver}{ledDriver}}
+{\footnotesize\ttfamily \label{main_8cpp_add968250376b13755967c8603d611c3a} 
+\doxymbox{\hyperlink{class_i_s31_f_l3726_a}{IS31\+FL3726A}} led\+Driver(\doxymbox{\hyperlink{main_8h_aa9e355181361fb144f31f6c6426e690a}{LED\+\_\+\+SER\+\_\+\+IN\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a8a2ef85e0c660ed6c835f073e4441634}{LED\+\_\+\+SER\+\_\+\+IN\+\_\+\+Pin}}, \doxymbox{\hyperlink{main_8h_ac4a1bb215144d3f86fea4f3982dada29}{LED\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a18b1f86cf1c8fb6b932e34fd325d8a23}{LED\+\_\+\+CLK\+\_\+\+Pin}}, \doxymbox{\hyperlink{main_8h_a03734bb82e2cf3164f609634b820e960}{LED\+\_\+\+LATCH\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_aa7b17fb92ff7d8e7d59e12b4abde27d4}{LED\+\_\+\+LATCH\+\_\+\+Pin}}) (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{main_8h_aa9e355181361fb144f31f6c6426e690a}{LED\+\_\+\+SER\+\_\+\+IN\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_a8a2ef85e0c660ed6c835f073e4441634}{LED\+\_\+\+SER\+\_\+\+IN\+\_\+\+Pin}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_ac4a1bb215144d3f86fea4f3982dada29}{LED\+\_\+\+CLK\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_a18b1f86cf1c8fb6b932e34fd325d8a23}{LED\+\_\+\+CLK\+\_\+\+Pin}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_a03734bb82e2cf3164f609634b820e960}{LED\+\_\+\+LATCH\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_aa7b17fb92ff7d8e7d59e12b4abde27d4}{LED\+\_\+\+LATCH\+\_\+\+Pin}}}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_ae819ec77ee7b625587e835cdff15f230}\index{main.cpp@{main.cpp}!userButton1@{userButton1}}
+\index{userButton1@{userButton1}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{userButton1}{userButton1}}
+{\footnotesize\ttfamily \label{main_8cpp_ae819ec77ee7b625587e835cdff15f230} 
+\doxymbox{\hyperlink{class_button}{Button}} user\+Button1(\doxymbox{\hyperlink{main_8h_adcd6c40ce56ca990a77e4b3ae69dffd8}{Button1\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a5ff36741a6856e4c17ca099cbc0fdb8e}{Button1\+\_\+\+Pin}}, true) (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{main_8h_adcd6c40ce56ca990a77e4b3ae69dffd8}{Button1\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_a5ff36741a6856e4c17ca099cbc0fdb8e}{Button1\+\_\+\+Pin}}}]{}{, }\item[{true}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_aa8bf4af46800c9ccb22bb676504f67f2}\index{main.cpp@{main.cpp}!userButton2@{userButton2}}
+\index{userButton2@{userButton2}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{userButton2}{userButton2}}
+{\footnotesize\ttfamily \label{main_8cpp_aa8bf4af46800c9ccb22bb676504f67f2} 
+\doxymbox{\hyperlink{class_button}{Button}} user\+Button2(\doxymbox{\hyperlink{main_8h_aee8b6729f352c31e23e856276856d0ca}{Button2\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a1f90a9c1cf8eda94077208e98da7630b}{Button2\+\_\+\+Pin}}, false) (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{main_8h_aee8b6729f352c31e23e856276856d0ca}{Button2\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_a1f90a9c1cf8eda94077208e98da7630b}{Button2\+\_\+\+Pin}}}]{}{, }\item[{false}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a901fe4437c135ca0dad682c18dfc6f93}\index{main.cpp@{main.cpp}!userButton3@{userButton3}}
+\index{userButton3@{userButton3}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{userButton3}{userButton3}}
+{\footnotesize\ttfamily \label{main_8cpp_a901fe4437c135ca0dad682c18dfc6f93} 
+\doxymbox{\hyperlink{class_button}{Button}} user\+Button3(\doxymbox{\hyperlink{main_8h_af5620f77fad04bf7e58844965728a61b}{Button3\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_acddae970ed8c16dcf058f446818f400b}{Button3\+\_\+\+Pin}}, false) (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{main_8h_af5620f77fad04bf7e58844965728a61b}{Button3\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_acddae970ed8c16dcf058f446818f400b}{Button3\+\_\+\+Pin}}}]{}{, }\item[{false}]{}{}\end{DoxyParamCaption})}
+
+\Hypertarget{main_8cpp_a0f025ffd4742211b8f65c3c72840316a}\index{main.cpp@{main.cpp}!userButton4@{userButton4}}
+\index{userButton4@{userButton4}!main.cpp@{main.cpp}}
+\doxysubsubsection{\texorpdfstring{userButton4}{userButton4}}
+{\footnotesize\ttfamily \label{main_8cpp_a0f025ffd4742211b8f65c3c72840316a} 
+\doxymbox{\hyperlink{class_button}{Button}} user\+Button4(\doxymbox{\hyperlink{main_8h_acdfb7a35c3106c826252c2de1daa31f3}{Button4\+\_\+\+GPIO\+\_\+\+Port}}, \doxymbox{\hyperlink{main_8h_a78b4f3a18cf4e52fd1e3fbc2fdd11efe}{Button4\+\_\+\+Pin}}, false) (\begin{DoxyParamCaption}\item[{\doxymbox{\hyperlink{main_8h_acdfb7a35c3106c826252c2de1daa31f3}{Button4\+\_\+\+GPIO\+\_\+\+Port}}}]{}{, }\item[{\doxymbox{\hyperlink{main_8h_a78b4f3a18cf4e52fd1e3fbc2fdd11efe}{Button4\+\_\+\+Pin}}}]{}{, }\item[{false}]{}{}\end{DoxyParamCaption})}
+

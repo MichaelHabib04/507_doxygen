@@ -1,0 +1,46 @@
+\doxysection{button.\+h}
+\hypertarget{button_8h_source}{}\label{button_8h_source}\index{Core/Inc/button.h@{Core/Inc/button.h}}
+\doxymbox{\hyperlink{button_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#pragma\ once}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#ifndef\ BUTTON\_H\_}}
+\DoxyCodeLine{00003\ \textcolor{preprocessor}{\#define\ BUTTON\_H\_}}
+\DoxyCodeLine{00004\ }
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <stdint.h>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ "{}\doxymbox{\hyperlink{main_8h}{main.h}}"{}}}
+\DoxyCodeLine{00007\ }
+\DoxyCodeLine{00011\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{class\ }\doxymbox{\hyperlink{class_button_a61b35b69e9586135774635178f7dfcd7}{Button}}\{}
+\DoxyCodeLine{00013\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00014\ \ \ \ \ \textcolor{keyword}{enum}\ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{State}}\{}
+\DoxyCodeLine{00015\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a98a9255a9a1ca36353e7692dd532a081}{INACTIVE}},}
+\DoxyCodeLine{00016\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a2e9ecd5c73c25486cd10add21379ad19}{DB\_PRESS}},}
+\DoxyCodeLine{00017\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a2e515aeaab1c943310f4967133711a07}{ACTIVE}},}
+\DoxyCodeLine{00018\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6ad3592df1a34d79497e108c6da7672171}{WAIT\_RELEASE}},}
+\DoxyCodeLine{00019\ \ \ \ \ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6a0b2e8eb91ec162f374178be30333bdb3}{DB\_RELEASE}}}
+\DoxyCodeLine{00020\ \ \ \ \ \};}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \ \ \ \ \doxymbox{\hyperlink{class_button_a61b35b69e9586135774635178f7dfcd7}{Button}}(GPIO\_TypeDef*\ port,\ uint16\_t\ pin,\ \textcolor{keywordtype}{bool}\ holdable);}
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_button_ad56b64e1bc7b3643cabf9eb49cc10249}{easy\_update}}();}
+\DoxyCodeLine{00024\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_button_ad8e030c1c8846d43f3126047d4a3667f}{update}}();}
+\DoxyCodeLine{00025\ \ \ \ \ \textcolor{keywordtype}{void}\ \doxymbox{\hyperlink{class_button_ac9fdcae010e5072366ab0e11ded0ca33}{tick}}();}
+\DoxyCodeLine{00026\ }
+\DoxyCodeLine{00027\ \ \ \ \ \textcolor{keywordtype}{bool}\ \doxymbox{\hyperlink{class_button_a54b4312f35f61df1cf3fe132514e2fcd}{pressed}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00028\ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{State}}\ \doxymbox{\hyperlink{class_button_a4da3b657addd6f8487cf754abd75455e}{state}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00029\ }
+\DoxyCodeLine{00030\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00031\ \ \ \ \ GPIO\_TypeDef*\ gpioPort;}
+\DoxyCodeLine{00032\ \ \ \ \ uint16\_t\ gpioPin;}
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ isHoldable;\ \textcolor{comment}{//\ can\ hold\ button\ down}}
+\DoxyCodeLine{00034\ \ \ \ \ \textcolor{keywordtype}{bool}\ isPressed;\ \textcolor{comment}{//\ set\ HI\ on\ first\ contact,\ set\ LO\ on\ first\ break}}
+\DoxyCodeLine{00035\ \ \ \ \ \textcolor{keywordtype}{bool}\ readPin()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{char}\ bPin;\ \textcolor{comment}{//\ pointer\ to\ GPIO\ pin,\ can\ be\ reassigned}}
+\DoxyCodeLine{00037\ }
+\DoxyCodeLine{00038\ \ \ \ \ \doxymbox{\hyperlink{class_button_ae15938c6b06f6bbf909314f987938fd6}{State}}\ currentState;}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00040\ \ \ \ \ uint32\_t\ delayDB;}
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keyword}{const}\ uint32\_t\ debounceTimeMs\ =\ 20;}
+\DoxyCodeLine{00042\ \};}
+\DoxyCodeLine{00043\ \textcolor{preprocessor}{\#endif}}
+
+\end{DoxyCode}
